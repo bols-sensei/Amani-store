@@ -1,0 +1,21 @@
+{% extends "base_document.html" %}
+{% block content %}
+<div class="meta-grid">
+  <div class="meta-block"><h3>Vendeur</h3><b>{{ vendor.name }}</b><br>{{ vendor.slug }}</div>
+  <div class="meta-block"><h3>Client</h3><b>{{ customer.name }}</b><br>{{ customer.phone or customer.email }}</div>
+  <div class="meta-block"><h3>Livreur</h3>{{ courier.name or '—' }}<br>{{ courier.vehicle or '' }}</div>
+  <div class="meta-block"><h3>Livraison</h3>{{ shipment.reference }}<br>Confirmé : {{ delivered_at }}<br>Méthode : {{ confirmation_method }}</div>
+</div>
+<table class="items">
+  <thead><tr><th>Produit</th><th>Qté</th><th>P.U.</th><th>Total</th></tr></thead>
+  <tbody>
+  {% for it in items %}
+    <tr><td>{{ it.name }}</td><td>{{ it.quantity }}</td><td>{{ it.unit_price }}</td><td>{{ it.subtotal }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+<div class="totals">
+  <div>Sous-total : <b>{{ subtotal_display }}</b></div>
+  <div class="grand">Total encaissé (COD) : {{ total_display }}</div>
+</div>
+{% endblock %}

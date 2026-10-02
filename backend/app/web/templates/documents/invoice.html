@@ -1,0 +1,21 @@
+{% extends "base_document.html" %}
+{% block content %}
+<div class="meta-grid">
+  <div class="meta-block"><h3>Facturé à</h3><b>{{ customer.name }}</b><br>{{ customer.email or customer.phone }}</div>
+  <div class="meta-block"><h3>Commande</h3>{{ order.reference }}<br>{{ created_at }}</div>
+  <div class="meta-block"><h3>Adresse de livraison</h3>{{ order.address_lines|join('<br>')|safe }}</div>
+</div>
+<table class="items">
+  <thead><tr><th>Produit</th><th>Qté</th><th>P.U. USD</th><th>Total USD</th></tr></thead>
+  <tbody>
+  {% for it in items %}
+    <tr><td>{{ it.name }}</td><td>{{ it.quantity }}</td><td>{{ it.unit_price_usd }}</td><td>{{ it.subtotal_usd }}</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+<div class="totals">
+  <div>Sous-total produits : <b>{{ subtotal_usd }} $</b></div>
+  <div>Frais de livraison : {{ delivery_fee_usd }} $</div>
+  <div class="grand">Total : {{ total_usd }} $</div>
+</div>
+{% endblock %}

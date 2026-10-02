@@ -1,0 +1,31 @@
+# Runtime — Python 3.12, FastAPI async
+fastapi==0.116.1
+uvicorn[standard]==0.34.2
+jinja2==3.1.6
+
+# Base de données (SQLAlchemy 2.0 async + PostgreSQL 18)
+sqlalchemy[asyncio]==2.0.41
+asyncpg==0.31.0
+alembic==1.15.2
+
+# Cache / queue
+redis==5.3.1
+arq==0.26.3
+
+# Auth : Argon2id + JWT HS256
+argon2-cffi==23.1.0
+python-jose[cryptography]==3.4.0
+
+# Validation / config
+pydantic==2.11.4
+pydantic-settings==2.9.1
+email-validator==2.2.0
+
+# HTTP client (Kimia SMS, OneSignal...)
+httpx==0.28.1
+
+# Erreurs
+sentry-sdk==2.25.1
+
+# Utilitaires
+python-multipart==0.0.20
