@@ -31,7 +31,9 @@ ACTOR_RULES: dict[tuple[str, str], set[str]] = {
     ("preparing", "shipped"): {"vendor", "superadmin"},
     ("shipped", "out_for_delivery"): {"vendor", "superadmin"},
     ("out_for_delivery", "delivered"): {"courier", "superadmin"},
-    ("out_for_delivery", "rescheduled"): {"customer", "courier", "vendor", "superadmin"},
+    # Le report initial (client acteur, P3) est réservé au client ;
+    # le courier/vendor ne peuvent reporter qu'après un échec (failed→rescheduled).
+    ("out_for_delivery", "rescheduled"): {"customer", "vendor", "superadmin"},
     ("out_for_delivery", "failed"): {"courier", "vendor", "superadmin"},
     ("rescheduled", "out_for_delivery"): {"vendor", "courier", "superadmin"},
     ("rescheduled", "cancelled"): {"vendor", "customer", "superadmin", "system"},

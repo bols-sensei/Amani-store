@@ -136,9 +136,18 @@ async def get_cart_summary(
     groups: dict[str, dict[str, Any]] = {}
     tenants = await _tenant_map(db, {i.tenant_id for i in cart.items})
 
+    # Chargement explicite des produits + images (évite un lazy-load async
+    # « MissingGreenlet » sur la relation prod.images).
+    prods = (await db.execute(
+        select(Product)
+        .where(Product.id.in_({i.product_id for i in cart.items}))
+        .options(selectinload(Product.images))
+    )).scalars().all() if cart.items else []
+    pmap = {p.id: p for p in prods}
+
     subtotal_usd = Decimal("0")
     for item in sorted(cart.items, key=lambda i: i.added_at):
-        prod = await get_product(db, item.product_id)
+        prod = pmap.get(item.product_id)
         if prod is None:
             continue
         _, value, _ = await product_service.display_price(

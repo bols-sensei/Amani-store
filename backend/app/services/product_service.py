@@ -17,6 +17,7 @@ from typing import Any, Optional
 from sqlalchemy import select
 from sqlalchemy import text as sa_text
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import inspect as sa_inspect
 from sqlalchemy.orm import selectinload
 
 from app.core.events import events
@@ -373,7 +374,17 @@ async def serialize_product(
 ) -> dict[str, Any]:
     """Produit → dict avec prix affiché selon la devise de préférence du user."""
     price_display, price_value, cur_code = await display_price(db, Decimal(prod.price_usd), user)
-    primary = next((i for i in prod.images if i.is_primary), prod.images[0] if prod.images else None)
+    # Chargement explicite des images si la relation n'est pas déjà chargée :
+    # un lazy-load async ici lèverait MissingGreenlet (SQLAlchemy 2.0 async).
+    unloaded = sa_inspect(prod).unloaded
+    if "images" in unloaded:
+        prod_images = list((await db.execute(
+            select(ProductImage).where(ProductImage.product_id == prod.id)
+            .order_by(ProductImage.display_order)
+        )).scalars().all())
+    else:
+        prod_images = list(prod.images)
+    primary = next((i for i in prod_images if i.is_primary), prod_images[0] if prod_images else None)
     data: dict[str, Any] = {
         "id": prod.id,
         "tenant_id": prod.tenant_id,
@@ -407,12 +418,19 @@ async def serialize_product(
                 "medium_url": i.medium_url, "alt_text": i.alt_text,
                 "display_order": i.display_order, "is_primary": i.is_primary,
             }
-            for i in prod.images
+            for i in prod_images
         ]
-        data["category"] = (
-            {"id": prod.category.id, "name": prod.category.name, "slug": prod.category.slug}
-            if prod.category else None
-        )
+        data["category"] = None
+        if prod.category_id:
+            cat = None
+            if "category" not in sa_inspect(prod).unloaded:
+                cat = prod.category
+            if cat is None:
+                cat = (await db.execute(
+                    select(Category).where(Category.id == prod.category_id)
+                )).scalar_one_or_none()
+            if cat is not None:
+                data["category"] = {"id": cat.id, "name": cat.name, "slug": cat.slug}
         data["created_at"] = prod.created_at.isoformat() if prod.created_at else None
         data["updated_at"] = prod.updated_at.isoformat() if prod.updated_at else None
     return data

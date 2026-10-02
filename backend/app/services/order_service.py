@@ -102,7 +102,10 @@ async def create_orders_from_cart(
     # 1) Verrouiller et vérifier le stock pour TOUS les items (une seule requête).
     product_ids = {i.product_id for i in cart.items}
     products = (await db.execute(
-        select(Product).where(Product.id.in_(product_ids)).with_for_update()
+        select(Product)
+        .where(Product.id.in_(product_ids))
+        .options(selectinload(Product.images))
+        .with_for_update()
     )).scalars().all()
     pmap = {p.id: p for p in products}
 
