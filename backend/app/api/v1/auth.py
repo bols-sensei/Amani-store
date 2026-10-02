@@ -80,9 +80,12 @@ async def register_vendor(
     )
     from app.core.security import create_access_token, create_refresh_token, hash_token
 
-    # Le JWT doit porter le tenant_id COURANT (créé juste avant ce flush) :
-    # l'attribut ORM de `user` peut être expiré après commit — on relit la base.
+    # Le tenant vient D'ÊTRE créé dans la même transaction : flush pour le
+    # rendre visible, puis commit — ainsi les sessions indépendantes des
+    # middlewares (TenantStatus) voient immédiatement le tenant "pending".
     await db.flush()
+    await db.commit()
+    # Le JWT porte le tenant_id COURANT, relu en base après commit.
     fresh_user = await get_user_with_permissions(db, user.id)
     access = create_access_token(
         subject=user.id,

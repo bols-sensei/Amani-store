@@ -2,11 +2,14 @@
 
 from app.models.audit_log import AuditLog
 from app.models.business_rule import BusinessRule
+from app.models.category import Category
 from app.models.currency import Currency
 from app.models.exchange_rate import ExchangeRate
 from app.models.login_attempt import LoginAttempt
 from app.models.permission import Permission
+from app.models.product import Product, ProductImage, ProductVariant
 from app.models.role_template import RoleTemplate
+from app.models.search_query import SearchQuery
 from app.models.session import Session
 from app.models.setting import Setting
 from app.models.tenant import Tenant
@@ -17,7 +20,8 @@ from app.models.user_permission import UserPermission
 from app.models.verification_token import VerificationToken
 
 __all__ = [
-    "AuditLog", "BusinessRule", "Currency", "ExchangeRate", "LoginAttempt",
-    "Permission", "RoleTemplate", "Session", "Setting", "Tenant",
+    "AuditLog", "BusinessRule", "Category", "Currency", "ExchangeRate",
+    "LoginAttempt", "Permission", "Product", "ProductImage", "ProductVariant",
+    "RoleTemplate", "SearchQuery", "Session", "Setting", "Tenant",
     "TokenBlacklist", "User", "UserConsent", "UserPermission", "VerificationToken",
 ]

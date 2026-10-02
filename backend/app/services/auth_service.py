@@ -32,7 +32,12 @@ from app.core.security import (
 )
 from app.crud import session as crud_session
 from app.crud.business_rule import get_rule
-from app.crud.user import create_user, get_user_by_identifier, get_user_with_permissions
+from app.crud.user import (
+    create_user,
+    get_user_by_identifier,
+    get_user_fresh,
+    get_user_with_permissions,
+)
 from app.db.base import utcnow
 from app.models.user import User
 from app.services.sms_service import send_verification_link
@@ -129,8 +134,11 @@ async def login(
         user.hashed_password = hash_password(password)
 
     user.last_login_at = utcnow()
+    # JWT forgé depuis une relecture fraîche (+ tenant chargé) : le claim
+    # tenant_id vient TOUJOURS de la base, jamais du body ni d'un cache.
+    fresh = await get_user_fresh(db, user.id)
     access = create_access_token(
-        subject=user.id, extra_claims={"role": user.role, "tenant_id": user.tenant_id}
+        subject=user.id, extra_claims={"role": user.role, "tenant_id": fresh.tenant_id}
     )
     refresh = create_refresh_token()
     await crud_session.create_session(
@@ -150,7 +158,7 @@ async def refresh(db: AsyncSession, raw_refresh: str) -> tuple[User, str, str]:
     session = await crud_session.get_session_by_token_hash(db, token_hash)
     if session is None or session.is_revoked:
         raise AuthenticationError("Refresh token invalide ou révoqué")
-    user = await get_user_with_permissions(db, session.user_id)
+    user = await get_user_fresh(db, session.user_id)
     if user is None or not user.is_active:
         raise AuthenticationError("Compte inactive")
     new_refresh = create_refresh_token()

@@ -65,6 +65,82 @@ BUSINESS_RULES: list[dict] = [
     {"key": "rate_limit.api_per_minute", "value": "300", "type": "number",
      "category": "security", "description": "API standard req/min",
      "editable_by": "superadmin"},
+
+    # --- Limites par plan (catalogue) — modifiables superadmin sans code ---
+    {"key": "limits.free.max_products", "value": "20", "type": "number",
+     "category": "plans", "description": "Produits max — plan FREE",
+     "editable_by": "superadmin"},
+    {"key": "limits.pro.max_products", "value": "500", "type": "number",
+     "category": "plans", "description": "Produits max — plan PRO",
+     "editable_by": "superadmin"},
+    {"key": "limits.business.max_products", "value": "-1", "type": "number",
+     "category": "plans", "description": "Produits max — plan BUSINESS (-1 = illimité)",
+     "editable_by": "superadmin"},
+    {"key": "limits.free.max_images_per_product", "value": "3", "type": "number",
+     "category": "plans", "description": "Images max/produit — plan FREE",
+     "editable_by": "superadmin"},
+    {"key": "limits.pro.max_images_per_product", "value": "10", "type": "number",
+     "category": "plans", "description": "Images max/produit — plan PRO",
+     "editable_by": "superadmin"},
+    {"key": "limits.business.max_images_per_product", "value": "20", "type": "number",
+     "category": "plans", "description": "Images max/produit — plan BUSINESS",
+     "editable_by": "superadmin"},
+
+    # --- Catalogue / stock / images ---
+    {"key": "stock.low_stock_threshold", "value": "5", "type": "number",
+     "category": "products", "description": "Seuil alerte stock bas",
+     "editable_by": "vendor"},
+    {"key": "images.max_size_mb", "value": "5", "type": "number",
+     "category": "products", "description": "Taille max d'une image (MB)",
+     "editable_by": "superadmin"},
+    {"key": "images.max_per_upload", "value": "10", "type": "number",
+     "category": "products", "description": "Images max par upload",
+     "editable_by": "superadmin"},
+]
+
+# Catégories GLOBALES (tenant_id = NULL) : 7 racines + sous-catégories.
+# Une catégorie = une ligne en base, JAMAIS un enum Python (principe n°2).
+GLOBAL_CATEGORIES: list[dict] = [
+    {"name": "Mode", "slug": "mode", "children": [
+        {"name": "T-shirts", "slug": "t-shirts"},
+        {"name": "Chemises", "slug": "chemises"},
+        {"name": "Pantalons", "slug": "pantalons"},
+        {"name": "Robes", "slug": "robes"},
+        {"name": "Chaussures", "slug": "chaussures-mode"},
+        {"name": "Accessoires", "slug": "accessoires-mode"},
+    ]},
+    {"name": "Électronique", "slug": "electronique", "children": [
+        {"name": "Téléphones", "slug": "telephones"},
+        {"name": "Ordinateurs", "slug": "ordinateurs"},
+        {"name": "Accessoires", "slug": "accessoires-electronique"},
+        {"name": "Audio", "slug": "audio"},
+    ]},
+    {"name": "Maison", "slug": "maison", "children": [
+        {"name": "Meubles", "slug": "meubles"},
+        {"name": "Cuisine", "slug": "cuisine"},
+        {"name": "Décoration", "slug": "decoration"},
+        {"name": "Literie", "slug": "literie"},
+    ]},
+    {"name": "Beauté", "slug": "beaute", "children": [
+        {"name": "Soins", "slug": "soins"},
+        {"name": "Maquillage", "slug": "maquillage"},
+        {"name": "Parfums", "slug": "parfums"},
+    ]},
+    {"name": "Sport", "slug": "sport", "children": [
+        {"name": "Vêtements", "slug": "vetements-sport"},
+        {"name": "Équipement", "slug": "equipement-sport"},
+        {"name": "Chaussures", "slug": "chaussures-sport"},
+    ]},
+    {"name": "Alimentation", "slug": "alimentation", "children": [
+        {"name": "Épicerie", "slug": "epicerie"},
+        {"name": "Boissons", "slug": "boissons"},
+        {"name": "Snacks", "slug": "snacks"},
+    ]},
+    {"name": "Enfants", "slug": "enfants", "children": [
+        {"name": "Vêtements", "slug": "vetements-enfants"},
+        {"name": "Jouets", "slug": "jouets"},
+        {"name": "Puériculture", "slug": "puericulture"},
+    ]},
 ]
 
 PERMISSIONS: list[dict] = [

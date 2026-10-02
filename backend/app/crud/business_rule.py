@@ -30,6 +30,14 @@ async def get_rule(db: AsyncSession, key: str, default: Any = None) -> Any:
     return coerce(rule) if rule else default
 
 
+async def get_rule_number(db: AsyncSession, key: str, default: float = 0) -> float:
+    """Retourne une règle numérique (float), ou `default` si absente/non numérique."""
+    val = await get_rule(db, key, None)
+    if isinstance(val, (int, float)):
+        return float(val)
+    return float(default)
+
+
 async def set_rule(db: AsyncSession, key: str, value: str, **fields) -> BusinessRule:
     rule = (await db.execute(select(BusinessRule).where(BusinessRule.key == key))).scalar_one_or_none()
     if rule is None:

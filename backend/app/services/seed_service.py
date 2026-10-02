@@ -10,11 +10,19 @@ from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.models.business_rule import BusinessRule
+from app.models.category import Category
 from app.models.currency import Currency
 from app.models.exchange_rate import ExchangeRate
 from app.models.permission import Permission
 from app.models.role_template import RoleTemplate
-from app.seed_data import BUSINESS_RULES, CURRENCIES, EXCHANGE_RATES, PERMISSIONS, ROLE_TEMPLATES
+from app.seed_data import (
+    BUSINESS_RULES,
+    CURRENCIES,
+    EXCHANGE_RATES,
+    GLOBAL_CATEGORIES,
+    PERMISSIONS,
+    ROLE_TEMPLATES,
+)
 
 
 async def seed_config(db: AsyncSession) -> dict[str, int]:
@@ -65,5 +73,47 @@ async def seed_config(db: AsyncSession) -> dict[str, int]:
             db.add(RoleTemplate(**tpl))
             counts["role_templates"] += 1
 
+    cat_count = await seed_global_categories(db)
+    counts["global_categories"] = cat_count
+
     await db.flush()
     return counts
+
+
+async def seed_global_categories(db: AsyncSession) -> int:
+    """Insère les catégories globales (tenant_id NULL) : racines + enfants.
+
+    Idempotent : upsert par (tenant_id IS NULL, slug). Retourne le nombre de
+    lignes créées.
+    """
+    created = 0
+    for order, root in enumerate(GLOBAL_CATEGORIES):
+        existing = (await db.execute(
+            select(Category).where(
+                Category.tenant_id.is_(None), Category.slug == root["slug"]
+            )
+        )).scalars().first()
+        if existing is None:
+            parent = Category(
+                tenant_id=None, name=root["name"], slug=root["slug"],
+                display_order=order, is_active=True,
+            )
+            db.add(parent)
+            await db.flush()
+            created += 1
+        else:
+            parent = existing
+        for corder, child in enumerate(root.get("children", [])):
+            ex_child = (await db.execute(
+                select(Category).where(
+                    Category.tenant_id.is_(None), Category.slug == child["slug"]
+                )
+            )).scalars().first()
+            if ex_child is None:
+                db.add(Category(
+                    tenant_id=None, parent_id=parent.id, name=child["name"],
+                    slug=child["slug"], display_order=corder, is_active=True,
+                ))
+                created += 1
+    await db.flush()
+    return created

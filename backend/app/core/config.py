@@ -47,7 +47,7 @@ class Settings(BaseSettings):
 
     # --- Divers ----------------------------------------------------------
     CORS_ORIGINS: list[str] = Field(default_factory=lambda: ["http://localhost:3000"])
-    STORAGE_PATH: str = "/var/data"
+    STORAGE_PATH: str = "./data/media"
     PASSWORD_MIN_LENGTH: int = 8
 
     @property

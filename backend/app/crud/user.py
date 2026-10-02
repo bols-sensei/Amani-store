@@ -33,6 +33,20 @@ async def get_user_with_permissions(db: AsyncSession, user_id: str) -> Optional[
     return result.scalar_one_or_none()
 
 
+async def get_user_fresh(db: AsyncSession, user_id: str) -> Optional[User]:
+    """Recharge un user avec permissions + tenant (pour forger les JWT).
+
+    Le tenant est TOUJOURS lu en base au moment du login/refresh — jamais
+    depuis un objet potentiellement périmé ni depuis le body de la requête.
+    """
+    result = await db.execute(
+        select(User)
+        .options(selectinload(User.permissions), selectinload(User.tenant))
+        .where(User.id == user_id)
+    )
+    return result.scalar_one_or_none()
+
+
 async def create_user(db: AsyncSession, **fields) -> User:
     user = User(**fields)
     db.add(user)

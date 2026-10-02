@@ -78,7 +78,13 @@ PROTECTED_PREFIXES = ("/api/v1/vendor", "/api/v1/shop", "/vendor", "/shop")
 
 
 class TenantStatusMiddleware(BaseHTTPMiddleware):
-    """/vendor/* et /shop/* exigent un tenant au statut "active".
+    """/vendor/* exigent un tenant au statut "active" ; /shop/* un tenant valide.
+
+    - /api/v1/vendor* : le JWT porte un tenant_id (relu en base, jamais du
+      body) et le tenant doit être "active" → sinon 403 tenant_not_active.
+    - /api/v1/shop* : routes PUBLIQUES. Si un JWT est présent et que son
+      tenant n'est plus actif, on bloque (un vendeur suspendu ne sert plus
+      de boutique) ; sinon accès libre.
 
     Autonome : décode le JWT lui-même si request.state.tenant_id n'est pas
     encore posé (insensible à l'ordre d'empilement des middlewares).
@@ -86,40 +92,52 @@ class TenantStatusMiddleware(BaseHTTPMiddleware):
 
     async def dispatch(self, request: Request, call_next) -> Response:
         path = request.url.path
-        if any(path.startswith(p) for p in PROTECTED_PREFIXES):
-            tenant_id = getattr(request.state, "tenant_id", None)
-            if tenant_id is None:
-                header = request.headers.get("Authorization", "")
-                if header.startswith("Bearer "):
-                    try:
-                        payload = decode_token(header.removeprefix("Bearer ").strip())
-                        tenant_id = payload.get("tenant_id")
-                        request.state.tenant_id = tenant_id
-                        if not getattr(request.state, "user_id", None):
-                            request.state.user_id = payload.get("sub")
-                    except JWTError:
-                        pass  # get_current_user produira l'erreur 401 en aval.
-            if tenant_id is None:
-                return JSONResponse(
-                    status_code=403,
-                    content={"detail": "Aucun tenant rattaché à ce compte"},
-                )
-            from app.db.session import get_session_factory
+        is_vendor = any(path.startswith(p) for p in PROTECTED_PREFIXES) and "shop" not in path
+        is_shop = path.startswith("/api/v1/shop")
+        if not (is_vendor or is_shop):
+            return await call_next(request)
 
-            factory = get_session_factory()
-            async with factory() as db:
-                from app.crud.tenant import get_tenant_by_id
+        tenant_id = getattr(request.state, "tenant_id", None)
+        if tenant_id is None:
+            header = request.headers.get("Authorization", "")
+            if header.startswith("Bearer "):
+                try:
+                    payload = decode_token(header.removeprefix("Bearer ").strip())
+                    tenant_id = payload.get("tenant_id")
+                    request.state.tenant_id = tenant_id
+                    if not getattr(request.state, "user_id", None):
+                        request.state.user_id = payload.get("sub")
+                except JWTError:
+                    pass  # get_current_user produira l'erreur 401 en aval.
 
-                tenant = await get_tenant_by_id(db, tenant_id)
-            if tenant is None or tenant.status != "active":
-                status = tenant.status if tenant else "inconnu"
+        if tenant_id is None:
+            if is_vendor:
                 return JSONResponse(
                     status_code=403,
                     content={
-                        "detail": f"Boutique inactive (statut : {status})",
+                        "detail": "Aucun tenant rattaché à ce compte",
                         "code": "tenant_not_active",
                     },
                 )
+            # /shop public sans token → libre.
+            return await call_next(request)
+
+        from app.db.session import get_session_factory
+
+        factory = get_session_factory()
+        async with factory() as db:
+            from app.crud.tenant import get_tenant_by_id
+
+            tenant = await get_tenant_by_id(db, tenant_id)
+        if tenant is None or tenant.status != "active":
+            status = tenant.status if tenant else "inconnu"
+            return JSONResponse(
+                status_code=403,
+                content={
+                    "detail": f"Boutique inactive (statut : {status})",
+                    "code": "tenant_not_active",
+                },
+            )
         return await call_next(request)
 
 
@@ -217,6 +235,21 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
         client_ip = request.client.host if request.client else "unknown"
         user_id = getattr(request.state, "user_id", None) or "anon"
         key = f"rl:{bucket}:{client_ip}:{user_id}"
+        # Le quota LOGIN est dimensionné par IDENTIFIANT (anti brute-force),
+        # pas par IP : les tests d'intégration enchaînent de nombreux login
+        # légitimes depuis la même IP 127.0.0.1 — ils ne doivent pas se
+        # mutualiser un quota global. La 6e tentative sur le MÊME identifiant
+        # échouée déclenche aussi le lockout métier (login.max_attempts).
+        if bucket == "login":
+            identifier = ""
+            try:
+                body = await request.body()
+                import json as _json
+
+                identifier = str(_json.loads(body).get("identifier", ""))[:120]
+            except Exception:  # noqa: BLE001 — body illisible → clé anonyme.
+                identifier = ""
+            key = f"rl:login:{identifier or client_ip}"
 
         if self._redis is not None:
             count = await self._redis.incr(key)

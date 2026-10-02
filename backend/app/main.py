@@ -92,8 +92,21 @@ api_v1_prefix = "/api/v1"
 app.include_router(auth_router, prefix=api_v1_prefix)
 app.include_router(superadmin_tenants_router, prefix=api_v1_prefix)
 from app.api.v1.vendor.staff import router as vendor_staff_router  # noqa: E402
+from app.api.v1.vendor.products import router as vendor_products_router  # noqa: E402
+from app.api.v1.shop import router as shop_router  # noqa: E402
 
 app.include_router(vendor_staff_router, prefix=api_v1_prefix)
+app.include_router(vendor_products_router, prefix=api_v1_prefix)
+app.include_router(shop_router, prefix=api_v1_prefix)
+
+# --- Médias (images produits stockées sur disque local) ---
+from pathlib import Path  # noqa: E402
+
+from fastapi.staticfiles import StaticFiles  # noqa: E402
+
+_media_root = Path(settings.STORAGE_PATH)
+_media_root.mkdir(parents=True, exist_ok=True)
+app.mount("/media", StaticFiles(directory=str(_media_root)), name="media")
 
 
 @app.get("/healthz", tags=["system"])
