@@ -53,6 +53,7 @@ async def add_item(
 
     # Snapshot du prix courant en USD (le panier garde le prix au moment de l'ajout)
     cart = await get_or_create_cart(db, user)
+    await db.refresh(cart)  # items chargés explicitement (jamais de lazy-load sync async)
     existing = next((i for i in cart.items if i.product_id == prod.id), None)
     if existing is not None:
         new_qty = existing.quantity + quantity

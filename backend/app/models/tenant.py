@@ -42,5 +42,5 @@ class Tenant(Base, TimestampMixin):
     suspension_reason: Mapped[str | None] = mapped_column(Text, nullable=True)
 
     users: Mapped[list["User"]] = relationship(  # noqa: F821
-        "User", back_populates="tenant", foreign_keys="User.tenant_id"
+        "User", back_populates="tenant", foreign_keys="User.tenant_id", lazy="selectin"
     )
