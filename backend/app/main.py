@@ -99,6 +99,17 @@ app.include_router(vendor_staff_router, prefix=api_v1_prefix)
 app.include_router(vendor_products_router, prefix=api_v1_prefix)
 app.include_router(shop_router, prefix=api_v1_prefix)
 
+# --- Module panier + commandes (prompt 3) ---
+from app.api.v1.cart import router as cart_router  # noqa: E402
+from app.api.v1.orders import router as orders_router  # noqa: E402
+from app.api.v1.customer import router as customer_router  # noqa: E402
+from app.api.v1.vendor.orders import router as vendor_orders_router  # noqa: E402
+
+app.include_router(cart_router, prefix="/api/v1/customer")
+app.include_router(orders_router, prefix="/api/v1/customer")
+app.include_router(customer_router, prefix=api_v1_prefix)
+app.include_router(vendor_orders_router, prefix=api_v1_prefix)
+
 # --- Médias (images produits stockées sur disque local) ---
 from pathlib import Path  # noqa: E402
 
