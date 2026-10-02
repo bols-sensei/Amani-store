@@ -37,7 +37,7 @@ class Cart(Base, TimestampMixin):
     is_empty: Mapped[bool] = mapped_column(Boolean, nullable=False, default=True)
 
     items: Mapped[list["CartItem"]] = relationship(
-        back_populates="cart", cascade="all, delete-orphan", lazy="selectin"
+        back_populates="cart", cascade="all, delete-orphan", lazy="raise"
     )
 
 
