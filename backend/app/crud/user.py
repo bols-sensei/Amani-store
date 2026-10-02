@@ -59,6 +59,15 @@ async def list_users(
     db: AsyncSession, tenant_id: Optional[str] = None, role: Optional[str] = None,
     offset: int = 0, limit: int = 50,
 ) -> Sequence[User]:
+    """Liste des users.
+
+    ⚠️ Isolation multi-tenant : `tenant_id` est TOUJOURS fourni par l'appelant
+    (déduit du JWT). S'il manque alors qu'un filtrage tenant est attendu, on
+    renvoie une liste vide plutôt que de requêter sans filtre — jamais de
+    fuite inter-tenants par oubli d'argument.
+    """
+    if tenant_id is None and role in ("staff", "courier"):
+        return []
     stmt = select(User)
     if tenant_id is not None:
         stmt = stmt.where(User.tenant_id == tenant_id)

@@ -51,6 +51,12 @@ async def get_current_user(
     user = await get_user_with_permissions(db, payload["sub"])
     if user is None or not user.is_active:
         raise AuthenticationError("Compte introuvable ou désactivé")
+    # Isolation défensive : le tenant_id du JWT FAIT FOI. S'il diffère du
+    # tenant en base (ex. compte rattaché à un autre tenant entre-temps),
+    # on refuse le token périmé plutôt que d'utiliser l'état DB.
+    jwt_tenant = payload.get("tenant_id")
+    if jwt_tenant != user.tenant_id:
+        raise AuthenticationError("Session obsolète, reconnectez-vous")
     request.state.current_user = user
     request.state.current_token = token
     request.state.db = db

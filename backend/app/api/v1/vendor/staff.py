@@ -74,12 +74,21 @@ async def create_staff(
 
 @router.get("/staff", response_model=list[UserRead])
 async def list_staff(
+    request: Request,
     user: CurrentUser,
     db: AsyncSession = Depends(get_db),
     _: User = Depends(require_permission("staff.manage")),
 ) -> list[UserRead]:
-    """Liste le staff DU TENANT COURANT uniquement (filtre JWT, jamais body)."""
-    staff = await crud_user.list_users(db, tenant_id=user.tenant_id, role="staff")
+    """Liste le staff DU TENANT COURANT uniquement (filtre JWT, jamais body).
+
+    Le tenant est rechargé en base depuis get_current_tenant : si le claim
+    du token divergeait de la base, on refuse toute liste plutôt que de
+    fuiter des données inter-tenants.
+    """
+    tenant = await get_current_tenant(request, user)
+    if tenant is None or tenant.id != user.tenant_id:
+        raise PermissionDeniedError("Aucun tenant valide rattaché à ce compte")
+    staff = await crud_user.list_users(db, tenant_id=tenant.id, role="staff")
     return [UserRead.model_validate(s) for s in staff]
 
 

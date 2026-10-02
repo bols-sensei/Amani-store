@@ -18,7 +18,7 @@ from typing import Protocol
 
 from app.core.config import settings
 from app.crud.business_rule import get_rule_number
-from app.db.session import AsyncSessionLocal
+from app.db.session import get_session_factory
 
 logger = logging.getLogger(__name__)
 
@@ -119,7 +119,7 @@ class LocalDiskStorage:
     async def _max_size_mb() -> int:
         """Taille max lue depuis business_rules (config-driven, jamais codée en dur)."""
         try:
-            async with AsyncSessionLocal() as db:
+            async with get_session_factory()() as db:
                 val = await get_rule_number(db, "images.max_size_mb", default=5)
                 return int(val)
         except Exception:
