@@ -291,6 +291,7 @@ async def create_product(
         action="product.create", target_type="product", target_id=prod.id,
         after={"name": prod.name},
     ))
+    await db.flush()  # insère l'audit AVANT le lazy-load des images (évite MissingGreenlet)
     result = await product_service.serialize_product(db, prod, user, full=True)
     return result
 
