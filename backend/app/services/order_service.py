@@ -187,9 +187,7 @@ async def create_orders_from_cart(
                 quantity=ci.quantity,
                 subtotal_usd=line_usd,
                 commission_rate=commission_rate[tid],
-                commission_amount_usd=compute_commission(
-                    line_usd, commission_rate[tid], commission_min[tid]
-                ),
+                commission_amount_usd=Decimal("0"),  # calculé à la livraison (point de vérité)
             ))
         db.add(OrderStatusHistory(
             order_id=order.id, old_status=None, new_status="pending",
@@ -251,6 +249,9 @@ async def _release_reserved_stock(db: AsyncSession, order: Order) -> None:
 async def _apply_delivered_stock(db: AsyncSession, order: Order) -> None:
     """À la livraison : décrément stock ET reserved_stock (point de vérité)."""
     now = datetime.now(timezone.utc)
+    tenant = await db.get(Tenant, order.tenant_id)
+    rate = await _commission_rate_for(db, tenant) if tenant else Decimal("0")
+    min_usd = await _min_commission_usd(db, tenant) if tenant else Decimal("0")
     for oi in order.items:
         if oi.product_id:
             await db.execute(
@@ -262,9 +263,30 @@ async def _apply_delivered_stock(db: AsyncSession, order: Order) -> None:
                     sales_count=Product.sales_count + oi.quantity,
                 )
             )
-        oi.delivered_at = now
+        if oi.delivered_at is None:
+            oi.delivered_at = now
+            # Commission recalculée au point de vérité (snapshot du taux à la commande).
+            oi.commission_amount_usd = compute_commission(
+                Decimal(str(oi.subtotal_usd)), Decimal(str(oi.commission_rate)), min_usd
+            )
     order.delivered_at = now
     order.paid_at = now  # COD : payé à la livraison (encaissé par le vendeur)
+
+
+async def adjust_reserved_stock(db: AsyncSession, product_id: str, delta: int) -> None:
+    """Ajustement atomique de reserved_stock avec clamp à 0 (utilisé colis retournés)."""
+    if delta == 0:
+        return
+    await db.execute(
+        update(Product)
+        .where(Product.id == product_id)
+        .values(reserved_stock=Product.reserved_stock + delta)
+    )
+    await db.execute(
+        Product.__table__.update()
+        .where(Product.id == product_id, Product.reserved_stock < 0)
+        .values(reserved_stock=0)
+    )
 
 
 async def update_order_status(

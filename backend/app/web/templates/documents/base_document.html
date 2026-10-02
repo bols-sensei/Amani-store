@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>{{ title }}</title>
+<style>
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #1a1a2e; margin: 0; padding: 32px; font-size: 13px; }
+  .doc-header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid #0e7c66; padding-bottom: 16px; margin-bottom: 24px; }
+  .brand { font-size: 22px; font-weight: 800; color: #0e7c66; }
+  .doc-type { font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .doc-number { color: #555; }
+  table.items { width: 100%; border-collapse: collapse; margin-top: 16px; }
+  table.items th { background: #f2f5f4; text-align: left; padding: 8px; border-bottom: 2px solid #dfe6e4; font-size: 12px; }
+  table.items td { padding: 8px; border-bottom: 1px solid #eee; }
+  .totals { margin-top: 16px; text-align: right; }
+  .totals .grand { font-size: 16px; font-weight: 800; color: #0e7c66; }
+  .meta-grid { display: flex; gap: 48px; margin-bottom: 16px; }
+  .meta-block h3 { font-size: 12px; margin: 0 0 4px; color: #777; text-transform: uppercase; }
+  .footer { margin-top: 40px; border-top: 1px solid #ddd; padding-top: 12px; color: #888; font-size: 11px; display: flex; justify-content: space-between; align-items: center; }
+  .qr img { width: 84px; height: 84px; }
+</style>
+</head>
+<body>
+  <div class="doc-header">
+    <div><div class="brand">Kimia</div><div style="color:#777;">Plateforme e-commerce RDC</div></div>
+    <div style="text-align:right;">
+      <div class="doc-type">{{ doc_type_label }}</div>
+      <div class="doc-number">{{ number }}</div>
+      <div>{{ generated_at }}</div>
+    </div>
+  </div>
+  {% block content %}{% endblock %}
+  <div class="footer">
+    <div>Document généré automatiquement par Kimia — {{ legal_note }}</div>
+    {% if qr_data_url %}<div class="qr"><img src="{{ qr_data_url }}" alt="QR vérification"></div>{% endif %}
+  </div>
+</body>
+</html>

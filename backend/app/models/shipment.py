@@ -13,7 +13,7 @@ from datetime import datetime
 from typing import Optional
 
 from sqlalchemy import Boolean, DateTime, ForeignKey, Index, String, Text
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base, TimestampMixin, UUIDType, new_uuid
 
@@ -67,3 +67,12 @@ class Shipment(Base, TimestampMixin):
     )
 
     notes: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+
+    # --- Relations ---
+    order: Mapped["Order"] = relationship(  # noqa: F821
+        "Order", foreign_keys=[order_id], lazy="selectin"
+    )
+    items: Mapped[list["OrderItem"]] = relationship(  # noqa: F821
+        "OrderItem", foreign_keys="OrderItem.shipment_id",
+        viewonly=True, lazy="selectin",
+    )
