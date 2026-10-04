@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f6;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(38,30,23,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xm3QBqwjVUmyYbF9hSATd2TnJjJS2CrBYUTFAqIcJ593e50jx7s61lLuuxyn8etHtXZI1x4m_mVH_unjjnVYhCxeAK8sXLClJymwtlOa-4ohHyolti0yoWB_1PPxyL9_dj453Nrd-szRMxwcW3esL2qpMCt5sdP0E-JIopZ7srPGfaY8yTqTGIqURkHrWVwQWkgmnzAMwkgoxUSd3DYrgxhWDLC_tnv2sLBLyZxwoaGnvjxL4PWVPxX84"/><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-md text-body-lg text-on-surface tracking-tight leading-none">Amani</span><span class="font-label-sm text-[10px] leading-none uppercase tracking-wider bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded-full">SUPERADMIN</span></div><span class="font-label-sm text-[11px] text-on-surface-variant truncate max-w-[110px]">Finances</span></div></div><div class="flex items-center gap-2"><div class="inline-flex items-center bg-surface-container rounded-full p-0.5 shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)]"><button class="px-2 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-[11px] shadow-[0_1px_3px_rgba(38,30,23,0.08)]" type="button">USD</button><button class="px-2 py-1 rounded-full text-on-surface-variant font-label-sm text-[11px]" type="button">CDF</button></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_1px_4px_rgba(113,85,48,0.25)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-md px-margin-mobile pt-space-md pb-space-lg">
+<!-- 1. En-tête de section -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="min-w-0">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Factures SaaS &amp; Abonnements</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Facturation mensuelle des 99 boutiques de la plateforme</p>
+</div>
+<div class="shrink-0">
+<button class="inline-flex items-center gap-1.5 bg-primary-container text-on-primary-container px-3.5 py-2 rounded-lg font-label-lg text-label-lg shadow-sm active:scale-95 transition-transform" id="btn-generate" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Générer</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 2. Carte résumé Recouvrement & Santé financière -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Total à recouvrer • Octobre 2026</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-surface tracking-tight leading-none">$3,511.00</span>
+<span class="font-body-md text-body-md text-secondary">USD</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-semibold mt-0.5">≈ 8,777,500 FC</span>
+</div>
+<div class="flex flex-col items-end">
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>94.2%</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Recouvrement</span>
+</div>
+</div>
+<!-- Barre de progression émeraude -->
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary h-2 rounded-full transition-all duration-500" style="width: 94.2%;"></div>
+</div>
+<!-- Métriques MRR & Commissions -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[15px]">autorenew</span>
+<span class="font-label-sm text-label-sm">MRR Abonnements</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">$1,250.00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">≈ 3,125,000 FC</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[15px]">percent</span>
+<span class="font-label-sm text-label-sm">Commissions</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface mt-1">$2,261.00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">≈ 5,652,500 FC</span>
+</div>
+</div>
+<!-- Cartouche d'alerte impayés -->
+<div class="flex items-center justify-between gap-space-sm bg-error-container text-on-error-container px-3 py-2.5 rounded-lg">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-[20px] text-error shrink-0">warning</span>
+<span class="font-label-md text-label-md font-semibold truncate">3 factures en retard ($42.50)</span>
+</div>
+<span class="font-label-sm text-label-sm shrink-0 bg-surface-container-lowest text-error px-2 py-0.5 rounded-full shadow-xs">Relance WhatsApp prête</span>
+</div>
+</div>
+<!-- 3. Filtres onglets pilules (horizontaux scrollables) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-margin-mobile px-margin-mobile scrollbar-none">
+<button class="tab-filter shrink-0 px-3.5 py-1.5 rounded-full bg-on-surface text-surface font-label-lg text-label-lg shadow-sm" type="button">
+        Toutes (99)
+      </button>
+<button class="tab-filter shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-lg text-label-lg active:scale-95" type="button">
+        En attente (12)
+      </button>
+<button class="tab-filter shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-lg text-label-lg active:scale-95" type="button">
+        Payées (84)
+      </button>
+<button class="tab-filter shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-lg text-label-lg active:scale-95" type="button">
+<span>En retard</span>
+<span class="bg-error text-on-error rounded-full px-1.5 py-0.2 font-label-sm text-label-sm leading-tight">3</span>
+</button>
+<button class="tab-filter shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-lg text-label-lg active:scale-95" type="button">
+        Brouillons (0)
+      </button>
+</div>
+<!-- 4. Barre de recherche et sélecteur de date -->
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[19px] text-outline">search</span>
+<input class="w-full bg-surface-container-lowest text-on-surface placeholder:text-outline text-body-md font-body-md pl-9 pr-3 py-2.5 rounded-lg shadow-xs focus:outline-none focus:ring-1 focus:ring-primary-container" placeholder="N° INV, boutique ou contact..." type="text"/>
+</div>
+<div class="shrink-0 flex items-center gap-1.5 bg-surface-container-lowest px-3 py-2.5 rounded-lg shadow-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_month</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Oct 2026</span>
+</div>
+</div>
+<!-- 5. Cartes de factures détaillées -->
+<div class="flex flex-col gap-space-md">
+<!-- Carte 1 : Chez Awa (En attente) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wide">INV-2026-00042</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+                En attente
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1 truncate">Chez Awa</h2>
+<span class="font-body-md text-body-md text-on-surface-variant">Mode &amp; Accessoires</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-bold leading-none">$18.50</span>
+<div class="font-label-sm text-label-sm text-secondary font-semibold mt-0.5">≈ 46,250 FC</div>
+</div>
+</div>
+<!-- Décomposition & Contact -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="text-on-surface-variant">Forfait PRO + Commissions</span>
+<span class="text-on-surface font-medium">$10.00 + $8.50</span>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-secondary pt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">person</span>
+<span>Awa K. (+243 82 345 6789 • Gombe)</span>
+</div>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Échéance: 12 Nov (J-8)</span>
+</div>
+</div>
+</div>
+<!-- Boutons d'actions rapides -->
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 px-1.5 bg-surface-container rounded-lg text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-1 active:scale-95" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Détail</span>
+</button>
+<button class="py-2 px-1.5 bg-tertiary-fixed text-on-tertiary-fixed rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-1 active:scale-95 font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Payée</span>
+</button>
+<button class="py-2 px-1.5 bg-secondary-fixed text-on-secondary-fixed rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-1 active:scale-95 font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">chat</span>
+<span>Relance</span>
+</button>
+</div>
+</div>
+<!-- Carte 2 : ÉlectroMoussa Kinshasa (Payée) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wide">INV-2026-00041</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">check</span>
+                Payée
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1 truncate">ÉlectroMoussa Kinshasa</h2>
+<span class="font-body-md text-body-md text-on-surface-variant">Électronique &amp; Gadgets</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-bold leading-none">$45.20</span>
+<div class="font-label-sm text-label-sm text-secondary font-semibold mt-0.5">≈ 113,000 FC</div>
+</div>
+</div>
+<!-- Décomposition & Preuve de paiement -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="text-on-surface-variant">Forfait BUSINESS + Commissions</span>
+<span class="text-on-surface font-medium">$30.00 + $15.20</span>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-secondary pt-1">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">smartphone</span>
+<span>Orange Money (TXN-OM-9821)</span>
+</div>
+<span class="text-tertiary font-medium">Réglé le 02 Oct</span>
+</div>
+</div>
+<!-- Action principale -->
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Contact: Moussa (+243 81 234 5678)</span>
+<button class="py-2 px-3 bg-surface-container text-on-surface rounded-lg font-label-sm text-label-sm flex items-center gap-1 active:scale-95 font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">receipt</span>
+<span>Reçu &amp; Détail</span>
+</button>
+</div>
+</div>
+<!-- Carte 3 : ModeFatou Boutique (En retard J+4) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wide">INV-2026-00040</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+                En retard (J+4)
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1 truncate">ModeFatou Boutique</h2>
+<span class="font-body-md text-body-md text-on-surface-variant">Prêt-à-porter féminin</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-error font-bold leading-none">$8.50</span>
+<div class="font-label-sm text-label-sm text-secondary font-semibold mt-0.5">≈ 21,250 FC</div>
+</div>
+</div>
+<!-- Décomposition & Retard -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="text-on-surface-variant">Forfait FREE ($0.00) + Commissions</span>
+<span class="text-on-surface font-medium">$8.50</span>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm pt-1">
+<span class="text-secondary truncate">Fatou N. (+243 89 123 4567 • Kintambo)</span>
+<span class="text-error font-bold shrink-0">Échue le 30 Sept</span>
+</div>
+</div>
+<!-- Boutons d'actions urgentes -->
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-2 bg-error text-on-error rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-1.5 active:scale-95 font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+<span>Relance urgente SMS/WA</span>
+</button>
+<button class="py-2.5 px-2 bg-primary-container text-on-primary-container rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-1 active:scale-95 font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">check_box</span>
+<span>Enregistrer paiement</span>
+</button>
+</div>
+</div>
+<!-- Carte 4 : Kin Tech Store (Payée) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wide">INV-2026-00039</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">check</span>
+                Payée
+              </span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1 truncate">Kin Tech Store</h2>
+<span class="font-body-md text-body-md text-on-surface-variant">Informatique &amp; Bureautique</span>
+</div>
+<div class="text-right shrink-0">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-bold leading-none">$54.80</span>
+<div class="font-label-sm text-label-sm text-secondary font-semibold mt-0.5">≈ 137,000 FC</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="text-on-surface-variant">Forfait BUSINESS + Commissions</span>
+<span class="text-on-surface font-medium">$30.00 + $24.80</span>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-secondary pt-1">
+<div class="flex items-center gap-1 truncate">
+<span class="material-symbols-outlined text-[14px]">call</span>
+<span>Patrick M. (Gombe) • Airtel Money</span>
+</div>
+<span class="text-tertiary font-medium shrink-0">Réglé le 01 Oct</span>
+</div>
+</div>
+<div class="flex items-center justify-end">
+<button class="py-2 px-3 bg-surface-container text-on-surface rounded-lg font-label-sm text-label-sm flex items-center gap-1 active:scale-95 font-semibold" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Détail</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 6. Cartouche informatif de réconciliation ERP -->
+<div class="bg-secondary-container text-on-secondary-container rounded-lg p-3 flex items-center gap-2.5 shadow-xs">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">integration_instructions</span>
+<p class="font-label-sm text-label-sm flex-1 leading-snug">
+        Rapport comptable Kimia ERP généré automatiquement pour le mois d'octobre.
+      </p>
+<button class="font-label-sm text-label-sm font-bold text-primary underline shrink-0 active:opacity-75" type="button">
+        Exporter
+      </button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Interactivité rapide sur les onglets de filtres
+    const tabs = document.querySelectorAll('.tab-filter');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('bg-on-surface', 'text-surface', 'shadow-sm');
+          t.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        tab.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        tab.classList.add('bg-on-surface', 'text-surface', 'shadow-sm');
+      });
+    });
+
+    // Feedback d'action de génération
+    const generateBtn = document.getElementById('btn-generate');
+    if (generateBtn) {
+      generateBtn.addEventListener('click', () => {
+        const initialText = generateBtn.innerHTML;
+        generateBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Calcul...</span>';
+        setTimeout(() => {
+          generateBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>À jour</span>';
+          setTimeout(() => {
+            generateBtn.innerHTML = initialText;
+          }, 1800);
+        }, 1000);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.05)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="font-label-sm text-[11px]">Dashboard</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="vendeurs" href="#"><span class="material-symbols-outlined text-[22px]">store</span><span class="font-label-sm text-[11px]">Vendeurs</span></a><a class="relative flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="a-valider" href="#"><div class="relative"><span class="material-symbols-outlined text-[22px]">verified</span><span class="absolute -top-1 -right-2.5 bg-tertiary text-on-tertiary font-label-sm text-[10px] leading-tight px-1 rounded-full">8</span></div><span class="font-label-sm text-[11px]">À valider</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary-container font-semibold" data-path="finances" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[11px]">Finances</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="plus" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-[11px]">Plus</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

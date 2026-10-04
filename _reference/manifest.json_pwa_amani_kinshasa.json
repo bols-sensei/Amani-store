@@ -1,0 +1,137 @@
+{
+  "name": "Amani — Marché & Boutiques Kinshasa",
+  "short_name": "Amani",
+  "description": "Marketplace multi-vendeurs de Kinshasa (RDC). Mode, électronique, créateurs locaux et livraison express par motards avec paiement cash à la livraison.",
+  "start_url": "/customer/",
+  "scope": "/customer/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBF9F6",
+  "theme_color": "#8C6D46",
+  "lang": "fr-CD",
+  "dir": "ltr",
+  "categories": [
+    "shopping",
+    "business",
+    "lifestyle"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-72x72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Mes commandes",
+      "short_name": "Commandes",
+      "description": "Suivre l'acheminement de vos colis et l'arrivée du motard",
+      "url": "/customer/orders",
+      "icons": [
+        {
+          "src": "/icons/shortcut-orders.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Mon panier",
+      "short_name": "Panier",
+      "description": "Consulter vos articles et commander en Cash-on-Delivery",
+      "url": "/customer/cart",
+      "icons": [
+        {
+          "src": "/icons/shortcut-cart.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Rechercher",
+      "short_name": "Recherche",
+      "description": "Trouver des articles et filtrer par commune de Kinshasa",
+      "url": "/customer/search",
+      "icons": [
+        {
+          "src": "/icons/shortcut-search.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Conseiller WhatsApp",
+      "short_name": "Assistance",
+      "description": "Échanger directement avec l'équipe support locale sur WhatsApp",
+      "url": "https://wa.me/243812345678?text=Bonjour%20Amani%20Kinshasa",
+      "icons": [
+        {
+          "src": "/icons/shortcut-whatsapp.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/screen-home-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Page d'accueil Amani avec sélecteur de devises USD/CDF et livraison rapide"
+    },
+    {
+      "src": "/screenshots/screen-tracking-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Suivi de commande et localisation du motard coursier en temps réel"
+    },
+    {
+      "src": "/screenshots/screen-home-desktop.png",
+      "sizes": "1440x900",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Marketplace Amani sur grand écran"
+    }
+  ],
+  "prefer_related_applications": false,
+  "related_applications": []
+}

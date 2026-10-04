@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Amani — Portail</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="shared/js/tailwind.config.js"></script>
+<style>.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400}</style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<main class="max-w-3xl mx-auto px-margin-mobile py-space-xl">
+  <header class="flex items-center gap-3 mb-space-lg">
+    <img src="shared/images/logo.svg" alt="Amani" class="h-10 w-auto"/>
+  </header>
+  <h1 class="font-headline-xl-mobile text-headline-xl-mobile mb-1">Portail du prototype</h1>
+  <p class="text-on-surface-variant mb-space-lg">Choisissez un espace. Chaque espace a sa page de connexion, sa barre d'onglets et ses écrans reliés entre eux.</p>
 
+  <div id="spaces" class="grid gap-4"></div>
+</main>
+
+<script src="shared/js/routes.js"></script>
+<script>
+  (function () {
+    var R = window.AmaniRoutes, host = document.getElementById('spaces');
+    Object.keys(R.entries).forEach(function (role) {
+      var e = R.entries[role];
+      var list = Object.keys(R.pages).filter(function (k) { return k.indexOf(role + '/') === 0; });
+      var links = list.map(function (k) {
+        return '<a class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-secondary-container" href="' + R.pages[k].path + '">' + R.pages[k].t + '</a>';
+      }).join('');
+      host.insertAdjacentHTML('beforeend',
+        '<section class="bg-surface-container-lowest rounded-2xl p-5 shadow-sm">' +
+          '<div class="flex items-center gap-3 mb-3">' +
+            '<span class="material-symbols-outlined text-primary text-[28px]">' + e.icon + '</span>' +
+            '<div class="flex-1"><h2 class="font-headline-md text-headline-md">' + e.label + '</h2>' +
+            '<p class="text-on-surface-variant font-body-md text-body-md">' + e.desc + '</p></div>' +
+            '<a href="' + R.pages[e.login].path + '" class="px-4 py-2 rounded-full bg-primary text-on-primary font-label-lg text-label-lg">Ouvrir</a>' +
+          '</div>' +
+          '<details><summary class="cursor-pointer text-primary font-label-lg text-label-lg py-1">Toutes les pages (' + list.length + ')</summary>' +
+          '<div class="flex flex-wrap gap-2 pt-3">' + links + '</div></details>' +
+        '</section>');
+    });
+  })();
+</script>
+</body>
+</html>

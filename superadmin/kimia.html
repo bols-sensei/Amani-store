@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f6;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(38,30,23,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xm3QBqwjVUmyYbF9hSATd2TnJjJS2CrBYUTFAqIcJ593e50jx7s61lLuuxyn8etHtXZI1x4m_mVH_unjjnVYhCxeAK8sXLClJymwtlOa-4ohHyolti0yoWB_1PPxyL9_dj453Nrd-szRMxwcW3esL2qpMCt5sdP0E-JIopZ7srPGfaY8yTqTGIqURkHrWVwQWkgmnzAMwkgoxUSd3DYrgxhWDLC_tnv2sLBLyZxwoaGnvjxL4PWVPxX84"/><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-md text-body-lg text-on-surface tracking-tight leading-none">Amani</span><span class="font-label-sm text-[10px] leading-none uppercase tracking-wider bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded-full">SUPERADMIN</span></div><span class="font-label-sm text-[11px] text-on-surface-variant truncate max-w-[110px]">Finances</span></div></div><div class="flex items-center gap-2"><div class="inline-flex items-center bg-surface-container rounded-full p-0.5 shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)]"><button class="px-2 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-[11px] shadow-[0_1px_3px_rgba(38,30,23,0.08)]" type="button">USD</button><button class="px-2 py-1 rounded-full text-on-surface-variant font-label-sm text-[11px]" type="button">CDF</button></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_1px_4px_rgba(113,85,48,0.25)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Ambient Banner / Breadcrumb & Status -->
+<section class="px-margin-mobile pt-space-sm pb-space-xs flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">account_balance</span>
+<span class="font-label-sm text-label-sm">ERP &amp; Comptabilité OHADA</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary-container shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary-fixed"></span>
+</span>
+<span class="font-label-sm text-label-sm tracking-tight">Connecté • Temps réel</span>
+</div>
+</div>
+<div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">Intégration Kimia ERP</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-snug">
+        Passerelle comptable, synchronisation des écritures &amp; flux financiers RDC
+      </p>
+</div>
+</section>
+<!-- Section 1: Hero Connection Card -->
+<section class="px-margin-mobile py-space-sm">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest p-space-md shadow-[0_2px_12px_rgba(38,30,23,0.06)] flex flex-col gap-space-md">
+<!-- Decorative watermarked subtle badge -->
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-secondary-container/40 pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[28px]">sync_alt</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight">Kimia ERP Pro</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm">Opérationnel</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">API REST v3.2 • Kinshasa Secure Bridge</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform" id="btn-health-check" title="Vérifier la connexion">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+</button>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="grid grid-cols-2 gap-space-sm relative z-10 pt-space-xs">
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">schedule</span>
+<span class="font-label-sm text-label-sm">Dernière sync globale</span>
+</div>
+<span class="font-headline-md text-[14px] text-on-surface font-semibold">17:45 UTC+1 <span class="font-label-sm text-on-surface-variant font-normal">(il y a 5 min)</span></span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">speed</span>
+<span class="font-label-sm text-label-sm">Latence dédiée Gombe</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-[14px] text-tertiary font-bold">24 ms</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Liaison Rawbank</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between px-3 py-2 rounded-lg bg-surface-container text-on-surface-variant text-label-sm font-label-sm relative z-10">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">verified_user</span>
+<span>Token JWT mTLS : Validité active</span>
+</div>
+<span class="font-semibold text-on-surface">31 Déc. 2026</span>
+</div>
+</div>
+</section>
+<!-- Section 2: KPIs & Performance Cards -->
+<section class="px-margin-mobile py-space-xs">
+<div class="grid grid-cols-3 gap-2">
+<!-- Sync Réussies -->
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-[0_1px_6px_rgba(38,30,23,0.04)] flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">Succès</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">check_circle</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">1 245</span>
+<p class="font-label-sm text-[10px] text-tertiary font-semibold mt-0.5">+42 aujourd'hui</p>
+</div>
+<div class="mt-2 w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 99.8%"></div>
+</div>
+</div>
+<!-- Échecs de Sync -->
+<div class="p-3 rounded-xl bg-error-container/40 shadow-[0_1px_6px_rgba(38,30,23,0.04)] flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-[11px] text-on-error-container">Rejets</span>
+<span class="material-symbols-outlined text-error text-[18px]">error</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-error font-bold tracking-tight">3</span>
+<a class="font-label-sm text-[10px] text-error font-semibold underline block mt-0.5" href="#log-echec">Voir rejets</a>
+</div>
+<div class="mt-2 w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 0.2%"></div>
+</div>
+</div>
+<!-- En attente / Queue -->
+<div class="p-3 rounded-xl bg-surface-container-lowest shadow-[0_1px_6px_rgba(38,30,23,0.04)] flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-[11px] text-on-surface-variant">File Queue</span>
+<span class="material-symbols-outlined text-primary-container text-[18px]">hourglass_empty</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">0</span>
+<p class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">Flux direct</p>
+</div>
+<div class="mt-2 w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 0%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Proactive Action Button -->
+<section class="px-margin-mobile py-space-sm">
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary-container active:scale-[0.98] transition-all duration-150 p-space-md rounded-xl shadow-md flex items-center justify-between" id="btn-sync-trigger">
+<div class="flex items-center gap-space-sm text-left">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest/15 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px] text-on-primary-container" id="sync-icon">sync</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold block leading-tight text-surface-container-lowest">Forcer la synchronisation globale</span>
+<span class="font-label-sm text-label-sm text-on-primary-container/85 block mt-0.5">Rapprochement automatique de 42 écritures</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-primary-container text-[20px]">arrow_forward</span>
+</button>
+</section>
+<!-- Section 4: Filters Pills Navigation -->
+<section class="py-space-xs">
+<div class="px-margin-mobile flex items-center justify-between mb-2">
+<h2 class="font-headline-md text-[18px] text-on-surface font-semibold">Journaux &amp; Transactions Kimia</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 USD = 2 500 FC</span>
+</div>
+<div class="flex gap-2 overflow-x-auto px-margin-mobile pb-2 no-scrollbar">
+<button class="px-3.5 py-1.5 rounded-full bg-on-surface text-surface font-label-md text-label-md shrink-0 shadow-sm">
+        Tous les flux (1 248)
+      </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shrink-0 shadow-sm hover:bg-surface-container">
+        Succès (1 245)
+      </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-error font-label-md text-label-md shrink-0 shadow-sm hover:bg-surface-container flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+        Échecs (3)
+      </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shrink-0 shadow-sm hover:bg-surface-container">
+        Journal de réconciliation
+      </button>
+</div>
+</section>
+<!-- Section 5: Real-time Transaction Logs Cards -->
+<section class="px-margin-mobile flex flex-col gap-space-sm pt-space-xs pb-space-md">
+<!-- Log 1: Succès Vente Awa Mode -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(38,30,23,0.04)] flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">ORD-2026-00142</span>
+<span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">Vente</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">Chez Awa Mode • Marché Central Gombe</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-[16px] font-bold text-on-surface">$20.00</span>
+<p class="font-label-sm text-[11px] text-on-surface-variant">50 000 FC</p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1 mt-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Écriture OHADA :</span>
+<span class="font-mono font-semibold text-primary">Journal Ventes #KMA-JV-9412</span>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Commission Amani (2%) :</span>
+<span class="font-semibold text-tertiary">$0.40 USD (1 000 FC)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-label-sm font-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>140 ms</span>
+</div>
+<span>Aujourd'hui à 17:42 UTC+1</span>
+</div>
+</div>
+<!-- Log 2: Succès ÉlectroMoussa -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(38,30,23,0.04)] flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">ORD-2026-00141</span>
+<span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">Vente</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">ÉlectroMoussa Kinshasa • Victoire</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-[16px] font-bold text-on-surface">$12.00</span>
+<p class="font-label-sm text-[11px] text-on-surface-variant">30 000 FC</p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1 mt-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Écriture OHADA :</span>
+<span class="font-mono font-semibold text-primary">Facturation &amp; Comm #KMA-JV-9411</span>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Commission Amani (1%) :</span>
+<span class="font-semibold text-tertiary">$0.12 USD (300 FC)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-label-sm font-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>118 ms</span>
+</div>
+<span>Aujourd'hui à 17:30 UTC+1</span>
+</div>
+</div>
+<!-- Log 3: Échec Temporaire / Conflit NIF -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_2px_12px_rgba(239,68,68,0.12)] flex flex-col gap-2 relative" id="log-echec">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">ORD-2026-00140</span>
+<span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-semibold">Rejet Kimia</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">ModeFatou Boutique • Kintambo</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-[16px] font-bold text-on-surface">$10.00</span>
+<p class="font-label-sm text-[11px] text-on-surface-variant">25 000 FC</p>
+</div>
+</div>
+<!-- Message d'erreur Kimia -->
+<div class="p-2.5 rounded-lg bg-error-container/30 text-on-error-container flex flex-col gap-1 mt-1">
+<div class="flex items-center gap-1 font-label-sm text-label-sm font-bold text-error">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Conflit de compte auxiliaire marchand</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface leading-tight">
+          Code NIF non vérifié Kimia : Identifiant fiscal DGI manquant dans le plan comptable auxiliaire.
+        </p>
+<span class="font-label-sm text-[11px] text-error font-medium mt-1">
+          🔄 Retry automatique 1/3 programmé dans 8 min
+        </span>
+</div>
+<!-- Quick Resolution Action Buttons -->
+<div class="flex items-center gap-2 pt-1">
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold active:scale-95 transition-transform flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+<span>Forcer l'écriture</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold active:scale-95 transition-transform flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+<span>Mapper le NIF</span>
+</button>
+</div>
+</div>
+<!-- Log 4: Succès Kin Tech Store -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(38,30,23,0.04)] flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">ORD-2026-00139</span>
+<span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">High-Tech</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">Kin Tech Store • Huileries</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-[16px] font-bold text-on-surface">$85.00</span>
+<p class="font-label-sm text-[11px] text-on-surface-variant">212 500 FC</p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1 mt-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Commission Amani (1%) :</span>
+<span class="font-semibold text-tertiary">$0.85 USD (2 125 FC)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-label-sm font-label-sm text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>135 ms</span>
+</div>
+<span>Aujourd'hui à 15:55 UTC+1</span>
+</div>
+</div>
+<!-- Log 5: Règlement Mensuel SaaS Chez Awa -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(38,30,23,0.04)] flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">INV-2026-00042</span>
+<span class="font-label-sm text-[11px] px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-medium">Abonnement</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">Règlement Mensuel • Chez Awa Mode</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-[16px] font-bold text-on-surface">$18.50</span>
+<p class="font-label-sm text-[11px] text-on-surface-variant">46 250 FC</p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1 mt-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Encaissement :</span>
+<span class="font-semibold text-on-surface">M-Pesa RDC • Trésorerie Amani</span>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant">Imputation Bancaire :</span>
+<span class="font-mono font-medium text-primary">Rawbank USD #KMA-BQ-104</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1 text-label-sm font-label-sm text-on-surface-variant">
+<span class="font-label-sm text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check</span>
+          Rapproché bancaire
+        </span>
+<span>Aujourd'hui à 14:10 UTC+1</span>
+</div>
+</div>
+</section>
+<!-- Section 6: Connector Security & Audit Config Panel -->
+<section class="px-margin-mobile pb-space-lg">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Paramètres &amp; Sécurité Kimia Gateway</h3>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">TLS 1.3</span>
+</div>
+<div class="flex flex-col gap-2 pt-1 font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center justify-between py-1 border-b border-surface-container">
+<span>Push Webhook RDC :</span>
+<span class="font-semibold text-on-surface">Immédiat au scan QR motard</span>
+</div>
+<div class="flex items-center justify-between py-1 border-b border-surface-container">
+<span>Signature Payload :</span>
+<span class="font-mono text-on-surface">HMAC SHA-256 (Clé rotate 90j)</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span>Serveur de réplication :</span>
+<span class="text-on-surface font-semibold">Cloud Kinshasa (Gombe Datacenter)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Notification Toast for Delight (Controlled via local micro-interactions) -->
+<div class="fixed bottom-20 left-4 right-4 z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none" id="toast-sync">
+<div class="p-3.5 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-2xl flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">cloud_sync</span>
+<div>
+<p class="font-label-md text-label-md font-bold">Synchronisation Kimia terminée</p>
+<p class="font-label-sm text-[11px] text-inverse-on-surface/80">42 écritures OHADA validées sans écart.</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-fixed font-bold">24ms</span>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Interactive trigger for Force Global Sync with micro-delight
+    const syncBtn = document.getElementById('btn-sync-trigger');
+    const syncIcon = document.getElementById('sync-icon');
+    const healthCheckBtn = document.getElementById('btn-health-check');
+    const toast = document.getElementById('toast-sync');
+
+    function triggerVisualSync() {
+      if (!syncIcon) return;
+      syncIcon.classList.add('animate-spin');
+      
+      setTimeout(() => {
+        syncIcon.classList.remove('animate-spin');
+        if (toast) {
+          toast.classList.remove('translate-y-32', 'opacity-0');
+          toast.classList.add('translate-y-0', 'opacity-100');
+          setTimeout(() => {
+            toast.classList.add('translate-y-32', 'opacity-0');
+            toast.classList.remove('translate-y-0', 'opacity-100');
+          }, 3500);
+        }
+      }, 1000);
+    }
+
+    if (syncBtn) {
+      syncBtn.addEventListener('click', triggerVisualSync);
+    }
+    if (healthCheckBtn) {
+      healthCheckBtn.addEventListener('click', function() {
+        healthCheckBtn.classList.add('animate-spin');
+        setTimeout(() => {
+          healthCheckBtn.classList.remove('animate-spin');
+        }, 800);
+      });
+    }
+
+    // Set tabbar highlight to 'plus' since this is an admin setup/integration screen
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'plus') {
+        link.classList.remove('text-on-surface-variant');
+        link.classList.add('text-primary-container', 'font-semibold');
+      }
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.05)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="font-label-sm text-[11px]">Dashboard</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="vendeurs" href="#"><span class="material-symbols-outlined text-[22px]">store</span><span class="font-label-sm text-[11px]">Vendeurs</span></a><a class="relative flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="a-valider" href="#"><div class="relative"><span class="material-symbols-outlined text-[22px]">verified</span><span class="absolute -top-1 -right-2.5 bg-tertiary text-on-tertiary font-label-sm text-[10px] leading-tight px-1 rounded-full">8</span></div><span class="font-label-sm text-[11px]">À valider</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="finances" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[11px]">Finances</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="plus" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-[11px]">Plus</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

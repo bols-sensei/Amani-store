@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script></head><body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(38,30,23,0.04)] pt-safe"><div class="h-28 px-margin-mobile flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XjIfsenHcmKn3krWQuLOUae2JeOsxLQN1TjhDCTVQdDaq4EbFi7MpQGvgP1_5DMjg8ibCDLrD12vbFxmnTgjwyDcN4TkLVi9Ngl-8PX2l23okCHBwCHNvw3O3ZOTdPmJeNB0-U6r2jjwKWfarvxhAqhmLw3gvvxi6uJPA0sFPiEhH_LM9-AI6o5EgRcH6Eglh94XeGACYfpeMHMkaRCpQ7epv6VbutIWbg5gVGPsDLRU3FEagxn7vOvu8"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">Amani</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Accueil</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-secondary-container/60 p-0.5 rounded-full shadow-[0_1px_3px_rgba(38,30,23,0.04)]"><button class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(38,30,23,0.08)]" type="button">USD $</button><button class="px-2 py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm" type="button">CDF FC</button></div><a aria-label="WhatsApp Support" class="w-11 h-11 flex items-center justify-center rounded-full bg-tertiary-container/10 text-tertiary active:scale-95 transition-transform" href="https://wa.me/243000000000"><span class="material-symbols-outlined text-[20px]">chat</span></a><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(38,30,23,0.12)]" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-tertiary rounded-full shadow-[0_0_0_1.5px_#fbf9f6]"></span></div></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface max-w-[150px] shadow-[0_1px_2px_rgba(38,30,23,0.04)]"><span class="material-symbols-outlined text-primary text-[16px]">location_on</span><span class="font-label-sm text-label-sm truncate font-medium">Kinshasa, Gombe</span></div><div class="flex-1 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_4px_rgba(38,30,23,0.04)]"><span class="material-symbols-outlined text-outline text-[18px]">search</span><span class="font-body-md text-body-md text-outline truncate">Rechercher sur Amani...</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-20 bg-surface"><div class="flex flex-col w-full pb-28">
+<!-- Header barre d'action contextuelle produit -->
+<div class="flex items-center justify-between px-margin-mobile py-space-sm bg-surface-container-lowest shadow-sm rounded-b-xl">
+<button aria-label="Retour" class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm shadow-sm active:scale-95 transition-all" id="toggle-currency-btn" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">currency_exchange</span>
+<span id="currency-mode-tag">USD ($)</span>
+</button>
+<button aria-label="Partager le produit" class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface active:scale-95 transition-transform" id="share-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<button aria-label="Ajouter aux favoris" class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant active:scale-95 transition-transform" id="favorite-btn" type="button">
+<span class="material-symbols-outlined text-[22px]" id="fav-icon">favorite</span>
+</button>
+</div>
+</div>
+<!-- Showcase Galerie Image & Vignettes -->
+<div class="px-margin-mobile pt-space-md">
+<div class="relative w-full aspect-square bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex items-center justify-center">
+<!-- Badges flottants d'assurance congolaise -->
+<div class="absolute top-3 left-3 z-10 flex flex-col gap-1.5 items-start">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/90 backdrop-blur-md text-on-tertiary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Vérifié Amani
+        </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-highest/95 backdrop-blur-md text-on-surface font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px] text-tertiary">inventory_2</span>
+          En stock à Kinshasa (Gombe)
+        </span>
+</div>
+<!-- Indicateur de position photo -->
+<div class="absolute bottom-3 right-3 z-10 px-2.5 py-0.5 rounded-full bg-inverse-surface/70 backdrop-blur-md text-inverse-on-surface font-label-sm text-label-sm tracking-wider">
+<span id="gallery-counter">1</span> / 4
+      </div>
+<!-- Image Principale -->
+<img alt="Montre Automatique Homme Cuir Vintage Cadran Bleu" class="w-full h-full object-contain p-4 transition-all duration-300 transform scale-100 hover:scale-105" id="main-product-img" src="https://lh3.googleusercontent.com/aida/AEtjO1WJGUuyNCv7X3npbk7xRvYU2M81fhItJWTF4OQJM3uZVomIzi-zGbvsA3bSxHIAE29FDWEkRDoVWCIy2ZfhIOULqrIdCQfO_xMjAqKYMxhtZkkIIvjEyYPT29eYakAm-jgnIt6dkRVA9F4VfQ2A60xTCadz64jdcMgNDbFjYdfgf1eQw48z7GPe7WnpGL4xbBjVGegdBjMjVPHdliGqFjViA39L-Y-odfnfZeIeaiITo3v-h7qeeEVecmI"/>
+</div>
+<!-- Mini vignettes interactives -->
+<div class="flex items-center justify-center gap-space-sm mt-3">
+<button class="gallery-thumb w-14 h-14 rounded-lg bg-surface-container-lowest shadow-md p-1 opacity-100 scale-105 transition-all" data-img="https://lh3.googleusercontent.com/aida/AEtjO1WJGUuyNCv7X3npbk7xRvYU2M81fhItJWTF4OQJM3uZVomIzi-zGbvsA3bSxHIAE29FDWEkRDoVWCIy2ZfhIOULqrIdCQfO_xMjAqKYMxhtZkkIIvjEyYPT29eYakAm-jgnIt6dkRVA9F4VfQ2A60xTCadz64jdcMgNDbFjYdfgf1eQw48z7GPe7WnpGL4xbBjVGegdBjMjVPHdliGqFjViA39L-Y-odfnfZeIeaiITo3v-h7qeeEVecmI" data-index="1" type="button">
+<img alt="Vue de face" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WJGUuyNCv7X3npbk7xRvYU2M81fhItJWTF4OQJM3uZVomIzi-zGbvsA3bSxHIAE29FDWEkRDoVWCIy2ZfhIOULqrIdCQfO_xMjAqKYMxhtZkkIIvjEyYPT29eYakAm-jgnIt6dkRVA9F4VfQ2A60xTCadz64jdcMgNDbFjYdfgf1eQw48z7GPe7WnpGL4xbBjVGegdBjMjVPHdliGqFjViA39L-Y-odfnfZeIeaiITo3v-h7qeeEVecmI"/>
+</button>
+<button class="gallery-thumb w-14 h-14 rounded-lg bg-surface-container-lowest shadow-sm p-1 opacity-60 hover:opacity-100 transition-all" data-index="2" data-placeholder="2" type="button">
+<img class="w-full h-full object-cover rounded" data-alt="Close-up macro shot of an automatic watch blue dial, polished silver hands, textured leather strap details in warm ambient boutique lighting, studio product photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk6xY_CY_7hvaGvfrtNkBGqz_yvO-klepogKZcdkURLffo-WKLu_WcXcIbfebhZjV8fnd2lZRHRu6iQ8dyLm0PmPS6_JcbYHPLXr_2oLmQgXloCfWEyJO3r224E4KxFrh9V9yvIaTwpEfkl-fKT12uAL7ZG62t_IerjwgNn1ZuNdo597HUvsfXNpUjolHBFL9PpuuYpYrAksEAIuTBJjNXCTxgelubyi4vkN2qWz5LW0IdeO9G77jq"/>
+</button>
+<button class="gallery-thumb w-14 h-14 rounded-lg bg-surface-container-lowest shadow-sm p-1 opacity-60 hover:opacity-100 transition-all" data-index="3" data-placeholder="3" type="button">
+<img class="w-full h-full object-cover rounded" data-alt="Brown textured genuine leather strap with off-white contrast saddle stitching, stainless steel buckle, luxurious warm beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDKbXCsQ0c7SAu5JCj18wVCt-CrUnO2ZhwCsdQxtan0CgmIl4UOIp3rh4YmJ030bsNpffeD-41m33SFjRJy-_jb00E-vejzK-ZSNSb9J_fz28gTZRdyzAcO47iBq-JspuwzQPgANs3OxLD5GEV5VUuBzm5u-5GMEeSd2ThKEIwkHqoELBd-DrIoK-BnHNSHVSMYlvPg6MNqgm5mxWogkUv35qq1BYohKBQFvngRUAoXKxMXpqXne7x"/>
+</button>
+<button class="gallery-thumb w-14 h-14 rounded-lg bg-surface-container-lowest shadow-sm p-1 opacity-60 hover:opacity-100 transition-all" data-index="4" data-placeholder="4" type="button">
+<img class="w-full h-full object-cover rounded" data-alt="Elegant African male wrist wearing luxury vintage automatic watch with brown leather strap in Kinshasa executive lounge, natural golden hour lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_NOF_lKip-Bf-nWHw9hoq4D2TxJH6B8jkCKGC9PYYWVaRXe76Biu1qGgqVnHifPEF5PIt_-6mn68SGOG2zBX63bRIy3JTsyc_nB_MjV1soI2vcbdGmcdeNDZu3qkGq86IDlkUKOPhY5Tvh1MZPEHw1X_G-pjZxPGLeB1tXxNniIrtDXBoaENCk64WvSLn1NdtLwDJwmJ1GG50PFM9ADJurc86JLjatbEy2RqA2FWKengM3IqcOvKH"/>
+</button>
+</div>
+</div>
+<!-- Bloc Titre, Vendeur et Tarification Bidevise -->
+<div class="px-margin-mobile mt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+          Horlogerie &amp; Bijoux • Chez Awa
+        </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/50 text-on-secondary-fixed text-label-sm font-label-sm">
+          Taux fixe : 1$ = 2 500 FC
+        </span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface mt-1">
+        Montre Automatique Homme Cuir Vintage
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Cadran bleu saphir soleillé &amp; bracelet cuir véritable surpiqué à la main.
+      </p>
+<!-- Évaluation vérifiée -->
+<div class="flex items-center gap-space-xs mt-1">
+<div class="flex items-center text-primary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">4.8</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">• (52 avis Kinshasa)</span>
+</div>
+<!-- Pricing Bidevise Dynamique -->
+<div class="mt-space-sm pt-space-sm bg-surface-container-low/70 rounded-lg p-3 flex items-baseline justify-between">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-bold tracking-tight" id="price-main">
+              $12.00
+            </span>
+<span class="font-body-lg text-body-lg text-on-surface-variant font-medium" id="price-secondary">
+              ≈ 30 000 FC
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1 font-semibold mt-0.5">
+<span class="material-symbols-outlined text-[14px]">price_check</span>
+            Prix net sans taxe cachée • Paiement à la réception
+          </span>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-lowest text-primary shadow-sm active:rotate-180 transition-transform" id="switch-currency-icon-btn" title="Inverser devise" type="button">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Variantes de Bracelet et Quantité -->
+<div class="px-margin-mobile mt-space-md flex flex-col gap-space-sm">
+<!-- Choix du Bracelet -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-2.5">
+<span class="font-label-lg text-label-lg text-on-surface">Modèle de bracelet :</span>
+<span class="font-label-md text-label-md text-primary font-semibold" id="selected-variant-label">Cuir Brun Classique</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="variant-btn active flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-high text-on-surface shadow-sm transition-all" data-variant="Cuir Brun Classique" type="button">
+<span class="w-6 h-6 rounded-full bg-[#8B5A2B] shadow-inner"></span>
+<span class="font-label-sm text-label-sm text-center leading-tight">Cuir Brun</span>
+</button>
+<button class="variant-btn flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-low text-on-surface-variant transition-all hover:bg-surface-container" data-variant="Cuir Noir Surpiqué" type="button">
+<span class="w-6 h-6 rounded-full bg-[#202020] shadow-inner"></span>
+<span class="font-label-sm text-label-sm text-center leading-tight">Cuir Noir</span>
+</button>
+<button class="variant-btn flex flex-col items-center gap-1 p-2 rounded-lg bg-surface-container-low text-on-surface-variant transition-all hover:bg-surface-container" data-variant="Acier Argenté Brossé" type="button">
+<span class="w-6 h-6 rounded-full bg-[#B0B7BD] shadow-inner"></span>
+<span class="font-label-sm text-label-sm text-center leading-tight">Acier Métal</span>
+</button>
+</div>
+</div>
+<!-- Sélecteur de Quantité & Alerte Stock -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Quantité</span>
+<span class="font-label-sm text-label-sm text-error flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[13px]">alarm</span>
+          Plus que 3 pièces en stock !
+        </span>
+</div>
+<div class="flex items-center gap-3 bg-surface-container-low p-1 rounded-full shadow-inner">
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" id="qty-minus" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<span class="font-headline-md text-headline-md text-on-surface px-1 min-w-[20px] text-center" id="qty-val">1</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" id="qty-plus" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Carte Vendeur & Réassurance Locale Congolaise -->
+<div class="px-margin-mobile mt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<!-- En-tête Boutique -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="relative w-12 h-12 rounded-full overflow-hidden bg-secondary-container shadow-sm flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Portrait of an elegant Congolese boutique owner woman in warm modern Kinshasa showroom, warm earth tone lighting, friendly welcoming smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI4mAJhaIw-krRSuC3jjeaR0XIby5SFLzXQRhuMtocXV1zYzdIIZ-xGYv4UQ9PYthSV2YkoggrHuQ5HV7gNTFEVf6q7fetNO9EkGGmIxB8vj2cXO7U06KWiX5svbD1FFEvYAFWPXfaLZsYP5R_XFSsJdN2R-DvWknC3VvOOsJ31uuI9A8uIEhgfzG0tO8G_f4uTC32UIcPQhi504Jz3UhfZshoGTUScbKQpWvZfAFFEjOid9yofSNS"/>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Chez Awa Kinshasa</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Boulevard du 30 Juin, Gombe</span>
+<div class="flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">4.7 / 5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(128 commandes honorées)</span>
+</div>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm shadow-sm active:scale-95 transition-transform" type="button">
+          Boutique
+        </button>
+</div>
+<!-- Action Directe WhatsApp Vendeur -->
+<a class="w-full py-2.5 px-3 rounded-lg bg-tertiary-container/15 text-tertiary flex items-center justify-center gap-2 font-label-lg text-label-lg active:scale-95 transition-all shadow-sm" href="https://wa.me/243810000000?text=Bonjour%20Chez%20Awa,%20je%20suis%20intéressé(e)%20par%20la%20Montre%20Automatique%20sur%20Amani">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Discuter avec Awa (+243 81...)</span>
+</a>
+<!-- 4 Piliers de Confiance Kinshasa -->
+<div class="grid grid-cols-1 gap-2 pt-2">
+<div class="flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Livraison Express en 24h</span>
+<span class="font-body-md text-[13px] text-on-surface-variant">Gombe, Limete, Ngaliema, Kintambo, Lemba &amp; environs.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">payments</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Paiement à la livraison</span>
+<span class="font-body-md text-[13px] text-on-surface-variant">Espèces en USD / CDF ou Mobile Money (M-Pesa, Airtel Money, Orange Money).</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Garantie "Toucher &amp; Essayer"</span>
+<span class="font-body-md text-[13px] text-on-surface-variant">Vérifiez la montre et essayez le fermoir avant de remettre les fonds au coursier.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Accordéons descriptifs et caractéristiques -->
+<div class="px-margin-mobile mt-space-md flex flex-col gap-2">
+<!-- Description tab -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden" open="">
+<summary class="flex items-center justify-between p-space-md cursor-pointer list-none select-none">
+<span class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">description</span>
+          Description du produit
+        </span>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md pt-0 font-body-md text-body-md text-on-surface-variant space-y-2">
+<p>
+          Cette montre automatique classique allie l'authenticité d'un cuir vieilli artisanal et la précision d'un mécanisme horloger à remontage naturel. 
+        </p>
+<p>
+          Conçue pour l'homme kinois raffiné, elle s'adapte aussi bien à un costume formel sur le Boulevard du 30 Juin qu'à une tenue décontractée de week-end en terrasse.
+        </p>
+</div>
+</details>
+<!-- Fiche Technique -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<summary class="flex items-center justify-between p-space-md cursor-pointer list-none select-none">
+<span class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+          Spécifications techniques
+        </span>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md pt-0 text-body-md font-body-md text-on-surface-variant">
+<div class="grid grid-cols-2 gap-2 text-label-sm">
+<div class="p-2 bg-surface-container-low rounded">
+<span class="text-on-surface-variant">Diamètre boîtier :</span>
+<p class="font-semibold text-on-surface">41 mm</p>
+</div>
+<div class="p-2 bg-surface-container-low rounded">
+<span class="text-on-surface-variant">Mouvement :</span>
+<p class="font-semibold text-on-surface">Automatique (Kinetic)</p>
+</div>
+<div class="p-2 bg-surface-container-low rounded">
+<span class="text-on-surface-variant">Verre :</span>
+<p class="font-semibold text-on-surface">Minéral anti-rayures</p>
+</div>
+<div class="p-2 bg-surface-container-low rounded">
+<span class="text-on-surface-variant">Étanchéité :</span>
+<p class="font-semibold text-on-surface">3 ATM (Gouttes &amp; pluie)</p>
+</div>
+<div class="p-2 bg-surface-container-low rounded col-span-2">
+<span class="text-on-surface-variant">Bracelet :</span>
+<p class="font-semibold text-on-surface">Cuir surpiqué interchangeable 20 mm</p>
+</div>
+</div>
+</div>
+</details>
+<!-- Politique de Retours -->
+<details class="group bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<summary class="flex items-center justify-between p-space-md cursor-pointer list-none select-none">
+<span class="font-label-lg text-label-lg text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">assignment_return</span>
+          Retour &amp; Échange (Kinshasa)
+        </span>
+<span class="material-symbols-outlined text-on-surface-variant group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="px-space-md pb-space-md pt-0 font-body-md text-body-md text-on-surface-variant">
+<p>
+          Vous disposez de <strong>7 jours ouvrables</strong> pour échanger votre produit en boutique physique à la Gombe ou demander un remplacement sans frais en cas de défaut avéré.
+        </p>
+</div>
+</details>
+</div>
+<!-- Avis Clients Vérifiés de Kinshasa -->
+<div class="px-margin-mobile mt-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">Retours d'expérience</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Clients réels livrés à Kinshasa</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-primary font-bold">4.8 / 5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">52 évaluations</span>
+</div>
+</div>
+<!-- Liste d'avis -->
+<div class="space-y-3">
+<!-- Avis 1 -->
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Serge K.</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                Limete
+              </span>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+            "Très belle montre, reçue le jour même directement à mon lieu de travail à la Gombe. J'ai payé par M-Pesa après avoir testé. Impeccable !"
+          </p>
+</div>
+<!-- Avis 2 -->
+<div class="p-3 bg-surface-container-low rounded-lg flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Dieudonné M.</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span>
+                Ngaliema
+              </span>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+            "Le cadran bleu attire vraiment l'œil à la lumière du soleil. Le coursier a été très patient pour l'essayage."
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommandations / Dans la même boutique -->
+<div class="px-margin-mobile mt-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Aussi chez "Chez Awa"</h3>
+<a class="font-label-sm text-label-sm text-primary font-semibold" href="#">Tout voir</a>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Premium men minimalist cotton t-shirt neatly folded on wooden table, warm beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATBhZg6wGf78B2mw1b53UCTYikKcs46FU3Bpm7dZulAE3sOcHmeCqmCnzZMmEtUNkI0LjNwOubZ655WQS-w7YLL3wQFMU4IAy-4_xL3x3q4Rm4gOGx9HMcajmUQaHVQZE2CORtgpYcgaGbkblgi5S9qxlrY7DOc1bnt76BBI5Bunz8BcxZv0W5ZKPeYqXzqD6Asn4gjHFgqBw01b0NAysS4_f4inIee3XSdjVI-VusGEYj2H5iiPBE"/>
+<span class="absolute top-1.5 right-1.5 px-2 py-0.5 rounded-full bg-surface/90 text-on-surface font-label-sm text-[10px]">Stock Gombe</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate mt-2">Polo Coton Égyptien</span>
+<span class="font-headline-md text-body-lg text-on-surface font-bold mt-0.5">$8.50 <span class="font-normal text-label-sm text-on-surface-variant">(21 250 FC)</span></span>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col">
+<div class="w-full aspect-square rounded-lg bg-surface-container-low overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Pair of brown leather dress shoes on sand linen background, warm luxury African commerce styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5bWDEQfQ0Y-5QW5xfsvs6EG7T6euf2EzATep4GtdOlot7W1re93w7KsUo3p_HZR2jjucc2VB2mZzgcnGG7OlJC22MgE9mGRasD2kAks5DKz5p_w1pwqNBJBvF0leocu6yCL5j74CAKQygDXcbej21mppFchNHb0PAlFIXI2pbinSQq4l4dzMSpxw8ShArtNmXqCFb3Pl__JC8hwz3KrI85GQQ8mX8yMP-ayrtQZkCt8ADTck1KPgS"/>
+<span class="absolute top-1.5 right-1.5 px-2 py-0.5 rounded-full bg-surface/90 text-on-surface font-label-sm text-[10px]">Stock Gombe</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate mt-2">Mocassins Cuir Nubuck</span>
+<span class="font-headline-md text-body-lg text-on-surface font-bold mt-0.5">$28.00 <span class="font-normal text-label-sm text-on-surface-variant">(70 000 FC)</span></span>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Bar (au dessus de la tab bar) -->
+<div class="fixed bottom-16 inset-x-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(38,30,23,0.08)] px-margin-mobile py-2.5">
+<div class="max-w-md mx-auto flex items-center justify-between gap-3">
+<!-- Rappel Prix -->
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-wider">Total estimé</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold truncate leading-tight" id="bottom-bar-price">
+          $12.00
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate" id="bottom-bar-subprice">
+          ≈ 30 000 FC
+        </span>
+</div>
+<!-- Actions CTA -->
+<div class="flex items-center gap-2 shrink-0">
+<!-- Bouton WhatsApp Express -->
+<a aria-label="Acheter via WhatsApp" class="w-12 h-12 flex items-center justify-center rounded-xl bg-tertiary-container/15 text-tertiary active:scale-95 transition-transform shadow-sm" href="https://wa.me/243810000000?text=Bonjour,%20je%20souhaite%20commander%20la%20Montre%20Automatique%20sur%20Amani">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+</a>
+<!-- Bouton Ajouter au Panier Principal -->
+<button class="h-12 px-5 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-2 active:scale-95 transition-all shadow-md" id="add-to-cart-cta" type="button">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span id="cta-label">Ajouter (30 000 FC)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Micro-interactions interactives vanille JS -->
+<script>
+  (function() {
+    // État local
+    let currentCurrency = 'USD'; // 'USD' ou 'CDF'
+    const unitPriceUSD = 12.00;
+    const rateUSDToCDF = 2500;
+    let quantity = 1;
+    let isFavorite = false;
+
+    // Éléments DOM
+    const priceMain = document.getElementById('price-main');
+    const priceSecondary = document.getElementById('price-secondary');
+    const bottomBarPrice = document.getElementById('bottom-bar-price');
+    const bottomBarSubprice = document.getElementById('bottom-bar-subprice');
+    const ctaLabel = document.getElementById('cta-label');
+    const currencyModeTag = document.getElementById('currency-mode-tag');
+    const toggleCurrencyBtn = document.getElementById('toggle-currency-btn');
+    const switchCurrencyIconBtn = document.getElementById('switch-currency-icon-btn');
+    const qtyVal = document.getElementById('qty-val');
+    const qtyMinus = document.getElementById('qty-minus');
+    const qtyPlus = document.getElementById('qty-plus');
+    const favoriteBtn = document.getElementById('favorite-btn');
+    const favIcon = document.getElementById('fav-icon');
+    const mainImg = document.getElementById('main-product-img');
+    const galleryCounter = document.getElementById('gallery-counter');
+    const thumbs = document.querySelectorAll('.gallery-thumb');
+    const variantBtns = document.querySelectorAll('.variant-btn');
+    const selectedVariantLabel = document.getElementById('selected-variant-label');
+
+    function updatePrices() {
+      const totalUSD = (unitPriceUSD * quantity).toFixed(2);
+      const totalCDF = Math.round(unitPriceUSD * rateUSDToCDF * quantity).toLocaleString('fr-FR');
+
+      if (currentCurrency === 'USD') {
+        priceMain.textContent = `$${totalUSD}`;
+        priceSecondary.textContent = `≈ ${totalCDF} FC`;
+        bottomBarPrice.textContent = `$${totalUSD}`;
+        bottomBarSubprice.textContent = `≈ ${totalCDF} FC`;
+        ctaLabel.textContent = `Ajouter (${totalCDF} FC)`;
+        currencyModeTag.textContent = 'USD ($)';
+      } else {
+        priceMain.textContent = `${totalCDF} FC`;
+        priceSecondary.textContent = `≈ $${totalUSD}`;
+        bottomBarPrice.textContent = `${totalCDF} FC`;
+        bottomBarSubprice.textContent = `≈ $${totalUSD}`;
+        ctaLabel.textContent = `Ajouter ($${totalUSD})`;
+        currencyModeTag.textContent = 'CDF (FC)';
+      }
+    }
+
+    function toggleCurrency() {
+      currentCurrency = (currentCurrency === 'USD') ? 'CDF' : 'USD';
+      updatePrices();
+    }
+
+    if (toggleCurrencyBtn) toggleCurrencyBtn.addEventListener('click', toggleCurrency);
+    if (switchCurrencyIconBtn) switchCurrencyIconBtn.addEventListener('click', toggleCurrency);
+
+    // Quantité tactile
+    if (qtyPlus) {
+      qtyPlus.addEventListener('click', () => {
+        if (quantity < 3) {
+          quantity++;
+          qtyVal.textContent = quantity;
+          updatePrices();
+        }
+      });
+    }
+
+    if (qtyMinus) {
+      qtyMinus.addEventListener('click', () => {
+        if (quantity > 1) {
+          quantity--;
+          qtyVal.textContent = quantity;
+          updatePrices();
+        }
+      });
+    }
+
+    // Toggle Favoris
+    if (favoriteBtn && favIcon) {
+      favoriteBtn.addEventListener('click', () => {
+        isFavorite = !isFavorite;
+        if (isFavorite) {
+          favIcon.style.fontVariationSettings = "'FILL' 1";
+          favoriteBtn.classList.remove('text-on-surface-variant');
+          favoriteBtn.classList.add('text-error');
+        } else {
+          favIcon.style.fontVariationSettings = "'FILL' 0";
+          favoriteBtn.classList.remove('text-error');
+          favoriteBtn.classList.add('text-on-surface-variant');
+        }
+      });
+    }
+
+    // Variantes de bracelet
+    variantBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        variantBtns.forEach(b => {
+          b.classList.remove('bg-surface-container-high', 'shadow-sm', 'text-on-surface');
+          b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        btn.classList.add('bg-surface-container-high', 'shadow-sm', 'text-on-surface');
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        if (selectedVariantLabel) {
+          selectedVariantLabel.textContent = btn.getAttribute('data-variant');
+        }
+      });
+    });
+
+    // Galerie micro-interaction
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        thumbs.forEach(t => {
+          t.classList.remove('opacity-100', 'scale-105', 'shadow-md');
+          t.classList.add('opacity-60', 'shadow-sm');
+        });
+        thumb.classList.add('opacity-100', 'scale-105', 'shadow-md');
+        thumb.classList.remove('opacity-60', 'shadow-sm');
+        
+        const index = thumb.getAttribute('data-index');
+        if (galleryCounter) galleryCounter.textContent = index;
+
+        const thumbImg = thumb.querySelector('img');
+        if (thumbImg && mainImg) {
+          mainImg.src = thumbImg.src;
+        }
+      });
+    });
+
+    // Confirmation d'ajout au panier
+    const addToCartCta = document.getElementById('add-to-cart-cta');
+    if (addToCartCta) {
+      addToCartCta.addEventListener('click', () => {
+        const originalText = ctaLabel.textContent;
+        ctaLabel.textContent = 'Ajouté ! ✓';
+        addToCartCta.classList.add('bg-tertiary');
+        setTimeout(() => {
+          ctaLabel.textContent = originalText;
+          addToCartCta.classList.remove('bg-tertiary');
+        }, 1800);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.05)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-gutter-mobile flex justify-around items-center"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="accueil" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Accueil</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="recherche" href="#"><span class="material-symbols-outlined text-[24px]">search</span><span class="font-label-sm text-label-sm">Recherche</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="panier" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute -top-1 -right-2 bg-primary text-on-primary font-label-sm text-[10px] leading-tight px-1.5 py-0.5 rounded-full min-w-[16px] text-center shadow-[0_1px_3px_rgba(38,30,23,0.2)]">3</span></div><span class="font-label-sm text-label-sm">Panier</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="commandes" href="#"><span class="material-symbols-outlined text-[24px]">inventory_2</span><span class="font-label-sm text-label-sm">Commandes</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="compte" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm">Compte</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

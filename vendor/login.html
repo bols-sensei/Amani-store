@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><title>Login</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>@layer base { html, body { width: 100%; margin: 0; padding: 0; min-height: 100%; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col pt-safe pb-safe selection:bg-secondary-container selection:text-on-secondary-container"><main class="flex-1 flex flex-col relative w-full bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-8">
+<div class="flex items-center justify-between py-2 mb-4">
+<a class="inline-flex items-center gap-1 text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Accueil client</span>
+</a>
+<div class="flex items-center gap-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>Kinshasa RDC</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-secondary">
+<span>FR</span>
+<span class="text-outline-variant">•</span>
+<span>+243</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center text-center mb-6">
+<div class="relative mb-3.5">
+<div class="w-[72px] h-[72px] rounded-2xl bg-surface-container-low shadow-sm flex items-center justify-center p-2.5 overflow-hidden">
+<img alt="Logo Amani Vendeur" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xm3QBqwjVUmyYbF9hSATd2TnJjJS2CrBYUTFAqIcJ593e50jx7s61lLuuxyn8etHtXZI1x4m_mVH_unjjnVYhCxeAK8sXLClJymwtlOa-4ohHyolti0yoWB_1PPxyL9_dj453Nrd-szRMxwcW3esL2qpMCt5sdP0E-JIopZ7srPGfaY8yTqTGIqURkHrWVwQWkgmnzAMwkgoxUSd3DYrgxhWDLC_tnv2sLBLyZxwoaGnvjxL4PWVPxX84"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-tertiary text-on-tertiary rounded-full p-1 shadow-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">storefront</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-1.5">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">Amani Vendeur</h1>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+        Marchand
+      </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[330px] leading-relaxed">
+      Pilotez vos ventes, vos livraisons motards et vos encaissements <span class="text-on-surface font-medium">Cash-on-Delivery</span> dans les 24 communes de Kinshasa.
+    </p>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm mb-4">
+<div class="bg-surface-container-low p-1 rounded-xl flex items-center gap-1 mb-5" role="tablist">
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold transition-all duration-200 bg-surface-container-lowest text-on-surface shadow-sm text-center flex items-center justify-center gap-1.5" id="tab-phone" onclick="switchLoginMode('phone')" type="button">
+<span class="material-symbols-outlined text-[16px]">call</span>
+<span>Téléphone (+243)</span>
+</button>
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md font-medium transition-all duration-200 text-on-surface-variant text-center flex items-center justify-center gap-1.5" id="tab-email" onclick="switchLoginMode('email')" type="button">
+<span class="material-symbols-outlined text-[16px]">alternate_email</span>
+<span>Adresse email</span>
+</button>
+</div>
+<form class="flex flex-col gap-4" onsubmit="event.preventDefault();">
+<div class="flex flex-col gap-1.5" id="field-phone">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Numéro marchand Kinshasa</label>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">verified_user</span> M-Pesa / Airtel / Orange
+          </span>
+</div>
+<div class="flex rounded-xl bg-surface-container-low p-1 focus-within:bg-surface-container-lowest focus-within:shadow-sm transition-all duration-150">
+<div class="flex items-center gap-1.5 px-3 py-2 bg-surface-container rounded-lg font-label-md text-label-md text-on-surface font-semibold select-none">
+<span class="text-base leading-none">🇨🇩</span>
+<span>+243</span>
+</div>
+<input class="flex-1 bg-transparent px-3 py-2 text-on-surface font-body-lg text-body-lg placeholder:text-outline-variant focus:outline-none tracking-wide" inputmode="numeric" placeholder="89 543 2190" type="tel"/>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 px-1">
+<span class="material-symbols-outlined text-[14px]">cell_tower</span>
+          Compatible Vodacom M-Pesa, Airtel Money et Orange Money
+        </span>
+</div>
+<div class="hidden flex-col gap-1.5" id="field-email">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Adresse email professionnelle</label>
+<div class="flex rounded-xl bg-surface-container-low p-1 focus-within:bg-surface-container-lowest focus-within:shadow-sm transition-all duration-150">
+<div class="flex items-center px-3 py-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</div>
+<input class="flex-1 bg-transparent pr-3 py-2 text-on-surface font-body-md text-body-md placeholder:text-outline-variant focus:outline-none" placeholder="boutique.gombe@amani.cd" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Mot de passe</label>
+<a class="font-label-sm text-label-sm text-primary hover:text-primary-container transition-colors font-medium" href="#">Mot de passe oublié ?</a>
+</div>
+<div class="flex items-center rounded-xl bg-surface-container-low p-1 focus-within:bg-surface-container-lowest focus-within:shadow-sm transition-all duration-150">
+<div class="flex items-center px-3 py-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<input class="flex-1 bg-transparent pr-2 py-2 text-on-surface font-body-md text-body-md placeholder:text-outline-variant focus:outline-none" id="password-input" placeholder="••••••••••••" type="password"/>
+<button aria-label="Afficher ou masquer mot de passe" class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg transition-colors flex items-center justify-center" onclick="togglePasswordVisibility()" type="button">
+<span class="material-symbols-outlined text-[18px]" id="eye-icon">visibility</span>
+</button>
+</div>
+</div>
+<label class="flex items-start gap-2.5 pt-1 cursor-pointer select-none">
+<input checked="" class="mt-0.5 w-4 h-4 rounded text-primary-container accent-primary-container focus:ring-0" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant leading-tight">
+<strong class="text-on-surface font-medium">Mémoriser cet appareil (PWA)</strong><br/>
+<span class="font-label-sm text-label-sm text-secondary">Restez connecté 30 jours pour recevoir les alertes des motards en temps réel.</span>
+</span>
+</label>
+<button class="mt-2 w-full py-3.5 px-4 rounded-xl bg-primary-container hover:bg-primary active:scale-[0.99] text-on-primary font-label-lg text-label-lg font-semibold shadow-sm transition-all duration-150 flex items-center justify-center gap-2" type="submit">
+<span>Accéder à mon tableau de bord</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<div class="relative my-5 flex items-center justify-center">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute bg-surface-container-lowest px-3 font-label-sm text-label-sm text-secondary uppercase tracking-wider">
+        ou connexion directe
+      </span>
+</div>
+<div class="flex flex-col gap-2.5">
+<button class="w-full py-2.5 px-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container active:scale-[0.99] text-on-surface font-label-md text-label-md font-semibold transition-all duration-150 flex items-center justify-between" type="button">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+</div>
+<div class="flex flex-col text-left">
+<span>Connexion WhatsApp Business</span>
+<span class="font-label-sm text-label-sm text-secondary font-normal">Validation instantanée par message sécurisé</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-tertiary">send</span>
+</button>
+<button class="w-full py-2.5 px-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container active:scale-[0.99] text-on-surface font-label-md text-label-md font-medium transition-all duration-150 flex items-center justify-between" type="button">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-lg bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span>
+</div>
+<div class="flex flex-col text-left">
+<span>Biométrie ou code SMS (OTP)</span>
+<span class="font-label-sm text-label-sm text-secondary font-normal">Empreinte digitale / Face Unlock</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="rounded-2xl bg-surface-container-low p-4 mb-4 flex flex-col gap-3">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">add_business</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold">Pas encore de boutique ?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5 leading-snug">
+          Rejoignez plus de <span class="text-on-surface font-semibold">150 commerçants kinois</span>. Vendez à Gombe, Bandalungwa, Limete, Lemba et Kintambo avec notre flotte de motards dédiés.
+        </p>
+</div>
+</div>
+<a class="w-full py-2.5 px-4 rounded-xl bg-surface-container-lowest hover:bg-surface-bright text-primary font-label-md text-label-md font-semibold text-center transition-colors shadow-sm flex items-center justify-center gap-1.5" href="#">
+<span>Ouvrir ma boutique gratuitement</span>
+<span class="material-symbols-outlined text-[16px]">east</span>
+</a>
+</div>
+<div class="flex flex-col items-center text-center gap-2 px-2">
+<a class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" href="https://wa.me/243812345678" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px] text-tertiary" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+<span>Support vendeur : <strong>+243 81 234 5678</strong> (7j/7)</span>
+</a>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+<span>Chiffrement 256-bit • Données hébergées en conformité RDC</span>
+</div>
+</div>
+</div>
+<script>
+  function switchLoginMode(mode) {
+    const tabPhone = document.getElementById('tab-phone');
+    const tabEmail = document.getElementById('tab-email');
+    const fieldPhone = document.getElementById('field-phone');
+    const fieldEmail = document.getElementById('field-email');
+
+    if (mode === 'phone') {
+      tabPhone.className = "flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold transition-all duration-200 bg-surface-container-lowest text-on-surface shadow-sm text-center flex items-center justify-center gap-1.5";
+      tabEmail.className = "flex-1 py-2 rounded-lg font-label-md text-label-md font-medium transition-all duration-200 text-on-surface-variant text-center flex items-center justify-center gap-1.5";
+      fieldPhone.classList.remove('hidden');
+      fieldPhone.classList.add('flex');
+      fieldEmail.classList.add('hidden');
+      fieldEmail.classList.remove('flex');
+    } else {
+      tabEmail.className = "flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold transition-all duration-200 bg-surface-container-lowest text-on-surface shadow-sm text-center flex items-center justify-center gap-1.5";
+      tabPhone.className = "flex-1 py-2 rounded-lg font-label-md text-label-md font-medium transition-all duration-200 text-on-surface-variant text-center flex items-center justify-center gap-1.5";
+      fieldEmail.classList.remove('hidden');
+      fieldEmail.classList.add('flex');
+      fieldPhone.classList.add('hidden');
+      fieldPhone.classList.remove('flex');
+    }
+  }
+
+  function togglePasswordVisibility() {
+    const input = document.getElementById('password-input');
+    const eyeIcon = document.getElementById('eye-icon');
+    if (input.type === 'password') {
+      input.type = 'text';
+      eyeIcon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      eyeIcon.textContent = 'visibility';
+    }
+  }
+</script></main><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

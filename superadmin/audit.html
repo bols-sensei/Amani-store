@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f6;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(38,30,23,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xm3QBqwjVUmyYbF9hSATd2TnJjJS2CrBYUTFAqIcJ593e50jx7s61lLuuxyn8etHtXZI1x4m_mVH_unjjnVYhCxeAK8sXLClJymwtlOa-4ohHyolti0yoWB_1PPxyL9_dj453Nrd-szRMxwcW3esL2qpMCt5sdP0E-JIopZ7srPGfaY8yTqTGIqURkHrWVwQWkgmnzAMwkgoxUSd3DYrgxhWDLC_tnv2sLBLyZxwoaGnvjxL4PWVPxX84"/><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-md text-body-lg text-on-surface tracking-tight leading-none">Amani</span><span class="font-label-sm text-[10px] leading-none uppercase tracking-wider bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded-full">SUPERADMIN</span></div><span class="font-label-sm text-[11px] text-on-surface-variant truncate max-w-[110px]">Finances</span></div></div><div class="flex items-center gap-2"><div class="inline-flex items-center bg-surface-container rounded-full p-0.5 shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)]"><button class="px-2 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-[11px] shadow-[0_1px_3px_rgba(38,30,23,0.08)]" type="button">USD</button><button class="px-2 py-1 rounded-full text-on-surface-variant font-label-sm text-[11px]" type="button">CDF</button></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_1px_4px_rgba(113,85,48,0.25)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive script for tabs and search simulation -->
+<script>
+    function switchAuditTab(btn, category) {
+      const parent = btn.parentElement;
+      parent.querySelectorAll('button').forEach(b => {
+        b.className = "flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-surface-container-low text-on-surface-variant transition-all";
+      });
+      btn.className = "flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-on-surface text-surface-container-lowest shadow-sm transition-all";
+      
+      const cards = document.querySelectorAll('[data-category]');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function filterAuditLogs(query) {
+      const q = query.toLowerCase();
+      const cards = document.querySelectorAll('[data-category]');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(q)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function switchPeriod(btn) {
+      const container = btn.parentElement;
+      container.querySelectorAll('button').forEach(b => {
+        b.className = "flex-1 py-1.5 px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-all text-center";
+      });
+      btn.className = "flex-1 py-1.5 px-2 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-sm transition-all text-center";
+    }
+  </script>
+<!-- Content Stream Container -->
+<div class="flex flex-col px-margin-mobile gap-4 py-3">
+<!-- 1. Header & Title Section -->
+<div class="flex items-start justify-between gap-3 pt-1">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">Journal d'Audit</h1>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant mt-0.5 line-clamp-1">Traçabilité immuable des actions sensibles</p>
+</div>
+<!-- Action Button: Export -->
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm active:scale-95 transition-transform flex-shrink-0" onclick="alert('Exportation du journal SHA-256 en cours (CSV/JSON)...')">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span class="font-label-sm text-label-sm font-semibold">Exporter</span>
+</button>
+</div>
+<!-- 2. Security & SHA-256 Integrity Banner -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-3.5 shadow-sm gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/15 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[20px]">lock</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface tracking-wide flex items-center gap-1.5">
+              Registre immuable SHA-256
+              <span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant truncate">Bloc #09482 • Synchro Ledger UTC+1</span>
+</div>
+</div>
+<span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-medium">0 faille</span>
+</div>
+<!-- Integrity metrics & period pill switcher -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low/60 p-2.5 rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">verified_user</span>
+<span class="text-on-surface font-semibold">48 logs</span>
+<span class="text-on-surface-variant text-[11px]">/ 7 jours</span>
+</div>
+<div class="w-px h-3.5 bg-surface-container-highest"></div>
+<div class="flex items-center gap-1 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">format_image_left</span>
+<span>Kinshasa Gateway DC1</span>
+</div>
+</div>
+<!-- Period Filter Segment -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-full">
+<button class="flex-1 py-1.5 px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-all text-center" onclick="switchPeriod(this)">
+          Aujourd'hui (8)
+        </button>
+<button class="flex-1 py-1.5 px-2 rounded-full font-label-sm text-label-sm bg-surface-container-lowest text-on-surface shadow-sm transition-all text-center" onclick="switchPeriod(this)">
+          Semaine (48)
+        </button>
+<button class="flex-1 py-1.5 px-2 rounded-full font-label-sm text-label-sm text-on-surface-variant transition-all text-center" onclick="switchPeriod(this)">
+          Mois (210)
+        </button>
+</div>
+</div>
+<!-- 4. Quick Search Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm outline-none focus:ring-1 focus:ring-primary-container transition-all" oninput="filterAuditLogs(this.value)" placeholder="Rechercher par admin, tenant, IP..." type="search"/>
+</div>
+<!-- 3. Category Pills (Horizontal Scrollable) -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 -mx-margin-mobile px-margin-mobile scrollbar-none">
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-on-surface text-surface-container-lowest shadow-sm transition-all" onclick="switchAuditTab(this, 'all')">
+        Tous <span class="bg-surface-container/20 text-surface-container-lowest text-[10px] px-1.5 py-0.2 rounded-full">48</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-surface-container-low text-on-surface-variant transition-all" onclick="switchAuditTab(this, 'kyc')">
+        Vendeurs &amp; KYC <span class="bg-surface-container text-on-surface text-[10px] px-1.5 py-0.2 rounded-full">14</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-surface-container-low text-on-surface-variant transition-all" onclick="switchAuditTab(this, 'commissions')">
+        Commissions &amp; Taux <span class="bg-surface-container text-on-surface text-[10px] px-1.5 py-0.2 rounded-full">9</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-surface-container-low text-on-surface-variant transition-all" onclick="switchAuditTab(this, 'billing')">
+        Facturation SaaS <span class="bg-surface-container text-on-surface text-[10px] px-1.5 py-0.2 rounded-full">12</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-surface-container-low text-on-surface-variant transition-all" onclick="switchAuditTab(this, 'security')">
+        Sécurité &amp; Rôles <span class="bg-surface-container text-on-surface text-[10px] px-1.5 py-0.2 rounded-full">5</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full font-label-sm text-label-sm whitespace-nowrap bg-surface-container-low text-on-surface-variant transition-all" onclick="switchAuditTab(this, 'data')">
+        Imports/Exports <span class="bg-surface-container text-on-surface text-[10px] px-1.5 py-0.2 rounded-full">8</span>
+</button>
+</div>
+<!-- 5. Audit Log Cards List -->
+<div class="flex flex-col gap-3" id="auditList">
+<!-- Event 1: Modification Commission (Aujourd'hui 17:40) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-4 shadow-sm gap-2.5 transition-all" data-category="commissions">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-[11px] bg-secondary-container text-on-secondary-container font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Modification de Commission
+            </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Aujourd'hui, 17:40</span>
+</div>
+<span class="font-label-sm text-[10px] text-tertiary font-mono bg-tertiary-container/10 px-1.5 py-0.5 rounded">il y a 5 min</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary-container">badge</span>
+<span class="font-semibold">Admin Marc K.</span>
+</div>
+<span class="text-on-surface-variant font-mono text-[11px]">105.235.14.88 • Gombe</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">store</span>
+<span>Cible : <span class="font-semibold text-on-surface">Chez Awa</span> <span class="font-mono text-[10px] text-outline">(TENANT-KIN-0089)</span></span>
+</div>
+</div>
+<!-- Before / After Diff Container -->
+<div class="flex flex-col bg-surface-container-low p-2.5 rounded-lg gap-1.5">
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface">
+<span class="text-on-surface-variant line-through bg-surface-container-high px-1.5 py-0.5 rounded">5.0%</span>
+<span class="material-symbols-outlined text-[16px] text-primary">arrow_forward</span>
+<span class="font-semibold text-tertiary bg-tertiary-container/15 px-2 py-0.5 rounded">2.0%</span>
+<span class="text-[12px] text-on-surface-variant font-normal">(Accord volume &gt; $4,000 / mois)</span>
+</div>
+<div class="text-[11px] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">handshake</span>
+<span>Seuil garanti ≈ 10,000,000 FC/mois</span>
+</div>
+</div>
+<div class="flex items-center justify-end pt-1">
+<button class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-on-surface transition-colors py-1">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Voir le contrat notarié lié</span>
+</button>
+</div>
+</div>
+<!-- Event 2: Validation KYC Vendeur (Aujourd'hui 15:15) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-4 shadow-sm gap-2.5 transition-all" data-category="kyc">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-[11px] bg-tertiary-container/20 text-tertiary font-semibold">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              Validation KYC Vendeur
+            </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Aujourd'hui, 15:15</span>
+</div>
+<span class="font-mono text-[10px] text-outline">TX#88219</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary-container">shield_person</span>
+<span class="font-semibold">Superadmin Sarah B.</span>
+</div>
+<span class="text-on-surface-variant font-mono text-[11px]">105.235.14.88 • Gombe</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">storefront</span>
+<span>Cible : <span class="font-semibold text-on-surface">Kin Bio Cosmétiques</span> <span class="font-mono text-[10px] text-outline">(TENANT-KIN-0092)</span></span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1 text-on-surface font-body-md text-[13px] leading-relaxed">
+<p>Validation conjointe du RCCM (CD/KIN/RCCM/23-B-014) et de l'Agrément Ministériel Santé. Compte marchand activé avec statut <span class="font-semibold text-tertiary">Vérifié Amani</span>.</p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[14px]">task_alt</span>
+            Statut actif immédiat
+          </span>
+<button class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors py-1">
+<span class="material-symbols-outlined text-[16px]">folder_shared</span>
+<span>Dossier KYC</span>
+</button>
+</div>
+</div>
+<!-- Event 3: Ajustement Taux de Change (Aujourd'hui 11:20) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-4 shadow-sm gap-2.5 transition-all" data-category="commissions">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-[11px] bg-secondary-fixed text-on-secondary-fixed-variant font-semibold">
+<span class="material-symbols-outlined text-[14px]">currency_exchange</span>
+              Ajustement Taux de Change
+            </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Aujourd'hui, 11:20</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary font-mono bg-primary-fixed/40 px-1.5 py-0.5 rounded">AUTO CRON</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">smart_toy</span>
+<span class="font-semibold">Moteur Automatique Amani Core</span>
+</div>
+<span class="text-on-surface-variant font-mono text-[11px]">System Daemon 01</span>
+</div>
+</div>
+<!-- Before / After Currency Diff -->
+<div class="flex flex-col bg-surface-container-low p-2.5 rounded-lg gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 font-headline-md text-body-lg text-on-surface">
+<span class="line-through text-outline font-normal">2 490 FC</span>
+<span class="material-symbols-outlined text-[16px] text-primary">trending_up</span>
+<span class="font-bold text-primary">2 500 FC</span>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-mono">1 USD = 2 500 CDF</span>
+</div>
+<p class="font-body-md text-[12px] text-on-surface-variant leading-tight">
+            Alignement automatique sur le cours indicatif Banque Centrale du Congo (BCC) &amp; marché interbancaire de Kinshasa.
+          </p>
+</div>
+</div>
+<!-- Event 4: Réassignation de Coursier (Hier 18:30) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-4 shadow-sm gap-2.5 transition-all" data-category="security">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-[11px] bg-surface-container text-on-surface-variant font-semibold">
+<span class="material-symbols-outlined text-[14px]">two_wheeler</span>
+              Réassignation de Coursier
+            </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Hier, 18:30</span>
+</div>
+<span class="font-mono text-[10px] text-outline">TX#88102</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary-container">badge</span>
+<span class="font-semibold">Admin Marc K.</span>
+</div>
+<span class="text-on-surface-variant font-mono text-[11px]">105.235.14.88</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_shipping</span>
+<span>Cible : <span class="font-semibold text-on-surface">Flotte Chez Awa</span></span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1">
+<p class="font-body-md text-[13px] text-on-surface">
+            Coursier référent <span class="font-semibold">Moussa B. (CRS-042)</span> assigné avec succès pour la zone <span class="font-semibold">Gombe &amp; Kintambo</span>.
+          </p>
+<div class="flex items-center gap-1.5 text-[11px] text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+<span>Contrôle permis moto &amp; assurance vérifiés</span>
+</div>
+</div>
+</div>
+<!-- Event 5: Suspension Temporaire de Tenant (Hier 14:10) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-4 shadow-sm gap-2.5 transition-all" data-category="kyc">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-[11px] bg-error-container text-on-error-container font-semibold">
+<span class="material-symbols-outlined text-[14px]">block</span>
+              Suspension Temporaire de Tenant
+            </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Hier, 14:10</span>
+</div>
+<span class="font-label-sm text-[10px] text-error font-mono bg-error-container/60 px-1.5 py-0.5 rounded">CRITIQUE</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary-container">shield_person</span>
+<span class="font-semibold">Superadmin Sarah B.</span>
+</div>
+<span class="text-on-surface-variant font-mono text-[11px]">105.235.14.88</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-error">domain_disabled</span>
+<span>Cible : <span class="font-semibold text-error">BoutiqueX Électronique</span> <span class="font-mono text-[10px] text-outline">(TENANT-KIN-0074)</span></span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5">
+<p class="font-body-md text-[13px] text-on-surface">
+            Compte suspendu suite à 3 relances d'impayés forfaits SaaS mensuels.
+          </p>
+<div class="flex items-center justify-between text-label-sm font-label-sm bg-surface-container-lowest p-2 rounded">
+<span class="text-on-surface-variant">Arriérés constatés :</span>
+<span class="font-semibold text-error font-headline-md text-label-lg">$890.00 USD <span class="text-outline text-label-sm font-normal font-body-md">(≈ 2,225,000 FC)</span></span>
+</div>
+</div>
+<div class="flex items-center justify-end pt-1">
+<button class="inline-flex items-center gap-1 font-label-sm text-label-sm text-error hover:underline transition-all py-1">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Voir journal d'alerte</span>
+</button>
+</div>
+</div>
+<!-- Event 6: Génération Facturation Mensuelle (02 Octobre, 09:00) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-4 shadow-sm gap-2.5 transition-all" data-category="billing">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded font-label-sm text-[11px] bg-tertiary-container/20 text-tertiary font-semibold">
+<span class="material-symbols-outlined text-[14px]">receipt_long</span>
+              Génération Facturation Mensuelle
+            </span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">02 Octobre, 09:00</span>
+</div>
+<span class="font-mono text-[10px] text-outline">BATCH#402</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+<span class="font-semibold">Moteur Facturation (Amani SaaS Core)</span>
+</div>
+<span class="text-on-surface-variant font-mono text-[11px]">Worker Cron #12</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">99 factures marchands générées</span>
+<span class="font-semibold text-tertiary font-headline-md text-label-lg">$3,511.00 USD</span>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant font-mono">
+<span>Contre-valeur marché fixe</span>
+<span>8,777,500 CDF (Taux 2 500)</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check_circle</span>
+            Notification par SMS &amp; e-mail envoyée
+          </span>
+<button class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:text-on-surface transition-colors py-1">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Consulter batch</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 6. Technical Integrity Footer Box -->
+<div class="flex items-start gap-2.5 bg-surface-container-low p-3.5 rounded-xl mt-2 mb-2">
+<span class="material-symbols-outlined text-primary-container text-[20px] flex-shrink-0 mt-0.5">verified</span>
+<p class="font-label-sm text-[11px] leading-relaxed text-on-surface-variant">
+        Toutes les opérations administratives sont horodatées en <span class="font-semibold text-on-surface">UTC+1 (Kinshasa)</span> et répliquées de manière irréversible sur serveur d'archive froid chiffré SHA-256 certifié OHADA.
+      </p>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.05)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="font-label-sm text-[11px]">Dashboard</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="vendeurs" href="#"><span class="material-symbols-outlined text-[22px]">store</span><span class="font-label-sm text-[11px]">Vendeurs</span></a><a class="relative flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="a-valider" href="#"><div class="relative"><span class="material-symbols-outlined text-[22px]">verified</span><span class="absolute -top-1 -right-2.5 bg-tertiary text-on-tertiary font-label-sm text-[10px] leading-tight px-1 rounded-full">8</span></div><span class="font-label-sm text-[11px]">À valider</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="finances" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[11px]">Finances</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="plus" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-[11px]">Plus</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

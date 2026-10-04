@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XjIfsenHcmKn3krWQuLOUae2JeOsxLQN1TjhDCTVQdDaq4EbFi7MpQGvgP1_5DMjg8ibCDLrD12vbFxmnTgjwyDcN4TkLVi9Ngl-8PX2l23okCHBwCHNvw3O3ZOTdPmJeNB0-U6r2jjwKWfarvxhAqhmLw3gvvxi6uJPA0sFPiEhH_LM9-AI6o5EgRcH6Eglh94XeGACYfpeMHMkaRCpQ7epv6VbutIWbg5gVGPsDLRU3FEagxn7vOvu8"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-on-surface truncate">Amani</span><span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[13px] text-primary">verified</span>Pro</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="font-label-sm text-label-sm truncate max-w-[90px]">Chez Awa</span><span class="text-[10px] text-outline">•</span><span class="font-label-sm text-label-sm text-primary font-medium truncate">Clients</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><div class="flex items-center p-0.5 rounded-full bg-surface-container"><button class="px-2 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-[0_1px_4px_rgba(38,30,23,0.06)] min-w-[32px] min-h-[28px] flex items-center justify-center" type="button">USD</button><button class="px-2 py-1 rounded-full text-on-surface-variant font-label-sm text-label-sm min-w-[32px] min-h-[28px] flex items-center justify-center" type="button">CDF</button></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface"></span></button><div class="flex items-center justify-center w-11 h-11"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile pb-space-xl gap-space-md">
+<!-- Header Contextuel -->
+<section class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Clients &amp; CRM</h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+<span>148 acheteurs actifs</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary font-medium">Chez Awa</span>
+</p>
+</div>
+<button aria-label="Ajouter un contact" class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+</button>
+</div>
+<!-- Barre de Recherche & Filtre Avancé -->
+<div class="flex items-center gap-space-sm mt-space-xs">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[20px] text-outline">search</span>
+<input class="w-full h-11 pl-10 pr-4 rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline shadow-sm focus:outline-none" placeholder="Nom, +243 WhatsApp, commune..." type="text"/>
+</div>
+<button aria-label="Filtres avancés" class="h-11 px-3.5 rounded-xl bg-surface-container-high text-on-surface-variant flex items-center justify-center gap-1.5 shadow-sm active:bg-surface-container-highest transition-colors" type="button">
+<span class="material-symbols-outlined text-[19px]">tune</span>
+<span class="font-label-sm text-label-sm hidden xs:inline">Filtres</span>
+</button>
+</div>
+</section>
+<!-- KPI Synthétiques (Scrollable Horizontal) -->
+<section class="flex gap-space-sm overflow-x-auto pb-1 -mx-margin-mobile px-margin-mobile">
+<!-- KPI 1 -->
+<div class="min-w-[140px] flex-1 p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-sm text-label-sm font-medium">Total clients</span>
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">148</div>
+<div class="inline-flex items-center gap-0.5 font-label-sm text-label-sm text-tertiary mt-0.5">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>+12 ce mois</span>
+</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="min-w-[140px] flex-1 p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-sm text-label-sm font-medium">Taux réachat</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">repeat</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">38%</div>
+<div class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Très bon</span>
+</div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="min-w-[160px] flex-1 p-space-sm rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-1">
+<span class="font-label-sm text-label-sm font-medium">Panier moyen</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">shopping_basket</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-on-surface font-bold">34 200 <span class="font-label-md text-label-md">FC</span></div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">
+          ~$13.70 USD
+        </div>
+</div>
+</div>
+</section>
+<!-- Segments RFM (Pill Chips) -->
+<section class="flex items-center gap-space-xs overflow-x-auto -mx-margin-mobile px-margin-mobile pb-1">
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-on-surface text-surface-container-lowest font-label-sm text-label-sm font-semibold shadow-sm flex items-center gap-1.5" type="button">
+<span>Tous</span>
+<span class="bg-surface-container-highest/30 text-surface-container-lowest text-[10px] px-1.5 py-0.2 rounded-full">148</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5" type="button">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Champions</span>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] px-1.5 py-0.2 rounded-full font-semibold">18</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5" type="button">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Fidèles</span>
+<span class="bg-tertiary-fixed-dim/40 text-on-surface text-[10px] px-1.5 py-0.2 rounded-full font-semibold">42</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5" type="button">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span>
+<span>Nouveaux</span>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] px-1.5 py-0.2 rounded-full font-semibold">31</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5" type="button">
+<span class="w-2 h-2 rounded-full bg-error-container"></span>
+<span>À risque</span>
+<span class="bg-error-container text-on-error-container text-[10px] px-1.5 py-0.2 rounded-full font-semibold">14</span>
+</button>
+<button class="flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5" type="button">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>Endormis</span>
+<span class="bg-surface-container-high text-on-surface-variant text-[10px] px-1.5 py-0.2 rounded-full font-semibold">43</span>
+</button>
+</section>
+<!-- Bannière d'Opportunité CRM -->
+<section class="p-space-md rounded-2xl bg-secondary-container/60 shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider text-primary">Opportunité Fidélité</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface font-semibold mt-0.5">3 clients VIP n'ont pas commandé depuis 30 jours</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Offrez une remise amicale pour réactiver leurs commandes hebdomadaires.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex -space-x-2 overflow-hidden">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold shadow-xs">JD</span>
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold shadow-xs">MK</span>
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold shadow-xs">+1</span>
+</div>
+<button class="px-3.5 py-2 rounded-xl bg-tertiary text-on-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Envoyer promo WhatsApp (-10%)</span>
+</button>
+</div>
+</section>
+<!-- Titre de section liste -->
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Clients récents (Kinshasa)</span>
+<button class="font-label-sm text-label-sm text-primary font-medium flex items-center gap-0.5" type="button">
+<span>Trier par dépense</span>
+<span class="material-symbols-outlined text-[16px]">arrow_drop_down</span>
+</button>
+</div>
+<!-- Liste des Clients -->
+<section class="flex flex-col gap-space-sm">
+<!-- Client 1 : Jean Dupont (Champion VIP) -->
+<article class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-start gap-space-sm">
+<img alt="Jean Dupont" class="w-12 h-12 rounded-full object-cover flex-shrink-0 shadow-xs" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Jean Dupont</h2>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold flex-shrink-0">
+<span class="material-symbols-outlined text-[13px] text-primary">military_tech</span>
+              Champion VIP
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate mt-0.5">
+            +243 89 543 2190 <span class="text-outline-variant">•</span> Bandalungwa
+          </p>
+</div>
+</div>
+<!-- Métriques transactionnelles -->
+<div class="grid grid-cols-2 gap-space-xs p-2.5 rounded-xl bg-surface-container-low">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Volume d'achats</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">12 commandes</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total dépensé</span>
+<span class="font-label-md text-label-md text-on-surface font-bold text-primary">458 000 FC <span class="text-on-surface-variant font-normal">(~$183.20)</span></span>
+</div>
+</div>
+<!-- Statut commande & Actions directes -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">check_circle</span>
+<span>Aujourd'hui <span class="font-medium text-on-surface">(ORD-2026-00142)</span></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-9 px-3 rounded-lg bg-tertiary/15 text-tertiary hover:bg-tertiary/25 font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp</span>
+</button>
+<button aria-label="Voir la fiche client" class="w-9 h-9 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Client 2 : Marie Kabila (Fidèle) -->
+<article class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed text-on-secondary-fixed font-headline-md text-headline-md font-semibold flex items-center justify-center flex-shrink-0">
+          MK
+        </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Marie Kabila</h2>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold flex-shrink-0">
+<span class="material-symbols-outlined text-[13px] text-tertiary">loyalty</span>
+              Fidèle
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate mt-0.5">
+            +243 81 220 4455 <span class="text-outline-variant">•</span> Gombe (Riverview)
+          </p>
+</div>
+</div>
+<!-- Métriques transactionnelles -->
+<div class="grid grid-cols-2 gap-space-xs p-2.5 rounded-xl bg-surface-container-low">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Volume d'achats</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">6 commandes</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total dépensé</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">320 000 FC <span class="text-on-surface-variant font-normal">(~$128.00)</span></span>
+</div>
+</div>
+<!-- Statut commande & Actions directes -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary animate-pulse">local_shipping</span>
+<span>En livraison <span class="font-medium text-on-surface">(ORD-2026-00141)</span></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Appeler Marie Kabila" class="w-9 h-9 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[17px]">call</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-tertiary/15 text-tertiary hover:bg-tertiary/25 font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Client 3 : Patrick Mwamba (Fidèle) -->
+<article class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-surface-container-high text-on-surface-variant font-headline-md text-headline-md font-semibold flex items-center justify-center flex-shrink-0">
+          PM
+        </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Patrick Mwamba</h2>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold flex-shrink-0">
+<span class="material-symbols-outlined text-[13px] text-tertiary">loyalty</span>
+              Fidèle
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate mt-0.5">
+            +243 99 780 1122 <span class="text-outline-variant">•</span> Limete Résidentiel
+          </p>
+</div>
+</div>
+<!-- Métriques transactionnelles -->
+<div class="grid grid-cols-2 gap-space-xs p-2.5 rounded-xl bg-surface-container-low">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Volume d'achats</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">5 commandes</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total dépensé</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">195 000 FC <span class="text-on-surface-variant font-normal">(~$78.00)</span></span>
+</div>
+</div>
+<!-- Statut commande & Actions directes -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">task_alt</span>
+<span>Livrée ce matin <span class="font-medium text-on-surface">(ORD-2026-00140)</span></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-9 px-3 rounded-lg bg-tertiary/15 text-tertiary hover:bg-tertiary/25 font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Client 4 : Sarah Lukusa (À risque) -->
+<article class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-error-container/40 text-on-error-container font-headline-md text-headline-md font-semibold flex items-center justify-center flex-shrink-0">
+          SL
+        </div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Sarah Lukusa</h2>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold flex-shrink-0">
+<span class="material-symbols-outlined text-[13px] text-error">schedule</span>
+              À risque
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate mt-0.5">
+            +243 85 901 3344 <span class="text-outline-variant">•</span> Kintambo
+          </p>
+</div>
+</div>
+<!-- Métriques transactionnelles -->
+<div class="grid grid-cols-2 gap-space-xs p-2.5 rounded-xl bg-surface-container-low">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Volume d'achats</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">3 commandes</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total dépensé</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">115 000 FC <span class="text-on-surface-variant font-normal">(~$46.00)</span></span>
+</div>
+</div>
+<!-- Statut inactivité & Relance -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-secondary">history</span>
+<span>Dernier achat : <span class="font-medium text-error">il y a 45 jours</span></span>
+</div>
+<button class="h-9 px-3 rounded-lg bg-primary-container text-on-primary hover:bg-primary font-label-sm text-label-sm font-semibold flex items-center gap-1 shadow-xs transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+<span>Relancer</span>
+</button>
+</div>
+</article>
+<!-- Client 5 : Ibrahim S. (Nouveau) -->
+<article class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<img alt="Ibrahim S." class="w-12 h-12 rounded-full object-cover flex-shrink-0 shadow-xs" src="https://lh3.googleusercontent.com/aida/AEtjO1X3MQ5NJXqGcMA8whD4sq-p4FiX7kCETRtU1IB7ivR1xlsqbhc8Mi86Q1L4SjYP36Psd_8kQ2tfbMc5Up4ZZYcMapyrX2mwl3eFr65r2_cGlYyvmFvZ6N-PUR8E1AB5fHE2_bUwXG6ZRIVuh2IzVQcyEL0K_fQ_zKJgrP-XGby4Dtz05d133grS0nAjlHFOCvhpVuwY3F95WrBKwE_h14SbTk_0qSVAILpCAzJ8xfQysbsnbMyHDsuh7Rk"/>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<h2 class="font-label-lg text-label-lg text-on-surface font-bold truncate">Ibrahim S.</h2>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex-shrink-0">
+<span class="material-symbols-outlined text-[13px] text-primary">arrow_back_ios_new</span>
+              Nouveau
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate mt-0.5">
+            +243 82 109 8877 <span class="text-outline-variant">•</span> Barumbu
+          </p>
+</div>
+</div>
+<!-- Métriques transactionnelles -->
+<div class="grid grid-cols-2 gap-space-xs p-2.5 rounded-xl bg-surface-container-low">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Volume d'achats</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">1ère commande</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total dépensé</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">39 000 FC <span class="text-on-surface-variant font-normal">(~$15.60)</span></span>
+</div>
+</div>
+<!-- Statut & Action de bienvenue -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">celebration</span>
+<span>Bienvenue envoyée</span>
+</div>
+<button class="h-9 px-3 rounded-lg bg-tertiary/15 text-tertiary hover:bg-tertiary/25 font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Action Globale d'Exportation -->
+<section class="mt-space-xs">
+<button class="w-full py-3.5 px-4 rounded-xl bg-surface-container-highest text-on-surface font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 active:bg-surface-variant transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary">download</span>
+<span>Exporter CSV (Contacts WhatsApp &amp; Adresses)</span>
+</button>
+<p class="font-label-sm text-label-sm text-center text-outline mt-2">
+      Export conforme au carnet d'adresses Kinshasa WhatsApp Business.
+    </p>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for category tabs
+  document.querySelectorAll('section button').forEach(button => {
+    button.addEventListener('click', function() {
+      // feedback tactile
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="produits" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm">Produits</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="commandes" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="font-label-sm text-label-sm">Commandes</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[48px] min-h-[44px] gap-0.5 transition-colors text-primary font-semibold" data-path="clients" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm">Clients</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="plus-finances" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-sm text-label-sm">Finances</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

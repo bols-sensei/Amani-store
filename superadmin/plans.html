@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f6;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(38,30,23,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xm3QBqwjVUmyYbF9hSATd2TnJjJS2CrBYUTFAqIcJ593e50jx7s61lLuuxyn8etHtXZI1x4m_mVH_unjjnVYhCxeAK8sXLClJymwtlOa-4ohHyolti0yoWB_1PPxyL9_dj453Nrd-szRMxwcW3esL2qpMCt5sdP0E-JIopZ7srPGfaY8yTqTGIqURkHrWVwQWkgmnzAMwkgoxUSd3DYrgxhWDLC_tnv2sLBLyZxwoaGnvjxL4PWVPxX84"/><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-md text-body-lg text-on-surface tracking-tight leading-none">Amani</span><span class="font-label-sm text-[10px] leading-none uppercase tracking-wider bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded-full">SUPERADMIN</span></div><span class="font-label-sm text-[11px] text-on-surface-variant truncate max-w-[110px]">Finances</span></div></div><div class="flex items-center gap-2"><div class="inline-flex items-center bg-surface-container rounded-full p-0.5 shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)]"><button class="px-2 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-[11px] shadow-[0_1px_3px_rgba(38,30,23,0.08)]" type="button">USD</button><button class="px-2 py-1 rounded-full text-on-surface-variant font-label-sm text-[11px]" type="button">CDF</button></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_1px_4px_rgba(113,85,48,0.25)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full">
+<div class="px-margin-mobile pt-space-md pb-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">Plans d'Abonnement</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Tarification SaaS &amp; plafonds marchands</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm active:scale-95 transition-transform" onclick="openCreateModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Créer</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</div>
+<div>
+<div class="font-label-lg text-label-lg text-on-surface">Santé du Parc SaaS</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Kinshasa Marché • 99 boutiques</div>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary bg-on-tertiary-container px-2 py-0.5 rounded-full">32.3% Payants</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Revenu Récurrent (MRR)</span>
+<div class="mt-1">
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight leading-tight">$1,250.00</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">≈ 3,125,000 FC / mois</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Actifs Facturés</span>
+<div class="mt-1">
+<div class="font-headline-md text-headline-md text-on-surface tracking-tight leading-tight">32 <span class="font-body-md text-body-md text-on-surface-variant">/ 99</span></div>
+<div class="font-label-sm text-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+4 ce mois-ci</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Mix d'abonnements</span>
+<span class="text-on-surface">67 Free • 20 Pro • 12 Business</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container flex overflow-hidden">
+<div class="h-full bg-secondary" style="width: 67.7%;" title="Free (67)"></div>
+<div class="h-full bg-primary-container" style="width: 20.2%;" title="Pro (20)"></div>
+<div class="h-full bg-tertiary" style="width: 12.1%;" title="Business (12)"></div>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-[10px] text-on-surface-variant pt-0.5">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Free (68%)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Pro (20%)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Business (12%)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">Offres Configurées</span>
+<span class="font-label-md text-label-md text-on-surface-variant">3 Actives</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md relative">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">storefront</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface">FREE</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-secondary">Artisans</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Démarrage &amp; Micro-vendeurs</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<div class="flex items-baseline gap-2 pb-space-xs">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">0$</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ mois • Gratuit à vie</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low rounded-lg p-2.5">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Commission</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">5.0% <span class="font-normal text-on-surface-variant">(min $0.50)</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Catalogue Max</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">20 articles</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">check</span>
+<span>1 compte gestionnaire boutique</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">check</span>
+<span>Paiements Cash à la livraison (COD)</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">check</span>
+<span>Support client WhatsApp standard</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">check</span>
+<span>Statistiques basiques du canal</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">groups</span>
+<span><strong>67</strong> boutiques rattachées</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="openEditModal('FREE')" type="button">
+            Modifier le plan
+          </button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="absolute top-0 right-0">
+<div class="bg-primary text-on-primary font-label-sm text-[10px] uppercase tracking-wider font-bold py-1 px-3 rounded-bl-xl shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">hotel_class</span>
+<span>Le plus populaire</span>
+</div>
+</div>
+<div class="flex items-start justify-between pt-1">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface">PRO</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">Boutiques Établies</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Créateurs &amp; Boutiques locales</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer mt-4">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">10$ USD</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ mois</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">≈ 25 000 FC (Taux fixe garanti)</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low rounded-lg p-2.5">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Commission Réduite</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">2.0% <span class="font-normal text-on-surface-variant">/ vente livrée</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Catalogue Max</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">500 articles</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>3 comptes collaborateurs staff</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Passerelle ERP Kimia &amp; synchronisation stock</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Campagnes marketing, coupons &amp; codes promo</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Support prioritaire 7j/7 dédié Kinshasa</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Analytics avancés des flux clients</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs bg-surface-container-low/50 -mx-space-md -mb-space-md p-space-md rounded-b-xl">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span>
+<span><strong>20</strong> boutiques actives</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">ex: Chez Awa, Maison Wax Kin</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm active:scale-95 transition-transform" onclick="openEditModal('PRO')" type="button">
+            Modifier le plan
+          </button>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md relative">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-on-surface">BUSINESS</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">Enseignes</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Distributeurs &amp; Grandes Marques</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-high peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-2">
+<span class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">30$ USD</span>
+<span class="font-label-md text-label-md text-on-surface-variant">/ mois</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">≈ 75 000 FC (Taux fixe garanti)</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low rounded-lg p-2.5">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Commission Ultra-basse</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">1.0% <span class="font-normal text-on-surface-variant">/ vente livrée</span></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Catalogue Max</span>
+<span class="font-label-md text-label-md text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">all_inclusive</span>
+<span>Illimité</span>
+</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Comptes collaborateurs illimités</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>API dédiée &amp; Webhooks de commande en direct</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Multi-dépôts (Gombe, Limete, Bandalungwa)</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Flotte de coursier express assignée</span>
+</div>
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Account Manager Superadmin dédié</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-tertiary">groups</span>
+<span><strong>12</strong> enseignes actives</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant">ex: ÉlectroMoussa, Kin Tech Store</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors" onclick="openEditModal('BUSINESS')" type="button">
+            Modifier le plan
+          </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm mt-space-xs">
+<div class="flex items-center gap-2 pb-1">
+<span class="material-symbols-outlined text-[20px] text-primary">tune</span>
+<span class="font-headline-md text-headline-md text-on-surface">Règles Globales de Facturation SaaS</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Cycle de prélèvement</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Le 1er de chaque mois à 00h00 UTC+1</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-medium">Automatique</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Délai de grâce impayé</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tolérance avant passage en lecture seule</span>
+</div>
+</div>
+<span class="font-label-md text-label-md font-semibold text-on-surface">10 jours</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">phone_android</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Passerelle Mobile Money directe</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prélèvement USSD push instantané</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-tertiary">check_circle</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="px-2 py-1 rounded bg-surface-container font-label-sm text-[11px] text-on-surface-variant">M-Pesa (Vodacom)</span>
+<span class="px-2 py-1 rounded bg-surface-container font-label-sm text-[11px] text-on-surface-variant">Orange Money</span>
+<span class="px-2 py-1 rounded bg-surface-container font-label-sm text-[11px] text-on-surface-variant">Airtel Money</span>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed inset-0 z-50 hidden items-end justify-center bg-black/40 backdrop-blur-sm p-margin-mobile" id="plan-modal">
+<div class="bg-surface-container-lowest w-full max-w-md rounded-2xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-on-surface" id="modal-title">Modifier le plan</span>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Nom de l'offre</span>
+<input class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md px-3 py-2 rounded-lg outline-none focus:ring-1 focus:ring-primary" id="plan-name-input" type="text" value="PRO"/>
+</label>
+<div class="grid grid-cols-2 gap-space-sm">
+<label class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prix mensuel ($)</span>
+<input class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md px-3 py-2 rounded-lg outline-none focus:ring-1 focus:ring-primary" id="plan-price-input" type="number" value="10"/>
+</label>
+<label class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Commission (%)</span>
+<input class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md px-3 py-2 rounded-lg outline-none focus:ring-1 focus:ring-primary" id="plan-com-input" step="0.1" type="number" value="2.0"/>
+</label>
+</div>
+<label class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Plafond Articles Catalogue</span>
+<input class="w-full bg-surface-container-low text-on-surface font-label-md text-label-md px-3 py-2 rounded-lg outline-none focus:ring-1 focus:ring-primary" id="plan-cap-input" type="text" value="500"/>
+</label>
+</div>
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md" onclick="closeModal()" type="button">Annuler</button>
+<button class="flex-1 py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm" onclick="savePlan()" type="button">Enregistrer</button>
+</div>
+</div>
+</div>
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 hidden bg-inverse-surface text-inverse-on-surface font-label-md text-label-md px-4 py-2 rounded-full shadow-lg items-center gap-2" id="toast">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check_circle</span>
+<span id="toast-text">Plan mis à jour</span>
+</div>
+</div>
+<script>
+  function highlightActiveNav() {
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-path') === 'plus') {
+        link.classList.add('text-primary-container', 'font-semibold');
+        link.classList.remove('text-on-surface-variant');
+      } else {
+        link.classList.remove('text-primary-container', 'font-semibold');
+        link.classList.add('text-on-surface-variant');
+      }
+    });
+  }
+
+  function openEditModal(planType) {
+    const modal = document.getElementById('plan-modal');
+    const title = document.getElementById('modal-title');
+    const nameInput = document.getElementById('plan-name-input');
+    const priceInput = document.getElementById('plan-price-input');
+    const comInput = document.getElementById('plan-com-input');
+    const capInput = document.getElementById('plan-cap-input');
+
+    if (planType === 'FREE') {
+      title.innerText = 'Modifier l\'offre FREE';
+      nameInput.value = 'FREE';
+      priceInput.value = '0';
+      comInput.value = '5.0';
+      capInput.value = '20';
+    } else if (planType === 'PRO') {
+      title.innerText = 'Modifier l\'offre PRO';
+      nameInput.value = 'PRO';
+      priceInput.value = '10';
+      comInput.value = '2.0';
+      capInput.value = '500';
+    } else if (planType === 'BUSINESS') {
+      title.innerText = 'Modifier l\'offre BUSINESS';
+      nameInput.value = 'BUSINESS';
+      priceInput.value = '30';
+      comInput.value = '1.0';
+      capInput.value = 'Illimité';
+    }
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function openCreateModal() {
+    const modal = document.getElementById('plan-modal');
+    const title = document.getElementById('modal-title');
+    title.innerText = 'Créer une nouvelle offre SaaS';
+    document.getElementById('plan-name-input').value = 'VIP PARTENAIRE';
+    document.getElementById('plan-price-input').value = '50';
+    document.getElementById('plan-com-input').value = '0.5';
+    document.getElementById('plan-cap-input').value = 'Illimité';
+
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('plan-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function savePlan() {
+    closeModal();
+    showToast('Modifications enregistrées sur la marketplace');
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const toastText = document.getElementById('toast-text');
+    toastText.innerText = msg;
+    toast.classList.remove('hidden');
+    toast.classList.add('flex');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+      toast.classList.remove('flex');
+    }, 2800);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    highlightActiveNav();
+  });
+  highlightActiveNav();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.05)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="font-label-sm text-[11px]">Dashboard</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="vendeurs" href="#"><span class="material-symbols-outlined text-[22px]">store</span><span class="font-label-sm text-[11px]">Vendeurs</span></a><a class="relative flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="a-valider" href="#"><div class="relative"><span class="material-symbols-outlined text-[22px]">verified</span><span class="absolute -top-1 -right-2.5 bg-tertiary text-on-tertiary font-label-sm text-[10px] leading-tight px-1 rounded-full">8</span></div><span class="font-label-sm text-[11px]">À valider</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="finances" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[11px]">Finances</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="plus" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-[11px]">Plus</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

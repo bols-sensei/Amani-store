@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XjIfsenHcmKn3krWQuLOUae2JeOsxLQN1TjhDCTVQdDaq4EbFi7MpQGvgP1_5DMjg8ibCDLrD12vbFxmnTgjwyDcN4TkLVi9Ngl-8PX2l23okCHBwCHNvw3O3ZOTdPmJeNB0-U6r2jjwKWfarvxhAqhmLw3gvvxi6uJPA0sFPiEhH_LM9-AI6o5EgRcH6Eglh94XeGACYfpeMHMkaRCpQ7epv6VbutIWbg5gVGPsDLRU3FEagxn7vOvu8"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-on-surface truncate">Amani</span><span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold"><span class="material-symbols-outlined text-[13px] text-primary">verified</span>Pro</span></div><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="font-label-sm text-label-sm truncate max-w-[90px]">Chez Awa</span><span class="text-[10px] text-outline">•</span><span class="font-label-sm text-label-sm text-primary font-medium truncate">Clients</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><div class="flex items-center p-0.5 rounded-full bg-surface-container"><button class="px-2 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-[0_1px_4px_rgba(38,30,23,0.06)] min-w-[32px] min-h-[28px] flex items-center justify-center" type="button">USD</button><button class="px-2 py-1 rounded-full text-on-surface-variant font-label-sm text-label-sm min-w-[32px] min-h-[28px] flex items-center justify-center" type="button">CDF</button></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface"></span></button><div class="flex items-center justify-center w-11 h-11"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/></div></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Content Container with mobile responsive padding -->
+<div class="flex flex-col w-full px-margin-mobile space-y-space-md py-space-sm">
+<!-- Top Merchant Identity Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_2px_12px_-2px_rgba(38,30,23,0.06)] p-space-md relative overflow-hidden">
+<!-- Warm decorative brand glow in corner -->
+<div class="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-secondary-container/40 blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-space-md relative z-10">
+<div class="relative flex-shrink-0">
+<img class="w-16 h-16 rounded-xl object-cover shadow-sm bg-surface-container" data-alt="Warm portrait of an elegant Congolese boutique owner woman smiling warmly in her Kinshasa fashion studio, surrounded by draped earth-tone fabrics and artisan accessories, shot in soft natural afternoon golden light, premium editorial feel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ4atmVq785uABk5gUaR3RSXPAX3Ygcnx5OqFcLXdVhybMve-Pvt2KpHOcKgQC4FlXrTXncmxBNCDq4WxHdZshSh2wNa-pciXztxTgKFTi9O8v87eYbs6Y7ykLgH8CEGYSKfrhksE4ugKb9m2fArtfdsXpzIUwGSnE3ehG1zcXoBsoV0CKiTl_0xN4gEj_MGLUloel55Gf64UjTSOMozQi32y8hVMD4_eM-f3h2CKP2eg68WkJ4Gq2"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[12px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Chez Awa</span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-on-tertiary-container text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+              PRO
+            </span>
+</div>
+<div class="flex items-center gap-1.5 mt-1 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Boutique Active en ligne</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate mt-0.5">
+            Galerie Présidentielle, Gombe, Kinshasa
+          </p>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<a class="inline-flex items-center gap-1.5 font-label-lg text-label-lg text-primary hover:text-on-primary-fixed-variant transition-colors group" href="#">
+<span>Voir ma boutique publique</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" title="Partager ma boutique" type="button">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</button>
+</div>
+</div>
+<!-- Section 1 : Identité & Profil de la Boutique -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_-2px_rgba(38,30,23,0.05)] p-space-md">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Identité de la Boutique</h2>
+</div>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Kinshasa</span>
+</div>
+<div class="space-y-3">
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Nom commercial public</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Chez Awa Kinshasa</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Secteur &amp; Catégorie principale</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Mode, Prêt-à-porter &amp; Accessoires de Luxe</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Slogan d'accueil</span>
+<p class="font-body-md text-body-md text-on-surface italic">"Créations élégantes &amp; prêt-à-porter de qualité à Kinshasa."</p>
+</div>
+<div class="grid grid-cols-1 gap-2 pt-1">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-7 h-7 rounded-full bg-on-tertiary-container flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ligne WhatsApp Clients</span>
+<span class="font-label-lg text-label-lg text-on-surface truncate font-semibold">+243 89 543 2190</span>
+</div>
+</div>
+<span class="inline-flex items-center text-tertiary text-label-sm font-label-sm font-semibold bg-tertiary-fixed-dim/20 px-2 py-0.5 rounded-full">Actif</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5 min-w-0">
+<span class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">pin_drop</span>
+</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Départ motards Amani Express</span>
+<span class="font-label-lg text-label-lg text-on-surface truncate font-medium">Hub Gombe (Galerie Présidentielle)</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">Zone 1</span>
+</div>
+</div>
+<button class="w-full mt-2 py-3 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg font-semibold transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Modifier les informations de la boutique</span>
+</button>
+</div>
+</section>
+<!-- Section 2 : Abonnement & Forfait SaaS Amani -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_-2px_rgba(38,30,23,0.05)] p-space-md relative overflow-hidden">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Plan Vendeur</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Forfait boutique Kinshasa</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-on-tertiary-container text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          Actif
+        </span>
+</div>
+<!-- Plan Card with Warm Ochre Framing -->
+<div class="p-space-md rounded-xl bg-gradient-to-br from-secondary-container/40 via-surface-container-low to-surface-container-lowest mt-3 space-y-3">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">Plan PRO Vendeur</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Renouvellement automatique le 15 Nov 2026</p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-primary font-bold">45 000 FC</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">~18.00 USD / mois</span>
+</div>
+</div>
+<div class="h-px w-full bg-outline-variant/30"></div>
+<div class="space-y-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">verified</span>
+<span class="font-body-md text-body-md text-on-surface">Commission réduite à <strong>10%</strong> (au lieu de 15%)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">two_wheeler</span>
+<span class="font-body-md text-body-md text-on-surface"><strong>2 motards prioritaires</strong> : Moussa &amp; Ibrahim</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">qr_code_scanner</span>
+<span class="font-body-md text-body-md text-on-surface">Bordereaux PDF &amp; QR Codes Amani illimités</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">group_add</span>
+<span class="font-body-md text-body-md text-on-surface">CRM Clients &amp; relance WhatsApp intégrée</span>
+</div>
+</div>
+<div class="pt-2 flex flex-col gap-2">
+<button class="w-full py-2.5 px-4 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-semibold transition-colors shadow-sm flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+<span>Gérer l'abonnement</span>
+</button>
+<a class="inline-flex items-center justify-center gap-1.5 py-2 text-primary font-label-md text-label-md hover:underline" href="#">
+<span>Consulter les factures SaaS (INV-2026-00042)</span>
+<span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 3 : Préférences Financières & Devises -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_-2px_rgba(38,30,23,0.05)] p-space-md">
+<div class="flex items-center gap-2 mb-space-md">
+<span class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Finances &amp; Devises</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Règlements &amp; paiements mobiles</span>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Currency selector -->
+<div>
+<label class="block font-label-lg text-label-lg text-on-surface mb-1 font-semibold">Devise d'affichage principale</label>
+<div class="grid grid-cols-2 gap-2 p-1 bg-surface-container rounded-lg" id="currency-toggle-group">
+<button class="py-2 px-3 rounded-md bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-semibold shadow-sm flex items-center justify-center gap-1.5 transition-all" id="btn-curr-cdf" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Franc Congolais (CDF)</span>
+</button>
+<button class="py-2 px-3 rounded-md text-on-surface-variant font-label-lg text-label-lg font-medium hover:text-on-surface flex items-center justify-center gap-1.5 transition-all" id="btn-curr-usd" type="button">
+<span class="material-symbols-outlined text-[18px] opacity-0">check_circle</span>
+<span>Dollar Américain (USD)</span>
+</button>
+</div>
+<div class="flex items-center justify-between mt-1.5 px-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Taux de référence fixe marché</span>
+<span class="font-label-sm text-label-sm font-semibold text-primary">1 USD = 2 500 FC</span>
+</div>
+</div>
+<!-- Mode de reversement COD -->
+<div class="p-3 rounded-lg bg-surface-container-low space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Compte de reversement Cash on Delivery (COD)</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+              Vérifié
+            </span>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary font-bold text-headline-md shadow-xs">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-bold truncate">Airtel Money &amp; M-Pesa Business</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">+243 82 109 8877</span>
+<span class="font-label-sm text-label-sm text-secondary truncate">Bénéficiaire : Chez Awa SARL</span>
+</div>
+</div>
+</div>
+<!-- Fréquence de virement -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Virement automatique COD</span>
+<span class="font-label-lg text-label-lg text-on-surface font-medium">Quotidien à 20h00</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-on-surface-variant px-2 py-0.5 bg-surface-container rounded">Après clôture</span>
+</div>
+</div>
+</section>
+<!-- Section 4 : Gestion Logistique & Livraison Kinshasa -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_-2px_rgba(38,30,23,0.05)] p-space-md">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Logistique Kinshasa</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-on-tertiary-container text-tertiary font-label-sm text-label-sm font-semibold">Amani Fleet</span>
+</div>
+<div class="space-y-3">
+<!-- Visual map / stats placeholder -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-9 h-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">14 Communes couvertes</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Gombe, Ngaliema, Kintambo, Limete...</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</div>
+<!-- Motards prioritaires -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Professional Congolese courier driver with helmet smiling warmly in Kinshasa boulevard, modern delivery courier aesthetic, ambient daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOR7EFkb-BodTPvG65qOlzsU3DZV_DW3ezyaRtrkaWTUs5BApM6V6Nq2V7OSUd4VG3YtoatS5kiM1LstIovZDquKRg4mu4V0jSgwoX3ftCnWqXkXV5mCWNmLWtxCzGx_R4asB0TmqKXXmvwn7IJRFB6mH2mzgSaE1mwm5xoFVKnWM8B92V7EUonxzjnTYapppPVn4e786xlcwpLfnaLcd_F6qLKdL9n3auMKUdLn8xpe-yANCrO1jn"/>
+<img class="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-surface-container-lowest" data-alt="Young energetic African delivery driver wearing clean uniform and safety vest, cheerful friendly expression against a clean urban backdrop in Kinshasa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbIAwFgFw0fhPfPyTTQdjd9Q1Fv_A07dE3j1zw60Ict4v8B7Y8EjG_5ydB92Et9mz0bqa8mh-gO1j_H7c3-ZbtuvPXRp73LCNDCKDjt5nCo5QM0B9rqUe_EzZGoQutHyah1h9S-p8fDkzGQAT29bRPzqZpLN15Qye63Yh44uCL85vcJpZWamtC-HC-8V_VGDltW44MV9Wr988EXfi8SXLHmcmG2TngWB0MgLregsBYKhY5Dg53hQx2"/>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Assignation prioritaire</span>
+<span class="block font-label-sm text-label-sm text-on-surface-variant">Moussa B. &amp; Ibrahim S.</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer min-h-[44px] min-w-[44px] justify-center">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[12px] after:left-[4px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Délai moyen de préparation colis</span>
+<span class="font-label-lg text-label-lg text-on-surface font-medium">20 à 30 minutes</span>
+</div>
+</div>
+<button class="text-primary font-label-md text-label-md font-semibold hover:underline" type="button">Modifier</button>
+</div>
+<a class="w-full py-2.5 text-center font-label-lg text-label-lg text-primary hover:text-on-primary-fixed-variant flex items-center justify-center gap-1.5 transition-colors" href="#">
+<span>Configurer les zones &amp; tarifs de livraison</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</section>
+<!-- Section 5 : Notifications & Alertes -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_-2px_rgba(38,30,23,0.05)] p-space-md">
+<div class="flex items-center gap-2 mb-space-md">
+<span class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">notifications_active</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Notifications Vendeur</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Canaux WhatsApp &amp; alertes mobiles</span>
+</div>
+</div>
+<div class="space-y-3">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex flex-col pr-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Nouvelles commandes</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Alerte sonore immédiate + message WhatsApp</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer min-h-[44px] min-w-[44px] justify-center flex-shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[12px] after:left-[4px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex flex-col pr-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Arrivée du motard en boutique</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Quand Moussa ou Ibrahim est à moins de 500m</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer min-h-[44px] min-w-[44px] justify-center flex-shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[12px] after:left-[4px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<!-- Toggle 3 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex flex-col pr-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Alerte stock critique (&lt; 3 unités)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Prévention rupture pour vos pièces vedettes</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer min-h-[44px] min-w-[44px] justify-center flex-shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[12px] after:left-[4px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+<!-- Toggle 4 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex flex-col pr-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Rapport de caisse du soir (20h)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Récapitulatif des recettes encaissées et du solde</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer min-h-[44px] min-w-[44px] justify-center flex-shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[12px] after:left-[4px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-tertiary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Section 6 : Sécurité & Compte -->
+<section class="bg-surface-container-lowest rounded-xl shadow-[0_2px_8px_-2px_rgba(38,30,23,0.05)] p-space-md">
+<div class="flex items-center gap-2 mb-space-md">
+<span class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</span>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Sécurité &amp; Équipe</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Accès marchands et sessions</span>
+</div>
+</div>
+<div class="space-y-3">
+<!-- 2FA WhatsApp -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-on-tertiary-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Authentification double facteur</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Code temporaire par SMS / WhatsApp</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed-dim/20 px-2 py-0.5 rounded-full">Active</span>
+</div>
+<!-- Mot de passe -->
+<button class="w-full flex items-center justify-between p-3 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors text-left" type="button">
+<div class="flex items-center gap-2.5">
+<span class="w-7 h-7 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">key</span>
+</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Modifier mon mot de passe</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">chevron_right</span>
+</button>
+<!-- Membres de l'équipe -->
+<div class="p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Membres autorisés (2 accès)</span>
+<button class="text-primary font-label-sm text-label-sm font-semibold hover:underline" type="button">+ Ajouter</button>
+</div>
+<div class="space-y-2">
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center justify-center">A</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Awa (Moi)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-semibold">Propriétaire</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center justify-center">J</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Junior M.</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-medium">Préparateur Colis</span>
+</div>
+</div>
+</div>
+<!-- Bouton Déconnexion -->
+<div class="pt-2">
+<button class="w-full py-3 px-4 rounded-lg bg-error-container hover:bg-error-container/80 text-error font-label-lg text-label-lg font-semibold transition-colors flex items-center justify-center gap-2" id="btn-logout" type="button">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span>Se déconnecter de l'Espace Vendeur</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Version & Legal Footer Badge -->
+<div class="pt-space-xs pb-space-lg text-center flex flex-col items-center justify-center space-y-1">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">check_circle</span>
+<span>Amani Vendeur v2.4.0 (PWA) • Kinshasa RDC</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline">
+        Données cryptées &amp; synchronisées avec le Hub Central Amani
+      </p>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const btnCdf = document.getElementById('btn-curr-cdf');
+    const btnUsd = document.getElementById('btn-curr-usd');
+
+    if (btnCdf && btnUsd) {
+      btnCdf.addEventListener('click', () => {
+        btnCdf.className = "py-2 px-3 rounded-md bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-semibold shadow-sm flex items-center justify-center gap-1.5 transition-all";
+        btnCdf.querySelector('.material-symbols-outlined').classList.remove('opacity-0');
+        
+        btnUsd.className = "py-2 px-3 rounded-md text-on-surface-variant font-label-lg text-label-lg font-medium hover:text-on-surface flex items-center justify-center gap-1.5 transition-all";
+        btnUsd.querySelector('.material-symbols-outlined').classList.add('opacity-0');
+      });
+
+      btnUsd.addEventListener('click', () => {
+        btnUsd.className = "py-2 px-3 rounded-md bg-surface-container-lowest text-on-surface font-label-lg text-label-lg font-semibold shadow-sm flex items-center justify-center gap-1.5 transition-all";
+        btnUsd.querySelector('.material-symbols-outlined').classList.remove('opacity-0');
+
+        btnCdf.className = "py-2 px-3 rounded-md text-on-surface-variant font-label-lg text-label-lg font-medium hover:text-on-surface flex items-center justify-center gap-1.5 transition-all";
+        btnCdf.querySelector('.material-symbols-outlined').classList.add('opacity-0');
+      });
+    }
+
+    const logoutBtn = document.getElementById('btn-logout');
+    if (logoutBtn) {
+      logoutBtn.addEventListener('click', () => {
+        if (confirm("Voulez-vous vraiment vous déconnecter de votre boutique Chez Awa ?")) {
+          // Simulation feedback
+          logoutBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span> <span>Déconnexion en cours...</span>';
+          setTimeout(() => {
+            window.location.reload();
+          }, 800);
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="produits" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm">Produits</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="commandes" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="font-label-sm text-label-sm">Commandes</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="clients" href="#"><span class="material-symbols-outlined text-[22px]">group</span><span class="font-label-sm text-label-sm">Clients</span></a><a class="flex flex-col items-center justify-center min-w-[48px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="plus-finances" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-sm text-label-sm">Finances</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

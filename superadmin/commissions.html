@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f6;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(38,30,23,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xm3QBqwjVUmyYbF9hSATd2TnJjJS2CrBYUTFAqIcJ593e50jx7s61lLuuxyn8etHtXZI1x4m_mVH_unjjnVYhCxeAK8sXLClJymwtlOa-4ohHyolti0yoWB_1PPxyL9_dj453Nrd-szRMxwcW3esL2qpMCt5sdP0E-JIopZ7srPGfaY8yTqTGIqURkHrWVwQWkgmnzAMwkgoxUSd3DYrgxhWDLC_tnv2sLBLyZxwoaGnvjxL4PWVPxX84"/><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-md text-body-lg text-on-surface tracking-tight leading-none">Amani</span><span class="font-label-sm text-[10px] leading-none uppercase tracking-wider bg-secondary-container text-on-secondary-container px-1.5 py-0.5 rounded-full">SUPERADMIN</span></div><span class="font-label-sm text-[11px] text-on-surface-variant truncate max-w-[110px]">Finances</span></div></div><div class="flex items-center gap-2"><div class="inline-flex items-center bg-surface-container rounded-full p-0.5 shadow-[inset_0_1px_2px_rgba(0,0,0,0.04)]"><button class="px-2 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-[11px] shadow-[0_1px_3px_rgba(38,30,23,0.08)]" type="button">USD</button><button class="px-2 py-1 rounded-full text-on-surface-variant font-label-sm text-[11px]" type="button">CDF</button></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_1px_4px_rgba(113,85,48,0.25)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface"><div class="flex flex-col w-full pb-8">
+<!-- SECTION HEADER & EXPORT ACTIONS -->
+<section class="px-margin-mobile pt-space-md pb-space-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="inline-flex items-center gap-1.5 text-primary mb-1">
+<span class="material-symbols-outlined text-[16px]">account_balance_wallet</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Trésorerie Plateforme</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">Commissions Plateforme</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Prélèvements automatiques sur les ventes livrées</p>
+</div>
+<button aria-label="Exporter vers Kimia" class="shrink-0 flex items-center justify-center gap-1.5 px-3 py-2 bg-surface-container-high active:bg-surface-container-highest text-on-surface rounded-lg shadow-sm transition-transform active:scale-95" id="exportBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span class="font-label-md text-label-md">Kimia CSV</span>
+</button>
+</div>
+<!-- TACTILE PERIOD SWITCHER -->
+<div class="flex items-center bg-surface-container rounded-lg p-1 gap-1 overflow-x-auto">
+<button class="period-btn flex-1 py-1.5 px-2.5 rounded text-center font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-sm transition-all whitespace-nowrap" data-period="oct26" type="button">
+        Ce mois (Octobre 2026)
+      </button>
+<button class="period-btn flex-1 py-1.5 px-2.5 rounded text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" data-period="sep26" type="button">
+        Mois dernier
+      </button>
+<button class="period-btn flex-1 py-1.5 px-2.5 rounded text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap" data-period="q3" type="button">
+        3 derniers mois
+      </button>
+</div>
+</section>
+<!-- KPI SUMMARY HERO CARD -->
+<section class="px-margin-mobile py-space-xs">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col gap-space-md">
+<!-- Decorative subtle radial glow -->
+<div class="absolute -right-8 -top-8 w-36 h-36 bg-primary-fixed-dim/20 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Main Metric -->
+<div class="flex items-start justify-between gap-space-sm relative z-10">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total commissions perçues</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-surface tracking-tight">$2,261<span class="text-headline-lg text-secondary">.00</span></span>
+<span class="font-label-md text-label-md text-secondary">USD</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">≈ 5,652,500 FC</span>
+</div>
+<div class="flex flex-col items-end gap-1.5">
+<span class="inline-flex items-center gap-1 bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+            +11% vs M-1
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Taux moyen : <strong class="text-on-surface font-semibold">4.8%</strong></span>
+</div>
+</div>
+<!-- Distribution Gauge Progress Bar -->
+<div class="flex flex-col gap-1.5 relative z-10">
+<div class="h-2 w-full bg-surface-container rounded-full overflow-hidden flex">
+<div class="h-full bg-secondary-fixed-dim" style="width: 15%" title="En attente: 15%"></div>
+<div class="h-full bg-secondary-container" style="width: 40%" title="Facturées: 40%"></div>
+<div class="h-full bg-tertiary-container" style="width: 45%" title="Encaissées: 45%"></div>
+</div>
+</div>
+<!-- Tri-split Metrics Grid -->
+<div class="grid grid-cols-3 gap-2 pt-space-xs relative z-10">
+<!-- Pending -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col justify-between">
+<div class="flex items-center gap-1 mb-1">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">En attente</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-on-surface block leading-tight">$342<span class="text-label-sm">.10</span></span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">38 trs</span>
+</div>
+</div>
+<!-- Invoiced -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col justify-between">
+<div class="flex items-center gap-1 mb-1">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Facturées</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-on-surface block leading-tight">$894<span class="text-label-sm">.40</span></span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">112 trs</span>
+</div>
+</div>
+<!-- Paid -->
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col justify-between">
+<div class="flex items-center gap-1 mb-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-tertiary">Encaissées</span>
+</div>
+<div>
+<span class="font-headline-md text-headline-md text-tertiary block leading-tight">$1,024<span class="text-label-sm">.50</span></span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">145 trs</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- HORIZONTAL STATUS TABS (PILLS) -->
+<section class="py-space-sm">
+<div class="flex items-center gap-2 overflow-x-auto px-margin-mobile no-scrollbar" id="statusTabs">
+<button class="tab-pill shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-inverse-surface text-inverse-on-surface shadow-sm transition-all" data-status="all" type="button">
+        Toutes (295)
+      </button>
+<button class="tab-pill shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant shadow-sm transition-all" data-status="pending" type="button">
+        En attente (38)
+      </button>
+<button class="tab-pill shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant shadow-sm transition-all" data-status="invoiced" type="button">
+        Facturées (112)
+      </button>
+<button class="tab-pill shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant shadow-sm transition-all" data-status="paid" type="button">
+        Encaissées (145)
+      </button>
+</div>
+</section>
+<!-- SEARCH & FILTER BAR -->
+<section class="px-margin-mobile pb-space-xs flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<!-- Search input -->
+<div class="flex-1 relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-9 pr-3 py-2 bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/70 rounded-lg font-body-md text-body-md focus:outline-none shadow-sm" id="commissionSearch" placeholder="Rechercher réf, vendeur, commande..." type="text"/>
+</div>
+<!-- Merchant select pill -->
+<div class="shrink-0 relative">
+<select class="appearance-none bg-surface-container-lowest text-on-surface py-2 pl-3 pr-8 rounded-lg font-label-md text-label-md shadow-sm focus:outline-none" id="merchantFilter">
+<option value="all">Tous les vendeurs</option>
+<option value="awa">Chez Awa</option>
+<option value="moussa">ÉlectroMoussa</option>
+<option value="fatou">ModeFatou</option>
+<option value="kintech">Kin Tech Store</option>
+<option value="nicole">Cosmétiques Nicole</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2.5 text-on-surface-variant text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</section>
+<!-- COMMISSION STACKED LIST -->
+<section class="px-margin-mobile pt-space-xs flex flex-col gap-space-sm" id="commissionsList">
+<!-- ITEM 1 -->
+<article class="commission-item bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm active:scale-[0.99] transition-transform" data-merchant="awa" data-status="pending">
+<!-- Top reference & badge -->
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-primary truncate">COM-2026-0142</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">#ORD-00142</span>
+</div>
+<span class="shrink-0 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-primary-fixed text-on-primary-fixed font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary-fixed animate-pulse"></span>
+          En attente (Pending)
+        </span>
+</div>
+<!-- Merchant & Tier Detail -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm font-bold">
+            CA
+          </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Chez Awa</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Plan PRO • Taux 2.0%</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aujourd'hui, 14:20</span>
+</div>
+<!-- Financial Split Box -->
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vente brute livrée</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">$20.00 <span class="text-label-sm text-on-surface-variant font-normal">(50,000 FC)</span></span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Commission perçue</span>
+<span class="font-headline-md text-headline-md text-primary font-bold leading-tight">$0.40 <span class="text-label-md font-semibold">USD</span></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">≈ 1,000 FC</span>
+</div>
+<button aria-label="Voir détail" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 2 -->
+<article class="commission-item bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm active:scale-[0.99] transition-transform" data-merchant="moussa" data-status="invoiced">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-primary truncate">COM-2026-0141</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">#ORD-00141</span>
+</div>
+<span class="shrink-0 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed-variant font-semibold">
+<span class="material-symbols-outlined text-[13px]">receipt</span>
+          Facturée (Invoiced)
+        </span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm font-bold">
+            EM
+          </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">ÉlectroMoussa Kinshasa</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span>Plan BUSINESS • 1.0%</span>
+<span>•</span>
+<span class="text-primary font-medium">INV-2026-00041</span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aujourd'hui, 11:05</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vente brute livrée</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">$12.00 <span class="text-label-sm text-on-surface-variant font-normal">(30,000 FC)</span></span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Commission perçue</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">$0.12 <span class="text-label-md font-semibold">USD</span></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">≈ 300 FC</span>
+</div>
+<button aria-label="Voir détail" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 3 -->
+<article class="commission-item bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm active:scale-[0.99] transition-transform" data-merchant="fatou" data-status="paid">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-primary truncate">COM-2026-0140</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">#ORD-00140</span>
+</div>
+<span class="shrink-0 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+          Encaissée (Paid)
+        </span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm font-bold">
+            MF
+          </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">ModeFatou Boutique</span>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span>Plan FREE • 5.0%</span>
+<span>•</span>
+<span class="text-tertiary font-medium">INV-2026-00039</span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hier, 17:45</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vente brute livrée</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">$10.00 <span class="text-label-sm text-on-surface-variant font-normal">(25,000 FC)</span></span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Commission perçue</span>
+<span class="font-headline-md text-headline-md text-tertiary font-bold leading-tight">$0.50 <span class="text-label-md font-semibold">USD</span></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">≈ 1,250 FC</span>
+</div>
+<button aria-label="Voir détail" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 4 -->
+<article class="commission-item bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm active:scale-[0.99] transition-transform" data-merchant="kintech" data-status="invoiced">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-primary truncate">COM-2026-0139</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">#ORD-00139</span>
+</div>
+<span class="shrink-0 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed-variant font-semibold">
+<span class="material-symbols-outlined text-[13px]">receipt</span>
+          Facturée (Invoiced)
+        </span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm font-bold">
+            KT
+          </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Kin Tech Store</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Plan BUSINESS • Taux 1.0%</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hier, 15:12</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vente brute livrée</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">$85.00 <span class="text-label-sm text-on-surface-variant font-normal">(212,500 FC)</span></span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Commission perçue</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold leading-tight">$0.85 <span class="text-label-md font-semibold">USD</span></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">≈ 2,125 FC</span>
+</div>
+<button aria-label="Voir détail" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- ITEM 5 -->
+<article class="commission-item bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm active:scale-[0.99] transition-transform" data-merchant="nicole" data-status="paid">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-primary truncate">COM-2026-0138</span>
+<span class="text-on-surface-variant/40">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">#ORD-00138</span>
+</div>
+<span class="shrink-0 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+          Encaissée (Paid)
+        </span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm font-bold">
+            CN
+          </div>
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Cosmétiques Nicole</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Plan FREE • Taux 5.0%</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">02 Oct 2026</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Vente brute livrée</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">$30.00 <span class="text-label-sm text-on-surface-variant font-normal">(75,000 FC)</span></span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Commission perçue</span>
+<span class="font-headline-md text-headline-md text-tertiary font-bold leading-tight">$1.50 <span class="text-label-md font-semibold">USD</span></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">≈ 3,750 FC</span>
+</div>
+<button aria-label="Voir détail" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- EMPTY FILTER FALLBACK (Hidden by default) -->
+<div class="hidden px-margin-mobile py-space-xl flex-col items-center justify-center text-center" id="noResults">
+<div class="w-14 h-14 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant mb-2">
+<span class="material-symbols-outlined text-[28px]">search_off</span>
+</div>
+<span class="font-headline-md text-headline-md text-on-surface">Aucune commission trouvée</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mt-1">Ajustez les termes de recherche ou sélectionnez un autre statut.</p>
+</div>
+<!-- INFORMATIONAL FOOTNOTE -->
+<section class="px-margin-mobile pt-space-md">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-start gap-2.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">verified_user</span>
+<p class="font-label-sm text-label-sm leading-relaxed">
+        Prélèvement automatique calculé à chaque clôture de course motard validée par QR code. Les montants sont réconciliés quotidiennement avec les comptes bancaires et Mobile Money des marchands.
+      </p>
+</div>
+</section>
+</div>
+<script>
+  (function initCommissionsInteractivity() {
+    const tabButtons = document.querySelectorAll('.tab-pill');
+    const periodButtons = document.querySelectorAll('.period-btn');
+    const searchInput = document.getElementById('commissionSearch');
+    const merchantSelect = document.getElementById('merchantFilter');
+    const items = document.querySelectorAll('.commission-item');
+    const noResults = document.getElementById('noResults');
+    const exportBtn = document.getElementById('exportBtn');
+
+    let currentStatus = 'all';
+    let currentMerchant = 'all';
+    let searchQuery = '';
+
+    function filterItems() {
+      let visibleCount = 0;
+      items.forEach(item => {
+        const itemStatus = item.getAttribute('data-status');
+        const itemMerchant = item.getAttribute('data-merchant');
+        const textContent = item.textContent.toLowerCase();
+
+        const matchStatus = (currentStatus === 'all' || itemStatus === currentStatus);
+        const matchMerchant = (currentMerchant === 'all' || itemMerchant === currentMerchant);
+        const matchSearch = searchQuery === '' || textContent.includes(searchQuery);
+
+        if (matchStatus && matchMerchant && matchSearch) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+
+      if (visibleCount === 0) {
+        noResults.classList.remove('hidden');
+        noResults.classList.add('flex');
+      } else {
+        noResults.classList.add('hidden');
+        noResults.classList.remove('flex');
+      }
+    }
+
+    // Status Tab Switcher
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => {
+          b.className = 'tab-pill shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant shadow-sm transition-all';
+        });
+        btn.className = 'tab-pill shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-inverse-surface text-inverse-on-surface shadow-sm transition-all';
+        currentStatus = btn.getAttribute('data-status');
+        filterItems();
+      });
+    });
+
+    // Period Switcher
+    periodButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        periodButtons.forEach(b => {
+          b.className = 'period-btn flex-1 py-1.5 px-2.5 rounded text-center font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all whitespace-nowrap';
+        });
+        btn.className = 'period-btn flex-1 py-1.5 px-2.5 rounded text-center font-label-md text-label-md bg-surface-container-lowest text-on-surface shadow-sm transition-all whitespace-nowrap';
+      });
+    });
+
+    // Search and Merchant filtering
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        filterItems();
+      });
+    }
+
+    if (merchantSelect) {
+      merchantSelect.addEventListener('change', (e) => {
+        currentMerchant = e.target.value;
+        filterItems();
+      });
+    }
+
+    // Micro-feedback for Export Kimia
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        const originalText = exportBtn.innerHTML;
+        exportBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] text-tertiary animate-spin">sync</span>
+          <span class="font-label-md text-label-md text-tertiary">Export...</span>
+        `;
+        setTimeout(() => {
+          exportBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[18px] text-tertiary">check</span>
+            <span class="font-label-md text-label-md text-tertiary">Téléchargé !</span>
+          `;
+          setTimeout(() => {
+            exportBtn.innerHTML = originalText;
+          }, 1800);
+        }, 900);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.05)]" data-active-classes="text-primary-container font-semibold"><div class="flex justify-around items-center h-16 px-1"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="font-label-sm text-[11px]">Dashboard</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="vendeurs" href="#"><span class="material-symbols-outlined text-[22px]">store</span><span class="font-label-sm text-[11px]">Vendeurs</span></a><a class="relative flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="a-valider" href="#"><div class="relative"><span class="material-symbols-outlined text-[22px]">verified</span><span class="absolute -top-1 -right-2.5 bg-tertiary text-on-tertiary font-label-sm text-[10px] leading-tight px-1 rounded-full">8</span></div><span class="font-label-sm text-[11px]">À valider</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 transition-colors text-primary-container font-semibold" data-path="finances" href="#"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="font-label-sm text-[11px]">Finances</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="plus" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-[11px]">Plus</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

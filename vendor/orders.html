@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#fbf9f6",
+          "surface-tint": "#765934",
+          "on-primary-fixed": "#2a1800",
+          "secondary-fixed-dim": "#d3c4b9",
+          "on-secondary-fixed": "#221a13",
+          "on-primary-fixed-variant": "#5c421f",
+          "on-error": "#ffffff",
+          "outline": "#80756a",
+          "on-primary-container": "#fff8f4",
+          "on-secondary-container": "#6c6158",
+          "on-surface": "#1b1c1a",
+          "primary": "#8c6d46",
+          "primary-dark": "#725633",
+          "on-secondary-fixed-variant": "#4f453d",
+          "on-tertiary": "#ffffff",
+          "background": "#fbf9f6",
+          "on-secondary": "#ffffff",
+          "primary-container": "#8c6d46",
+          "tertiary": "#006746",
+          "surface-container-low": "#f5f3f0",
+          "inverse-on-surface": "#f2f0ed",
+          "error-container": "#ffdad6",
+          "surface-bright": "#fbf9f6",
+          "primary-fixed": "#ffddb6",
+          "secondary": "#675c53",
+          "inverse-surface": "#30312f",
+          "surface-container-highest": "#e4e2df",
+          "outline-variant": "#e7e3dd",
+          "surface-container-high": "#eae8e5",
+          "secondary-container": "#edddd1",
+          "secondary-fixed": "#efe0d4",
+          "surface-variant": "#e4e2df",
+          "on-primary": "#ffffff",
+          "surface-dim": "#dbdad7",
+          "tertiary-container": "#00835a",
+          "error": "#ba1a1a",
+          "tertiary-fixed-dim": "#4edea3",
+          "on-background": "#1b1c1a",
+          "on-tertiary-fixed": "#002113",
+          "on-error-container": "#93000a",
+          "on-surface-variant": "#4e453b",
+          "on-tertiary-container": "#e8ffef",
+          "tertiary-fixed": "#6ffbbe",
+          "primary-fixed-dim": "#e6c093",
+          "surface-container-lowest": "#ffffff",
+          "surface-container": "#efeeeb",
+          "inverse-primary": "#e6c093",
+          "on-tertiary-fixed-variant": "#005236"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-mobile": "0.75rem",
+          "gutter": "1rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem",
+          "space-sm": "0.5rem",
+          "margin-mobile": "1rem",
+          "margin": "1rem",
+          "space-xl": "2.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "body-sm": ["Inter", "sans-serif"],
+          "body-md": ["Inter", "sans-serif"],
+          "body-lg": ["Inter", "sans-serif"],
+          "label-sm": ["Inter", "sans-serif"],
+          "label-md": ["Inter", "sans-serif"],
+          "label-lg": ["Inter", "sans-serif"],
+          "price-secondary": ["Inter", "sans-serif"],
+          "price-hero": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-xl": ["Plus Jakarta Sans", "sans-serif"]
+        },
+        "fontSize": {
+          "price-secondary": ["13px", { "lineHeight": "16px", "fontWeight": "500" }],
+          "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+          "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "600" }],
+          "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+          "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+          "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+          "price-hero": ["24px", { "lineHeight": "28px", "fontWeight": "800" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
+        }
+      }
+    }
+  };
+</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl border-b border-outline-variant/60 shadow-[0_1px_8px_rgba(70,50,30,0.03)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XjIfsenHcmKn3krWQuLOUae2JeOsxLQN1TjhDCTVQdDaq4EbFi7MpQGvgP1_5DMjg8ibCDLrD12vbFxmnTgjwyDcN4TkLVi9Ngl-8PX2l23okCHBwCHNvw3O3ZOTdPmJeNB0-U6r2jjwKWfarvxhAqhmLw3gvvxi6uJPA0sFPiEhH_LM9-AI6o5EgRcH6Eglh94XeGACYfpeMHMkaRCpQ7epv6VbutIWbg5gVGPsDLRU3FEagxn7vOvu8"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight font-bold">Chez Awa</span><span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 font-label-sm text-[10px] uppercase font-bold tracking-wider">PRO</span></div><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Vendor Dashboard</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-surface-container-low px-2 py-1 rounded-full text-on-surface border border-outline-variant/60"><span class="font-label-sm text-label-sm font-bold text-primary mr-1">USD</span><span class="font-label-sm text-label-sm text-outline">|</span><span class="font-label-sm text-label-sm text-on-surface-variant ml-1">CDF</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant ml-0.5">arrow_drop_down</span></div><button class="relative w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/30" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/><span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-tertiary ring-2 ring-surface"></span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full pb-28">
+<!-- Entête & Recherche -->
+<section class="px-gutter-mobile pt-3 pb-2 flex flex-col gap-3">
+<!-- Titre et Compteurs -->
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight">Commandes</h1>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm">Aujourd'hui</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="font-semibold text-on-surface">23 commandes</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-primary font-semibold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            3 à traiter en urgence
+          </span>
+</p>
+</div>
+<!-- Action Export Rapide -->
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors shadow-sm" title="Exporter bordereau">
+<span class="material-symbols-outlined text-[20px]">print</span>
+</button>
+</div>
+<!-- Barre de Recherche & Filtres -->
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[20px] text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all" placeholder="Rechercher #ORD, client, commune, motard..." type="text"/>
+</div>
+<button class="flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container transition-colors relative">
+<span class="material-symbols-outlined text-[21px]">tune</span>
+<span class="absolute top-2.5 right-2.5 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+</div>
+<!-- Filtres Onglets Horizontaux Défilants -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 -mx-gutter-mobile px-gutter-mobile">
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-on-surface text-surface-bright font-label-md text-label-md whitespace-nowrap shadow-sm">
+<span>Toutes</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[11px]">23</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md whitespace-nowrap shadow-sm transition-colors">
+<span>À préparer</span>
+<span class="px-1.5 py-0.2 rounded-full bg-primary/15 text-primary font-bold font-label-sm text-[11px]">2</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md whitespace-nowrap shadow-sm transition-colors">
+<span>Prêtes</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[11px]">3</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md whitespace-nowrap shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[16px] text-tertiary">two_wheeler</span>
+<span>En route</span>
+<span class="px-1.5 py-0.2 rounded-full bg-tertiary/10 text-tertiary font-bold font-label-sm text-[11px]">4</span>
+</button>
+<button class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md whitespace-nowrap shadow-sm transition-colors">
+<span>Livrées</span>
+<span class="px-1.5 py-0.2 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-[11px]">14</span>
+</button>
+</div>
+</section>
+<!-- Notification d'Action Prioritaire / Alerte Express -->
+<section class="px-gutter-mobile mt-1.5">
+<div class="p-3.5 rounded-2xl bg-secondary-container/60 shadow-sm flex flex-col gap-2.5 relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-primary/10 pointer-events-none"></div>
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="flex h-7 w-7 rounded-full bg-primary text-on-primary items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-secondary-container font-bold flex items-center gap-1">
+              Commande urgente reçue
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+</p>
+<p class="font-body-sm text-body-sm text-on-secondary-container/80">Reçue il y a 18 min • Bandalungwa</p>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-secondary-container">28 500 FC</span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-on-secondary-container/80 font-medium">#ORD-2026-00142 • Jean Dupont</span>
+<a class="px-3.5 py-1.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm hover:bg-primary-dark transition-colors flex items-center gap-1" href="#prepare-modal">
+<span>Préparer le colis</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Flux des Commandes - Groupe Aujourd'hui -->
+<section class="px-gutter-mobile mt-4 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h2 class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span>Aujourd'hui</span>
+<span class="px-2 py-0.2 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">8 colis</span>
+</h2>
+<button class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-0.5">
+<span>Filtrer par commune</span>
+<span class="material-symbols-outlined text-[16px]">keyboard_arrow_down</span>
+</button>
+</div>
+<!-- Carte 1: À préparer (Urgente) -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-3 hover:shadow-md transition-shadow">
+<!-- Entête carte : Réf & Statut -->
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">#ORD-2026-00142</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold">Zone B</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Reçue il y a 18 min
+          </span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          À préparer
+        </span>
+</div>
+<!-- Ligne Client & Lieu -->
+<div class="flex items-center gap-3 p-2.5 rounded-xl bg-surface-container-low">
+<img class="w-10 h-10 rounded-full object-cover shadow-sm shrink-0" data-alt="Close up warm studio portrait of Jean Dupont, a charismatic Congolese customer in Kinshasa smiling warmly wearing a stylish navy shirt with neutral soft backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAowhapM0ySWr5T0YWqZUsmg7Nd1XQtfyuVqDjSf4-RFhNc-ZDlo8n9e5RBMorYJRCZ21uMqpNJM-N9KqaY_754-Ane8DvZtKT-GiraA4gdkzP2M5OsliyVeGfgOQL1n8oQfMnZScZvFzq8C6BTHTBk6hxSYvfvApFT0d_UJAMpE-pGVe5smiWiGWVLATcmmTUFwKIJ57qIBMg26xQgSED9UWpxeS1VDQ5kCuyALKlxYmrd_mW3Jltj"/>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Jean Dupont</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary shrink-0">pin_drop</span>
+            Bandalungwa • Arrêt Bakayau
+          </p>
+</div>
+<span class="px-2 py-1 rounded-lg bg-surface-container font-label-sm text-[11px] text-on-surface font-semibold shrink-0">
+          2 articles
+        </span>
+</div>
+<!-- Aperçu Produits -->
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center p-1 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Folded luxury royal navy blue plain cotton unisex crewneck t-shirt top-down flat lay isolated on light warm beige background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWXbQE5wGRWPmUi-ff9uMOWoLgTSq-HvXv-GiWtaQ4Jta2LYGFM7Me80GTuwjh9xQ0U8LuOTMnxt_EebsOoUvDX8bOV7l19pRuwGbDJ8iSb_AbOucN6IkkkCo6vjFVN9pTxprIUzZUJONaDd9OaeUf_JV4PT_Zf7TXwBsG8VRCvqrh3sdngSHhftEfvmZFaYgF9oHYRghnwCs44RSHjYJqD83lIb_HECupL2VxVGzipTErHFNq7iM0"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">T-shirt coton premium Kinshasa (x2)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">+ Casquette urbaine Amani (x1)</span>
+</div>
+<div class="text-right shrink-0">
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">28 500 FC</p>
+<span class="font-body-sm text-body-sm text-outline font-medium">~$11.40</span>
+</div>
+</div>
+<!-- Footer & Action -->
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/50 text-on-secondary-container font-label-sm text-label-sm font-medium">
+<span class="material-symbols-outlined text-[14px]">payments</span>
+<span>Cash COD à la livraison</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-9 h-9 rounded-xl bg-surface-container text-on-surface flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_horiz</span>
+</button>
+<button class="px-3.5 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm hover:bg-primary-dark transition-colors flex items-center gap-1.5">
+<span>Préparer</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Carte 2: En cours de livraison (Motard en route) -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-3 hover:shadow-md transition-shadow">
+<!-- Entête carte : Réf & Statut -->
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">#ORD-2026-00141</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] font-bold">Gombe</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span> Prise en charge à 11:20
+          </span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">two_wheeler</span>
+          En route (~10 min)
+        </span>
+</div>
+<!-- Ligne Client & Lieu -->
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0">
+            MK
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Marie Kabila</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Gombe • Résidence Riverview, 4e ét.</p>
+</div>
+</div>
+<a class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:text-primary transition-colors shadow-sm shrink-0" href="tel:+243810000000">
+<span class="material-symbols-outlined text-[16px]">call</span>
+</a>
+</div>
+<!-- Aperçu Produit & Motard -->
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center p-1 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover rounded-lg" data-alt="Luxury handcrafted analog watch with deep navy blue face and rich cognac brown leather strap isolated on soft cream background studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATeJFsfmYRMf2d1AOIXPHa2L-YrK8MaaOMlQyXJoREdT58oZ_U1bgVTtHuvG6nnOvyUP5EH9cA3Vtjsdz4iX7Z_XM0ztM5Z4gvbUb9VyBnxGuObb8XHWHUuxETXDr_TrnesBOMsNegAGe7nIRT7V4sl-b9UcKsABJhvz2XaYOPmBMkgD2UBK2Afsw7oOidlRuBvuugrGfMPJdzpKBhDrG2pL1fwn1ECl9f6TRL6IiXOYkj4VYJb47b"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">Montre classique cuir Montrose</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[14px] text-tertiary">sports_motorsports</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Motard : Ibrahim S.</span>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">39 000 FC</p>
+<span class="font-body-sm text-body-sm text-outline font-medium">~$15.60</span>
+</div>
+</div>
+<!-- Actions : Suivi GPS & Contact WhatsApp -->
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 py-2 px-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[17px] text-primary">near_me</span>
+<span>Suivi GPS motard</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-tertiary/10 text-tertiary hover:bg-tertiary/15 font-label-md text-label-md font-bold transition-colors">
+<span class="material-symbols-outlined text-[17px]">chat</span>
+<span>WhatsApp</span>
+</button>
+</div>
+</article>
+<!-- Carte 4: Colis prêt en boutique (En attente motard) -->
+<article class="bg-surface-container-lowest rounded-2xl p-4 shadow-sm flex flex-col gap-3 hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">#ORD-2026-00139</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-[10px] font-bold">Kintambo</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">inventory_2</span> Emballé à 10:15
+          </span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_box</span>
+          Prête en boutique
+        </span>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-2.5 min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed font-headline-sm text-headline-sm font-bold flex items-center justify-center shrink-0">
+            SL
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Sarah Lukusa</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Kintambo Magasin • 3 articles</p>
+</div>
+</div>
+<div class="text-right shrink-0">
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">45 000 FC</p>
+<span class="font-body-sm text-body-sm text-outline font-medium">~$18.00</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span> Motard non assigné
+        </span>
+<button class="px-3.5 py-1.5 rounded-xl bg-on-surface text-surface font-label-md text-label-md font-bold shadow-sm hover:opacity-90 transition-opacity flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">sports_motorsports</span>
+<span>Assigner un motard</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Flux des Commandes - Groupe Hier / Historique Récent -->
+<section class="px-gutter-mobile mt-5 flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h2 class="font-label-lg text-label-lg font-bold text-on-surface flex items-center gap-2">
+<span>Terminées récemment</span>
+<span class="px-2 py-0.2 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">Hier &amp; matin</span>
+</h2>
+</div>
+<!-- Carte 3: Livrée avec Succès & M-Pesa Encaissé -->
+<article class="bg-surface-container-lowest/80 rounded-2xl p-4 shadow-sm flex flex-col gap-2.5 opacity-95">
+<div class="flex items-start justify-between gap-2">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-tight">#ORD-2026-00140</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] font-bold">Limete</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">done_all</span> Livré à 10:45 • Moussa Balume
+          </span>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+          Livrée
+        </span>
+</div>
+<div class="flex items-center justify-between py-1">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Patrick Mwamba</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Écouteurs Pro sans fil • Limete Résidentiel</span>
+</div>
+<div class="text-right shrink-0">
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">32 000 FC</p>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-[13px]">verified</span> M-Pesa reçu
+          </span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<button class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">receipt_long</span>
+<span>Reçu de caisse PDF</span>
+</button>
+<span class="font-body-sm text-body-sm text-outline">Note client: ★ 5.0</span>
+</div>
+</article>
+</section>
+<!-- Récapitulatif Flottant & Export / Bordereau (Fixé juste au dessus de la Bottom Nav) -->
+<section class="px-gutter-mobile mt-5 mb-2">
+<div class="p-3.5 rounded-2xl bg-surface-container-highest shadow-sm flex items-center justify-between gap-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Bilan COD à encaisser</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">126 500 FC</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">98% succès</span>
+</div>
+</div>
+<button class="px-3.5 py-2 rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md font-bold shadow-sm transition-colors flex items-center gap-1.5 shrink-0">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>Bordereau PDF</span>
+</button>
+</div>
+</section>
+</div>
+<script>
+  // Micro-interaction de confirmation d'action rapide
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('button[class*="whitespace-nowrap"]');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-on-surface', 'text-surface-bright');
+          b.classList.add('bg-surface-container-lowest', 'text-on-surface');
+        });
+        btn.classList.add('bg-on-surface', 'text-surface-bright');
+        btn.classList.remove('bg-surface-container-lowest', 'text-on-surface');
+      });
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl border-t border-outline-variant/60 shadow-[0_-2px_12px_rgba(70,50,30,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="vendor-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm font-bold">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="vendor-products" href="#"><span class="material-symbols-outlined text-[24px]">inventory_2</span><span class="font-label-sm text-label-sm">Produits</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="vendor-orders" href="#"><span class="relative"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute -top-1 -right-2 bg-error text-on-error font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">1</span></span><span class="font-label-sm text-label-sm">Commandes</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="vendor-crm" href="#"><span class="material-symbols-outlined text-[24px]">group</span><span class="font-label-sm text-label-sm">Clients</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="vendor-settings" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-sm text-label-sm">Plus</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

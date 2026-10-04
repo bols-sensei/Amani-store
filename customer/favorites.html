@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script></head><body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(38,30,23,0.04)] pt-safe"><div class="h-28 px-margin-mobile flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XjIfsenHcmKn3krWQuLOUae2JeOsxLQN1TjhDCTVQdDaq4EbFi7MpQGvgP1_5DMjg8ibCDLrD12vbFxmnTgjwyDcN4TkLVi9Ngl-8PX2l23okCHBwCHNvw3O3ZOTdPmJeNB0-U6r2jjwKWfarvxhAqhmLw3gvvxi6uJPA0sFPiEhH_LM9-AI6o5EgRcH6Eglh94XeGACYfpeMHMkaRCpQ7epv6VbutIWbg5gVGPsDLRU3FEagxn7vOvu8"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">Amani</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Accueil</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-secondary-container/60 p-0.5 rounded-full shadow-[0_1px_3px_rgba(38,30,23,0.04)]"><button class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(38,30,23,0.08)]" type="button">USD $</button><button class="px-2 py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm" type="button">CDF FC</button></div><a aria-label="WhatsApp Support" class="w-11 h-11 flex items-center justify-center rounded-full bg-tertiary-container/10 text-tertiary active:scale-95 transition-transform" href="https://wa.me/243000000000"><span class="material-symbols-outlined text-[20px]">chat</span></a><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(38,30,23,0.12)]" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-tertiary rounded-full shadow-[0_0_0_1.5px_#fbf9f6]"></span></div></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface max-w-[150px] shadow-[0_1px_2px_rgba(38,30,23,0.04)]"><span class="material-symbols-outlined text-primary text-[16px]">location_on</span><span class="font-label-sm text-label-sm truncate font-medium">Kinshasa, Gombe</span></div><div class="flex-1 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_4px_rgba(38,30,23,0.04)]"><span class="material-symbols-outlined text-outline text-[18px]">search</span><span class="font-body-md text-body-md text-outline truncate">Rechercher sur Amani...</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Feedback Snack Notification Container -->
+<div class="fixed top-32 inset-x-4 z-50 transform -translate-y-16 opacity-0 pointer-events-none transition-all duration-300 flex items-center justify-between px-space-md py-space-sm bg-inverse-surface text-inverse-on-surface rounded-xl shadow-xl" id="toast-notification">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+<span class="font-body-md text-body-md font-medium" id="toast-message">Article ajouté au panier</span>
+</div>
+<span class="font-label-sm text-label-sm text-surface-tint">Kinshasa Express</span>
+</div>
+<!-- Page Header Summary -->
+<div class="px-margin-mobile pt-space-xs pb-space-sm flex flex-col gap-space-xs">
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-1.5">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Mes Favoris</h1>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">(12 articles)</span>
+</div>
+<button class="font-label-md text-label-md text-primary font-medium active:opacity-70 transition-opacity" id="toggle-select-all">
+        Sélectionner
+      </button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-tertiary text-[16px]">verified_user</span>
+      Vendeurs certifiés à Kinshasa • Taux : 1$ = 2 500 FC
+    </p>
+</div>
+<!-- Filter Pills (Horizontal Scroll) -->
+<div class="w-full overflow-x-auto no-scrollbar px-margin-mobile pb-space-sm flex items-center gap-2">
+<button class="filter-chip active-chip px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm whitespace-nowrap transition-transform active:scale-95 flex items-center gap-1.5">
+<span>Tous</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-lowest/20 font-label-sm text-[10px]">12</span>
+</button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-transform active:scale-95 flex items-center gap-1.5">
+<span>Mode</span>
+<span class="text-outline font-label-sm text-[10px]">5</span>
+</button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-transform active:scale-95 flex items-center gap-1.5">
+<span>Électronique</span>
+<span class="text-outline font-label-sm text-[10px]">4</span>
+</button>
+<button class="filter-chip px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap transition-transform active:scale-95 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">near_me</span>
+<span>En stock Gombe</span>
+</button>
+</div>
+<!-- 2-Column Product Grid -->
+<div class="px-margin-mobile grid grid-cols-2 gap-gutter-mobile pb-space-xl">
+<!-- Item 1: Montre cuir homme -->
+<div class="favorite-card group relative bg-surface-container-lowest rounded-xl p-2.5 flex flex-col justify-between shadow-[0_2px_8px_-2px_rgba(38,30,23,0.05),0_1px_3px_0_rgba(38,30,23,0.03)] transition-all">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-2">
+<img alt="Montre automatique pour homme avec bracelet en cuir havane et cadran bleu nuit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1WJGUuyNCv7X3npbk7xRvYU2M81fhItJWTF4OQJM3uZVomIzi-zGbvsA3bSxHIAE29FDWEkRDoVWCIy2ZfhIOULqrIdCQfO_xMjAqKYMxhtZkkIIvjEyYPT29eYakAm-jgnIt6dkRVA9F4VfQ2A60xTCadz64jdcMgNDbFjYdfgf1eQw48z7GPe7WnpGL4xbBjVGegdBjMjVPHdliGqFjViA39L-Y-odfnfZeIeaiITo3v-h7qeeEVecmI"/>
+<!-- Commune Badge -->
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm shadow-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+          Gombe
+        </span>
+<!-- Remove from favorites micro-action -->
+<button aria-label="Retirer des favoris" class="btn-fav-toggle absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Content -->
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-surface-tint text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">4.9</span>
+<span class="font-label-sm text-[10px] text-outline">(34)</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold line-clamp-1">Montre Cuir Homme</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mb-2">Chez Awa • Vérifié</p>
+<!-- Pricing block -->
+<div class="mt-auto pt-1 flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">$12.00</span>
+</div>
+<span class="font-body-md text-[12px] text-outline font-medium">30 000 FC</span>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="mt-2.5 pt-2 flex items-center gap-1.5">
+<a class="w-8 h-8 rounded-lg bg-surface-container-low text-tertiary flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/243000000000?text=Bonjour%20Chez%20Awa,%20je%20suis%20intéressé%20par%20la%20Montre%20Cuir" title="WhatsApp rapide">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<button class="btn-add-cart flex-1 h-8 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+<!-- Item 2: T-shirt bleu pur coton -->
+<div class="favorite-card group relative bg-surface-container-lowest rounded-xl p-2.5 flex flex-col justify-between shadow-[0_2px_8px_-2px_rgba(38,30,23,0.05),0_1px_3px_0_rgba(38,30,23,0.03)] transition-all">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-2">
+<img alt="T-shirt bleu marine pur coton haut de gamme soigneusement plié" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1Urt02TTRuzS_NbCDXQ-3abSz18i-G_2yy-QDng-hRoMDymoXzjqy4uBXu2NNN4DTRe1sxpYHbwRyRXfIGtHxQwd7a_vXkXKuFYerj1eKRxFDgHrlJoHsee6w8LBLn23YN-LEfQRSZubc3OX-hVf6S0L2i3MH49I9tFoWxSY61R6cUrZjXbItkSPxEgx5l9OVdviLU5laQchxK-tOpjBQunXsmQYq8gdV0bsltRy7qGzOGdf_2M34XNFb0"/>
+<!-- Stock Limité Tag -->
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-semibold tracking-wide">
+          Stock limité
+        </span>
+<!-- Fav button -->
+<button aria-label="Retirer des favoris" class="btn-fav-toggle absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Content -->
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-surface-tint text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">4.7</span>
+<span class="font-label-sm text-[10px] text-outline">(19)</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold line-clamp-1">T-shirt Bleu Coton</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mb-2">Chez Awa • Gombe</p>
+<!-- Pricing block -->
+<div class="mt-auto pt-1 flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">$4.00</span>
+</div>
+<span class="font-body-md text-[12px] text-outline font-medium">10 000 FC</span>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="mt-2.5 pt-2 flex items-center gap-1.5">
+<a class="w-8 h-8 rounded-lg bg-surface-container-low text-tertiary flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/243000000000?text=Bonjour,%20le%20T-shirt%20bleu%20coton%20est-il%20disponible?" title="WhatsApp rapide">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<button class="btn-add-cart flex-1 h-8 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+<!-- Item 3: Baskets Running Pro -->
+<div class="favorite-card group relative bg-surface-container-lowest rounded-xl p-2.5 flex flex-col justify-between shadow-[0_2px_8px_-2px_rgba(38,30,23,0.05),0_1px_3px_0_rgba(38,30,23,0.03)] transition-all">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-2">
+<img alt="Paire de chaussures de running légères en mesh bleu électrique et semelle fluo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1XHx2Tr3gY2RXsShnktAAxCeZiIlqDM5dGPp8KMXj2HerJiuCQbL6pOE37WDMcY_chuJVUbZsEa_l6fZZ6QHt1WMQiNbgdcsn1G3TD5VeXRtMxLOELh4vLfWkx7kaSPA4AKrx7ZYcH-IOZOc4RxW0KZFBSEbpH_UADbrO0j2rGTi9QlrJG-DgpWOC0rAerrhw3ILjTs2feIiVopDByU8_qYiT0nPqopK72uW1InplW5lbaQkaNB-MQr-A"/>
+<!-- Commune Badge -->
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm shadow-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+          Kintambo
+        </span>
+<!-- Fav button -->
+<button aria-label="Retirer des favoris" class="btn-fav-toggle absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Content -->
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-surface-tint text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">5.0</span>
+<span class="font-label-sm text-[10px] text-outline">(62)</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold line-clamp-1">Baskets Running Pro</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mb-2">SportKin Express</p>
+<!-- Pricing block -->
+<div class="mt-auto pt-1 flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">$10.00</span>
+</div>
+<span class="font-body-md text-[12px] text-outline font-medium">25 000 FC</span>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="mt-2.5 pt-2 flex items-center gap-1.5">
+<a class="w-8 h-8 rounded-lg bg-surface-container-low text-tertiary flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/243000000000?text=Bonjour%20SportKin,%20taille%2042%20disponible%20pour%20les%20baskets?" title="WhatsApp rapide">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<button class="btn-add-cart flex-1 h-8 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+<!-- Item 4: Écouteurs Bluetooth TWS -->
+<div class="favorite-card group relative bg-surface-container-lowest rounded-xl p-2.5 flex flex-col justify-between shadow-[0_2px_8px_-2px_rgba(38,30,23,0.05),0_1px_3px_0_rgba(38,30,23,0.03)] transition-all">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container-low mb-2">
+<img alt="Écouteurs sans-fil intra-auriculaires noirs mats et casque audio studio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida/AEtjO1XY4yQG4lHAnK_OxliLZoir3X6XGJT9J7CVnfh3wMY40i_fsl2J-LXusz_EmrIinmBYpK1q9xwANQ4MNFN3oBS3B3kL96Lp3AQP0iaLjJ-f26KEEkuueIp6IcvDje_YJRq7zOCW4SWIOSJzTLMuV-64N2a8vu09wDtRaiwJBTdTf3HKr-sjIxviR0iq_8odc78cpxOvmhlUY8xNPoJ6aso55Sw1lceqMT17tloOUI8gsFSIoxegS8p-66s"/>
+<!-- Commune Badge -->
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm shadow-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px] text-primary">location_on</span>
+          Limete
+        </span>
+<!-- Fav button -->
+<button aria-label="Retirer des favoris" class="btn-fav-toggle absolute top-2 right-2 w-7 h-7 rounded-full bg-surface-container-lowest shadow-md flex items-center justify-center text-error active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<!-- Content -->
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-1 mb-1">
+<span class="material-symbols-outlined text-surface-tint text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">4.8</span>
+<span class="font-label-sm text-[10px] text-outline">(41)</span>
+</div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold line-clamp-1">Écouteurs TWS Bass+</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mb-2">ÉlectroMoussa</p>
+<!-- Pricing block -->
+<div class="mt-auto pt-1 flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">$6.00</span>
+</div>
+<span class="font-body-md text-[12px] text-outline font-medium">15 000 FC</span>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="mt-2.5 pt-2 flex items-center gap-1.5">
+<a class="w-8 h-8 rounded-lg bg-surface-container-low text-tertiary flex items-center justify-center active:scale-95 transition-transform" href="https://wa.me/243000000000?text=Bonjour%20ÉlectroMoussa,%20je%20souhaite%20commander%20les%20écouteurs%20TWS" title="WhatsApp rapide">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<button class="btn-add-cart flex-1 h-8 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1 active:scale-95 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span>Ajouter</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Trust Banner Callout -->
+<div class="mx-margin-mobile mb-4 p-3 bg-secondary-container/40 rounded-xl flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Paiement Cash à la livraison</span>
+<span class="font-body-md text-[11px] text-on-surface-variant leading-tight">Inspectez vos articles avant de payer au livreur partout à Kinshasa.</span>
+</div>
+</div>
+<!-- Sticky Bottom Batch Action Panel (Above bottom navigation shell) -->
+<div class="sticky bottom-0 z-40 bg-surface/95 backdrop-blur-md px-margin-mobile py-2.5 shadow-[0_-4px_16px_rgba(38,30,23,0.08)]">
+<div class="flex items-center gap-space-sm max-w-lg mx-auto">
+<div class="flex flex-col">
+<span class="font-label-sm text-[11px] text-outline uppercase font-semibold">Total sélection</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold" id="total-price-usd">$32.00</span>
+<span class="font-label-sm text-label-sm text-outline">(80 000 FC)</span>
+</div>
+</div>
+<button class="flex-1 h-11 px-4 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 active:scale-95 transition-all shadow-md" id="btn-add-all-cart">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>Tout ajouter au panier</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function initFavoritesInteractivity() {
+    // 1. Toast Notification Helper
+    const toast = document.getElementById('toast-notification');
+    const toastMessage = document.getElementById('toast-message');
+    let toastTimeout;
+
+    function showToast(msg) {
+      if (!toast) return;
+      toastMessage.textContent = msg;
+      toast.classList.remove('opacity-0', '-translate-y-16', 'pointer-events-none');
+      toast.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', '-translate-y-16', 'pointer-events-none');
+      }, 2400);
+    }
+
+    // 2. Favorite Toggle Buttons
+    const favButtons = document.querySelectorAll('.btn-fav-toggle');
+    favButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        const card = btn.closest('.favorite-card');
+        
+        if (icon.textContent.trim() === 'favorite') {
+          // Untoggle favorite
+          icon.textContent = 'favorite_border';
+          icon.style.fontVariationSettings = "'FILL' 0";
+          btn.classList.remove('text-error');
+          btn.classList.add('text-outline');
+          if (card) {
+            card.style.opacity = '0.45';
+          }
+          showToast('Retiré de vos favoris');
+        } else {
+          // Re-toggle favorite
+          icon.textContent = 'favorite';
+          icon.style.fontVariationSettings = "'FILL' 1";
+          btn.classList.remove('text-outline');
+          btn.classList.add('text-error');
+          if (card) {
+            card.style.opacity = '1';
+          }
+          showToast('Conservé dans vos favoris');
+        }
+      });
+    });
+
+    // 3. Add individual item to cart
+    const addCartButtons = document.querySelectorAll('.btn-add-cart');
+    addCartButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const originalContent = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[16px] text-tertiary">done</span> Ajouté';
+        btn.classList.replace('bg-primary-container', 'bg-tertiary-container/20');
+        showToast('Article ajouté au panier !');
+        setTimeout(() => {
+          btn.innerHTML = originalContent;
+          btn.classList.replace('bg-tertiary-container/20', 'bg-primary-container');
+        }, 1800);
+      });
+    });
+
+    // 4. Batch "Tout ajouter au panier"
+    const addAllBtn = document.getElementById('btn-add-all-cart');
+    if (addAllBtn) {
+      addAllBtn.addEventListener('click', () => {
+        showToast('4 articles ajoutés à votre panier !');
+        addAllBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">done_all</span><span>Articles au panier !</span>';
+        setTimeout(() => {
+          addAllBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">shopping_bag</span><span>Tout ajouter au panier</span>';
+        }, 2200);
+      });
+    }
+
+    // 5. Category Chips Switcher
+    const chips = document.querySelectorAll('.filter-chip');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => {
+          c.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+          c.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        chip.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        chip.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-sm');
+      });
+    });
+
+    // 6. Highlight Nav tab in shell if present
+    const navItems = document.querySelectorAll('nav [data-path]');
+    navItems.forEach(item => {
+      if (item.getAttribute('data-path') === 'compte') {
+        item.classList.add('text-primary');
+        item.classList.remove('text-on-surface-variant');
+      }
+    });
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.05)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-gutter-mobile flex justify-around items-center"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="accueil" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Accueil</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="recherche" href="#"><span class="material-symbols-outlined text-[24px]">search</span><span class="font-label-sm text-label-sm">Recherche</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="panier" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute -top-1 -right-2 bg-primary text-on-primary font-label-sm text-[10px] leading-tight px-1.5 py-0.5 rounded-full min-w-[16px] text-center shadow-[0_1px_3px_rgba(38,30,23,0.2)]">3</span></div><span class="font-label-sm text-label-sm">Panier</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="commandes" href="#"><span class="material-symbols-outlined text-[24px]">inventory_2</span><span class="font-label-sm text-label-sm">Commandes</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="compte" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm">Compte</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script></head><body class="bg-surface text-on-surface min-h-screen flex flex-col antialiased selection:bg-primary/20"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(38,30,23,0.04)] pt-safe"><div class="h-28 px-margin-mobile flex flex-col justify-center gap-space-xs"><div class="flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-xs"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XjIfsenHcmKn3krWQuLOUae2JeOsxLQN1TjhDCTVQdDaq4EbFi7MpQGvgP1_5DMjg8ibCDLrD12vbFxmnTgjwyDcN4TkLVi9Ngl-8PX2l23okCHBwCHNvw3O3ZOTdPmJeNB0-U6r2jjwKWfarvxhAqhmLw3gvvxi6uJPA0sFPiEhH_LM9-AI6o5EgRcH6Eglh94XeGACYfpeMHMkaRCpQ7epv6VbutIWbg5gVGPsDLRU3FEagxn7vOvu8"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">Amani</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Accueil</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-secondary-container/60 p-0.5 rounded-full shadow-[0_1px_3px_rgba(38,30,23,0.04)]"><button class="px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-[0_1px_2px_rgba(38,30,23,0.08)]" type="button">USD $</button><button class="px-2 py-0.5 rounded-full text-on-surface-variant font-label-sm text-label-sm" type="button">CDF FC</button></div><a aria-label="WhatsApp Support" class="w-11 h-11 flex items-center justify-center rounded-full bg-tertiary-container/10 text-tertiary active:scale-95 transition-transform" href="https://wa.me/243000000000"><span class="material-symbols-outlined text-[20px]">chat</span></a><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(38,30,23,0.12)]" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-tertiary rounded-full shadow-[0_0_0_1.5px_#fbf9f6]"></span></div></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low text-on-surface max-w-[150px] shadow-[0_1px_2px_rgba(38,30,23,0.04)]"><span class="material-symbols-outlined text-primary text-[16px]">location_on</span><span class="font-label-sm text-label-sm truncate font-medium">Kinshasa, Gombe</span></div><div class="flex-1 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_4px_rgba(38,30,23,0.04)]"><span class="material-symbols-outlined text-outline text-[18px]">search</span><span class="font-body-md text-body-md text-outline truncate">Rechercher sur Amani...</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-20 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- Interactive Search Context / Sticky Top Search Extension -->
+<section class="px-margin-mobile pt-space-xs pb-space-sm flex flex-col gap-space-sm bg-surface-container-low shadow-sm">
+<!-- Search Bar with clear & Filter action -->
+<div class="flex items-center gap-space-xs">
+<div class="flex-1 flex items-center bg-surface-container-lowest rounded-full px-3 py-2 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px] mr-2">search</span>
+<input class="flex-1 bg-transparent font-body-md text-body-md text-on-surface focus:outline-none placeholder:text-outline" id="search-input" placeholder="Rechercher article, boutique, marque..." type="text" value="Montre en cuir..."/>
+<button aria-label="Effacer le texte" class="w-6 h-6 flex items-center justify-center rounded-full bg-surface-container text-on-surface-variant active:scale-95 transition-transform" id="clear-search-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Filter Drawer Trigger Button -->
+<button aria-label="Ouvrir les filtres par commune et prix" class="relative flex items-center justify-center w-11 h-11 rounded-full bg-primary text-on-primary shadow-md active:scale-95 transition-transform" id="toggle-filter-drawer" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<!-- Active Filter Badge Counter -->
+<span class="absolute -top-1 -right-1 bg-tertiary text-on-tertiary font-label-sm text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold shadow-sm">
+          2
+        </span>
+</button>
+</div>
+<!-- Active Kinshasa Zone Quick Selector Bar -->
+<div class="flex items-center justify-between">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface active:bg-secondary-container transition-colors shadow-sm" id="open-commune-sheet" type="button">
+<span class="material-symbols-outlined text-primary text-[18px]">near_me</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">Kinshasa : Gombe &amp; Limete</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span>
+</button>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-label-sm font-medium">Boutiques vérifiées</span>
+</div>
+</div>
+</section>
+<!-- Horizontal Scrollable Quick Filter Chips -->
+<section class="py-space-sm pl-margin-mobile overflow-x-auto no-scrollbar flex items-center gap-space-xs">
+<!-- Active Zone Chip with Clear -->
+<div class="shrink-0 flex items-center gap-1.5 pl-3 pr-2 py-1.5 rounded-full bg-primary text-on-primary shadow-sm font-label-md text-label-md">
+<span>📍 Gombe &amp; Limete</span>
+<button aria-label="Supprimer le filtre de communes" class="w-4 h-4 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container" type="button">
+<span class="material-symbols-outlined text-[12px]">close</span>
+</button>
+</div>
+<!-- Active Instant Stock Chip -->
+<button class="shrink-0 flex items-center gap-1 px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md active:scale-95 transition-transform" type="button">
+<span>⚡ Stock immédiat</span>
+</button>
+<!-- Price Range Chip -->
+<button class="shrink-0 flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm active:scale-95 transition-transform" type="button">
+<span>🏷️ &lt; 25 000 FC ($10)</span>
+</button>
+<!-- Verified Merchants Chip -->
+<button class="shrink-0 flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm active:scale-95 transition-transform" type="button">
+<span>🛡️ Boutiques vérifiées</span>
+</button>
+<!-- Rating 4.5+ Chip -->
+<button class="shrink-0 flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md shadow-sm active:scale-95 transition-transform mr-margin-mobile" type="button">
+<span class="material-symbols-outlined text-amber-600 text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>Noté 4.5+</span>
+</button>
+</section>
+<!-- Interactive Accordion Filter Drawer (Kinshasa Municipalities & Localized Options) -->
+<section class="mx-margin-mobile my-space-xs rounded-xl bg-surface-container-lowest p-space-md shadow-sm" id="kinshasa-filter-section">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">pin_drop</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Communes de Kinshasa</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Livraison directe par coursier moto local</p>
+</div>
+</div>
+<button class="text-primary font-label-md text-label-md font-semibold active:opacity-70" id="toggle-commune-panel" type="button">
+        Modifier
+      </button>
+</div>
+<!-- Communes Grid Selector -->
+<div class="grid grid-cols-1 gap-2 pt-space-sm" id="communes-container">
+<!-- Commune: Gombe (Active) -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low cursor-pointer transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Gombe</span>
+<span class="px-1.5 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-[10px] font-bold">2h à 4h</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Nord Kinshasa • 142 articles disponibles</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Inclus</span>
+</label>
+<!-- Commune: Limete (Active) -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low cursor-pointer transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Limete</span>
+<span class="px-1.5 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-[10px] font-bold">Le jour même</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Industriel &amp; Résidentiel • 98 articles</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Inclus</span>
+</label>
+<!-- Commune: Ngaliema (Inactive) -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest cursor-pointer transition-colors opacity-75">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Ngaliema</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">24h max</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Macampagne, UPN, Binza • 64 articles</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">+ Ajouter</span>
+</label>
+<!-- Commune: Kintambo (Inactive) -->
+<label class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-lowest cursor-pointer transition-colors opacity-75">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 rounded-full bg-surface-container-high flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Kintambo</span>
+<span class="px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px]">Le jour même</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Magasin, Jamaïque • 45 articles</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">+ Ajouter</span>
+</label>
+</div>
+<!-- Dual-Currency Price Tiers -->
+<div class="pt-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Budget (Taux officiel : 1$ = 2 500 FC)</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Tout Kinshasa</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-low active:bg-secondary-container transition-colors" type="button">
+<span class="font-label-md text-label-md font-bold text-on-surface">&lt; $10</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">25 000 FC</span>
+</button>
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-primary text-on-primary shadow-sm" type="button">
+<span class="font-label-md text-label-md font-bold text-on-primary">$10 - $30</span>
+<span class="font-label-sm text-[10px] text-on-primary-fixed">25k - 75k FC</span>
+</button>
+<button class="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-low active:bg-secondary-container transition-colors" type="button">
+<span class="font-label-md text-label-md font-bold text-on-surface">&gt; $30</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">75 000 FC+</span>
+</button>
+</div>
+</div>
+<!-- Kinshasa Specific Payment & Delivery Trust Badges -->
+<div class="pt-space-md flex items-center justify-between gap-1 overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">payments</span>
+<span>Cash à la livraison</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary">smartphone</span>
+<span>Airtel / M-Pesa / Orange</span>
+</div>
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">checkroom</span>
+<span>Essayage sur place</span>
+</div>
+</div>
+</section>
+<!-- Sorting Bar & Results Count -->
+<section class="px-margin-mobile pt-space-md pb-space-xs flex items-center justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">84 articles trouvés</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Disponibles immédiatement à Kinshasa</p>
+</div>
+<!-- Sort Switcher -->
+<div class="flex items-center gap-2">
+<div class="relative">
+<select aria-label="Trier les résultats du catalogue" class="appearance-none bg-surface-container-lowest text-on-surface font-label-md text-label-md pl-3 pr-7 py-1.5 rounded-full shadow-sm focus:outline-none cursor-pointer" id="sort-select">
+<option selected="">Plus proches (Gombe)</option>
+<option>Prix croissant</option>
+<option>Mieux notés (★ 4.5+)</option>
+<option>Nouveautés Kinshasa</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+<!-- Grid / List Switcher -->
+<button aria-label="Basculer vue catalogue" class="w-8 h-8 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center shadow-sm active:scale-95 transition-transform" id="view-toggle-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+</div>
+</section>
+<!-- Product Catalog Grid (Optimized 2-Column Mobile Feed) -->
+<section class="p-margin-mobile grid grid-cols-2 gap-gutter-mobile">
+<!-- Product Card 1: Vintage Leather Watch -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]">
+<div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+<img alt="Montre Automatique Homme Cuir Vintage" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WJGUuyNCv7X3npbk7xRvYU2M81fhItJWTF4OQJM3uZVomIzi-zGbvsA3bSxHIAE29FDWEkRDoVWCIy2ZfhIOULqrIdCQfO_xMjAqKYMxhtZkkIIvjEyYPT29eYakAm-jgnIt6dkRVA9F4VfQ2A60xTCadz64jdcMgNDbFjYdfgf1eQw48z7GPe7WnpGL4xbBjVGegdBjMjVPHdliGqFjViA39L-Y-odfnfZeIeaiITo3v-h7qeeEVecmI"/>
+<!-- Location Tag -->
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md font-label-sm text-[10px] text-on-surface flex items-center gap-0.5 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-primary text-[12px]">location_on</span>
+          Gombe
+        </span>
+<!-- Wishlist Micro action -->
+<button aria-label="Ajouter aux favoris" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface/90 backdrop-blur-md flex items-center justify-center text-on-surface active:text-error transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<!-- Delivery Speed Chip -->
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold">
+          ⚡ 2h - 4h
+        </span>
+</div>
+<div class="p-space-xs flex-1 flex flex-col justify-between">
+<div>
+<!-- Seller Tag -->
+<div class="flex items-center gap-1 mb-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Awa Kinshasa</span>
+<span class="material-symbols-outlined text-tertiary text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Product Title -->
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold line-clamp-2 leading-snug">
+            Montre Cuir Vintage Auto
+          </h4>
+<!-- Rating -->
+<div class="flex items-center gap-1 my-1">
+<span class="material-symbols-outlined text-amber-600 text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.8</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">(52)</span>
+</div>
+</div>
+<div>
+<!-- Dual-currency Pricing Block -->
+<div class="mt-1 pt-1 bg-surface-container-low/50 rounded-lg p-1.5">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-primary font-bold leading-none">$12.00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">30 000 FC</span>
+</div>
+</div>
+<!-- Direct Action Buttons: WhatsApp & Cart -->
+<div class="mt-2 flex items-center gap-1.5">
+<a aria-label="Discuter sur WhatsApp avec le vendeur de Gombe" class="flex-1 py-1.5 px-2 rounded-lg bg-tertiary-container/15 text-tertiary font-label-sm text-[11px] font-semibold flex items-center justify-center gap-1 active:bg-tertiary-container/30 transition-colors" href="https://wa.me/243000000000?text=Bonjour,%20je%20suis%20intéressé%20par%20la%20Montre%20Cuir%20Vintage" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">chat</span>
+<span>WhatsApp</span>
+</a>
+<button aria-label="Ajouter la montre au panier" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Product Card 2: Modern Blue Cotton T-Shirt -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]">
+<div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+<img alt="T-shirt Coton Peigné Pur Bleu" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Urt02TTRuzS_NbCDXQ-3abSz18i-G_2yy-QDng-hRoMDymoXzjqy4uBXu2NNN4DTRe1sxpYHbwRyRXfIGtHxQwd7a_vXkXKuFYerj1eKRxFDgHrlJoHsee6w8LBLn23YN-LEfQRSZubc3OX-hVf6S0L2i3MH49I9tFoWxSY61R6cUrZjXbItkSPxEgx5l9OVdviLU5laQchxK-tOpjBQunXsmQYq8gdV0bsltRy7qGzOGdf_2M34XNFb0"/>
+<!-- Location Tag -->
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md font-label-sm text-[10px] text-on-surface flex items-center gap-0.5 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-primary text-[12px]">location_on</span>
+          Gombe
+        </span>
+<!-- Wishlist Micro action -->
+<button aria-label="Ajouter aux favoris" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface/90 backdrop-blur-md flex items-center justify-center text-on-surface active:text-error transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<!-- Stock Tag -->
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[9px] font-bold">
+          Stock Gombe (12 restants)
+        </span>
+</div>
+<div class="p-space-xs flex-1 flex flex-col justify-between">
+<div>
+<!-- Seller Tag -->
+<div class="flex items-center gap-1 mb-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Awa Kinshasa</span>
+<span class="material-symbols-outlined text-tertiary text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Product Title -->
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold line-clamp-2 leading-snug">
+            T-shirt Coton Peigné Bleu
+          </h4>
+<!-- Rating -->
+<div class="flex items-center gap-1 my-1">
+<span class="material-symbols-outlined text-amber-600 text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.5</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">(31)</span>
+</div>
+</div>
+<div>
+<!-- Dual-currency Pricing Block -->
+<div class="mt-1 pt-1 bg-surface-container-low/50 rounded-lg p-1.5">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-primary font-bold leading-none">$4.00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">10 000 FC</span>
+</div>
+</div>
+<!-- Direct Action Buttons: WhatsApp & Cart -->
+<div class="mt-2 flex items-center gap-1.5">
+<a aria-label="Discuter sur WhatsApp avec le vendeur" class="flex-1 py-1.5 px-2 rounded-lg bg-tertiary-container/15 text-tertiary font-label-sm text-[11px] font-semibold flex items-center justify-center gap-1 active:bg-tertiary-container/30 transition-colors" href="https://wa.me/243000000000?text=Bonjour,%20je%20souhaite%20commander%20le%20T-shirt%20Coton%20Bleu" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">chat</span>
+<span>WhatsApp</span>
+</a>
+<button aria-label="Ajouter le t-shirt au panier" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Product Card 3: Wireless Earbuds TWS -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]">
+<div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+<img alt="Écouteurs Pro TWS Noir Mat &amp; Réduction de Bruit" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XY4yQG4lHAnK_OxliLZoir3X6XGJT9J7CVnfh3wMY40i_fsl2J-LXusz_EmrIinmBYpK1q9xwANQ4MNFN3oBS3B3kL96Lp3AQP0iaLjJ-f26KEEkuueIp6IcvDje_YJRq7zOCW4SWIOSJzTLMuV-64N2a8vu09wDtRaiwJBTdTf3HKr-sjIxviR0iq_8odc78cpxOvmhlUY8xNPoJ6aso55Sw1lceqMT17tloOUI8gsFSIoxegS8p-66s"/>
+<!-- Location Tag -->
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md font-label-sm text-[10px] text-on-surface flex items-center gap-0.5 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-primary text-[12px]">location_on</span>
+          Limete
+        </span>
+<!-- Wishlist Micro action -->
+<button aria-label="Ajouter aux favoris" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface/90 backdrop-blur-md flex items-center justify-center text-on-surface active:text-error transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<!-- Warranty Chip -->
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-[9px] font-bold">
+          🛡️ Garantie 30 jours
+        </span>
+</div>
+<div class="p-space-xs flex-1 flex flex-col justify-between">
+<div>
+<!-- Seller Tag -->
+<div class="flex items-center gap-1 mb-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">ÉlectroMoussa Kin</span>
+<span class="material-symbols-outlined text-tertiary text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Product Title -->
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold line-clamp-2 leading-snug">
+            Écouteurs Pro TWS Noir
+          </h4>
+<!-- Rating -->
+<div class="flex items-center gap-1 my-1">
+<span class="material-symbols-outlined text-amber-600 text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.4</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">(19)</span>
+</div>
+</div>
+<div>
+<!-- Dual-currency Pricing Block -->
+<div class="mt-1 pt-1 bg-surface-container-low/50 rounded-lg p-1.5">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-primary font-bold leading-none">$6.00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">15 000 FC</span>
+</div>
+</div>
+<!-- Direct Action Buttons: WhatsApp & Cart -->
+<div class="mt-2 flex items-center gap-1.5">
+<a aria-label="Discuter sur WhatsApp avec ÉlectroMoussa" class="flex-1 py-1.5 px-2 rounded-lg bg-tertiary-container/15 text-tertiary font-label-sm text-[11px] font-semibold flex items-center justify-center gap-1 active:bg-tertiary-container/30 transition-colors" href="https://wa.me/243000000000?text=Bonjour,%20je%20cherche%20des%20détails%20sur%20les%20Écouteurs%20TWS%20Limete" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">chat</span>
+<span>WhatsApp</span>
+</a>
+<button aria-label="Ajouter les écouteurs au panier" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Product Card 4: Running Sneakers Sport Shoes -->
+<article class="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm transition-transform active:scale-[0.99]">
+<div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+<img alt="Baskets Running Pro Légères" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XHx2Tr3gY2RXsShnktAAxCeZiIlqDM5dGPp8KMXj2HerJiuCQbL6pOE37WDMcY_chuJVUbZsEa_l6fZZ6QHt1WMQiNbgdcsn1G3TD5VeXRtMxLOELh4vLfWkx7kaSPA4AKrx7ZYcH-IOZOc4RxW0KZFBSEbpH_UADbrO0j2rGTi9QlrJG-DgpWOC0rAerrhw3ILjTs2feIiVopDByU8_qYiT0nPqopK72uW1InplW5lbaQkaNB-MQr-A"/>
+<!-- Location Tag -->
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface/90 backdrop-blur-md font-label-sm text-[10px] text-on-surface flex items-center gap-0.5 shadow-sm font-semibold">
+<span class="material-symbols-outlined text-primary text-[12px]">location_on</span>
+          Kintambo
+        </span>
+<!-- Wishlist Micro action -->
+<button aria-label="Ajouter aux favoris" class="absolute top-2 right-2 w-7 h-7 rounded-full bg-surface/90 backdrop-blur-md flex items-center justify-center text-on-surface active:text-error transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+<!-- Express Chip -->
+<span class="absolute bottom-2 left-2 px-1.5 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-[9px] font-bold">
+          ⚡ Stock immédiat
+        </span>
+</div>
+<div class="p-space-xs flex-1 flex flex-col justify-between">
+<div>
+<!-- Seller Tag -->
+<div class="flex items-center gap-1 mb-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">SportKin Express</span>
+<span class="material-symbols-outlined text-tertiary text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Product Title -->
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold line-clamp-2 leading-snug">
+            Baskets Running Pro
+          </h4>
+<!-- Rating -->
+<div class="flex items-center gap-1 my-1">
+<span class="material-symbols-outlined text-amber-600 text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">4.8</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">(44)</span>
+</div>
+</div>
+<div>
+<!-- Dual-currency Pricing Block -->
+<div class="mt-1 pt-1 bg-surface-container-low/50 rounded-lg p-1.5">
+<div class="flex items-baseline justify-between">
+<span class="font-headline-md text-headline-md text-primary font-bold leading-none">$10.00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">25 000 FC</span>
+</div>
+</div>
+<!-- Direct Action Buttons: WhatsApp & Cart -->
+<div class="mt-2 flex items-center gap-1.5">
+<a aria-label="Discuter sur WhatsApp avec SportKin" class="flex-1 py-1.5 px-2 rounded-lg bg-tertiary-container/15 text-tertiary font-label-sm text-[11px] font-semibold flex items-center justify-center gap-1 active:bg-tertiary-container/30 transition-colors" href="https://wa.me/243000000000?text=Bonjour,%20je%20veux%20essayer%20les%20Baskets%20Running%20Pro" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[15px]">chat</span>
+<span>WhatsApp</span>
+</a>
+<button aria-label="Ajouter les baskets au panier" class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shadow-sm active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- Load More / End of Commune Results -->
+<div class="px-margin-mobile pb-space-md text-center">
+<button class="w-full py-3 px-4 rounded-xl bg-surface-container-low text-on-surface font-label-lg text-label-lg font-semibold shadow-sm active:bg-secondary-container transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">expand_circle_down</span>
+<span>Voir les 80 autres articles à Kinshasa</span>
+</button>
+</div>
+<!-- Kinshasa Trust & Reassurance Banner -->
+<section class="mx-margin-mobile mb-space-lg p-space-md rounded-2xl bg-secondary-container text-on-secondary-container shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest text-tertiary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline-md text-headline-md text-on-secondary-fixed leading-tight">
+          La Garantie Sérénité Kinshasa
+        </h4>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant mt-1 leading-normal">
+          Ne payez rien d'avance. Vérifiez et essayez votre commande auprès du coursier avant de régler en espèces ou Mobile Money.
+        </p>
+</div>
+</div>
+<!-- Concierge WhatsApp Help -->
+<div class="pt-space-xs flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-secondary-container font-medium">Vous cherchez un produit précis ?</span>
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-sm active:scale-95 transition-transform" href="https://wa.me/243000000000?text=Bonjour%20Amani,%20je%20cherche%20un%20article%20non%20trouvé%20sur%20le%20catalogue" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">support_agent</span>
+<span>Aide Express WhatsApp</span>
+</a>
+</div>
+</section>
+</div>
+<!-- Client-side Interactive Behaviors -->
+<script>
+  (function initSearchCatalogInteractions() {
+    // 1. Highlight Recherche tab in bottom nav
+    const bottomNav = document.querySelector('nav[data-active-classes]');
+    if (bottomNav) {
+      const navLinks = bottomNav.querySelectorAll('a[data-path]');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'recherche') {
+          link.classList.remove('text-on-surface-variant');
+          link.classList.add('text-primary', 'font-semibold');
+        } else {
+          link.classList.remove('text-primary', 'font-semibold');
+          link.classList.add('text-on-surface-variant');
+        }
+      });
+    }
+
+    // 2. Clear Search Text Micro-interaction
+    const clearBtn = document.getElementById('clear-search-btn');
+    const searchInput = document.getElementById('search-input');
+    if (clearBtn && searchInput) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        searchInput.focus();
+      });
+    }
+
+    // 3. Commune Selector Accordion Drawer Toggle
+    const toggleBtn = document.getElementById('toggle-commune-panel');
+    const toggleFilterDrawer = document.getElementById('toggle-filter-drawer');
+    const openCommuneSheet = document.getElementById('open-commune-sheet');
+    const communesContainer = document.getElementById('communes-container');
+
+    function toggleCommuneList() {
+      if (communesContainer) {
+        communesContainer.classList.toggle('hidden');
+        if (toggleBtn) {
+          toggleBtn.textContent = communesContainer.classList.contains('hidden') ? 'Afficher' : 'Réduire';
+        }
+      }
+    }
+
+    if (toggleBtn) toggleBtn.addEventListener('click', toggleCommuneList);
+    if (openCommuneSheet) openCommuneSheet.addEventListener('click', toggleCommuneList);
+    if (toggleFilterDrawer) toggleFilterDrawer.addEventListener('click', toggleCommuneList);
+
+    // 4. View Mode Switcher
+    const viewToggleBtn = document.getElementById('view-toggle-btn');
+    const catalogGrid = document.querySelector('section.grid-cols-2');
+    if (viewToggleBtn && catalogGrid) {
+      viewToggleBtn.addEventListener('click', () => {
+        const is2Col = catalogGrid.classList.contains('grid-cols-2');
+        if (is2Col) {
+          catalogGrid.classList.remove('grid-cols-2');
+          catalogGrid.classList.add('grid-cols-1');
+          viewToggleBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">view_agenda</span>';
+        } else {
+          catalogGrid.classList.remove('grid-cols-1');
+          catalogGrid.classList.add('grid-cols-2');
+          viewToggleBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">grid_view</span>';
+        }
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.05)]" data-active-classes="text-primary font-semibold"><div class="h-16 px-gutter-mobile flex justify-around items-center"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="accueil" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Accueil</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="recherche" href="#"><span class="material-symbols-outlined text-[24px]">search</span><span class="font-label-sm text-label-sm">Recherche</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="panier" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute -top-1 -right-2 bg-primary text-on-primary font-label-sm text-[10px] leading-tight px-1.5 py-0.5 rounded-full min-w-[16px] text-center shadow-[0_1px_3px_rgba(38,30,23,0.2)]">3</span></div><span class="font-label-sm text-label-sm">Panier</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="commandes" href="#"><span class="material-symbols-outlined text-[24px]">inventory_2</span><span class="font-label-sm text-label-sm">Commandes</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="compte" href="#"><span class="material-symbols-outlined text-[24px]">person</span><span class="font-label-sm text-label-sm">Compte</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

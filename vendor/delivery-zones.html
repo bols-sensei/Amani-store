@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fbf9f6;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-secondary-container"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(38,30,23,0.04)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button aria-label="Retour" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-low transition-colors flex-shrink-0" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XjIfsenHcmKn3krWQuLOUae2JeOsxLQN1TjhDCTVQdDaq4EbFi7MpQGvgP1_5DMjg8ibCDLrD12vbFxmnTgjwyDcN4TkLVi9Ngl-8PX2l23okCHBwCHNvw3O3ZOTdPmJeNB0-U6r2jjwKWfarvxhAqhmLw3gvvxi6uJPA0sFPiEhH_LM9-AI6o5EgRcH6Eglh94XeGACYfpeMHMkaRCpQ7epv6VbutIWbg5gVGPsDLRU3FEagxn7vOvu8"/><div class="flex flex-col min-w-0 pl-1"><h1 class="font-headline-md text-headline-md tracking-tight text-on-surface truncate">Zones De Livraison</h1><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Chez Awa PRO</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_3px_rgba(38,30,23,0.12)]" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full pb-28">
+<!-- Interactive Currency & Visual Reference Banner -->
+<div class="px-gutter-mobile pt-space-sm pb-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/50">
+<span class="material-symbols-outlined text-primary text-[15px]" style="font-variation-settings: 'FILL' 1;">sync_alt</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Taux référence : 1 $ = 2 500 FC</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container/10">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Service Motards En Ligne</span>
+</div>
+</div>
+<!-- Header Section -->
+<div class="px-gutter-mobile py-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex-1 min-w-0">
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Zones &amp; Tarifs de Livraison</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+          Définissez les communes desservies par vos motards, vos frais de course et les délais de remise en main propre à Kinshasa.
+        </p>
+</div>
+</div>
+<!-- Active Zones Badge & Top CTA -->
+<div class="flex items-center justify-between mt-space-md gap-space-sm">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high">
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-tight">4 zones actives • 24 communes</span>
+</div>
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md shadow-sm hover:opacity-90 active:scale-95 transition-all" onclick="showNotification('Assistant de personnalisation de zone ouvert')" type="button">
+<span class="material-symbols-outlined text-[17px]">add_circle</span>
+<span>Ajouter une zone</span>
+</button>
+</div>
+</div>
+<!-- Photo Framing: Dispatch Hub in Kinshasa -->
+<div class="px-gutter-mobile my-space-xs">
+<div class="relative w-full h-28 rounded-xl overflow-hidden shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Vibrant delivery dispatch point in Gombe Kinshasa with couriers, parcel packages, delivery motorbikes in warm golden daylight with sand ochre shop accents and modern urban pan-african retail atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDPZvxzgR3I4mvxauEKAE9ARqcZW05v8VJlZ1LWm_Rg2vVzGj81h96xXc_nO9zWxgtkSokb0Ek5RlZgaF7VteU4OigE4XjgCLs_i0wA2O-ISPK8-Dyt0glfQs25TNzsSBjhylxohTZ-aqNBo4yqVGyesXxwoFt-ZC1hm1dsXnahfRPbXxN5Om6TNzuzlZnYwUL8fG8FnuuVbGkzk_1i3Zbnfb_ZgkO15haTo2up-DVBbwu4Ygc_a6B"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/85 via-on-surface/30 to-transparent flex items-end p-3">
+<div class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">storefront</span>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-semibold text-on-primary truncate">Départ principal : Galerie Gombe</p>
+<p class="font-label-sm text-label-sm text-surface-container-highest/90 truncate">Boulevard du 30 Juin • Centre logistique Chez Awa</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Seller Delivery Policy Card -->
+<div class="px-gutter-mobile py-space-xs">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<div>
+<h3 class="font-label-lg text-label-lg text-on-surface font-semibold">Politique d'expédition Chez Awa</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Conditions appliquées en caisse Amani</p>
+</div>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">Vérifiée</span>
+</div>
+<div class="grid grid-cols-1 gap-2.5">
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[19px] mt-0.5">schedule</span>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Délai moyen d'expédition</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Le jour même pour toute commande passée avant 14h00</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5 p-2.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-[19px] mt-0.5">payments</span>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Mode d'encaissement</span>
+<span class="font-body-md text-body-md text-on-surface font-medium">Cash à la livraison (COD) collecté par le motard coursier</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-tertiary/10">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">redeem</span>
+<div class="min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold block truncate">Livraison offerte dès 100 000 FC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block truncate">≈ $40.00 USD d'achat panier</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold flex-shrink-0">Actif</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Delivery Zones Section -->
+<div class="px-gutter-mobile pt-space-md">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Zones &amp; Communes Desservies</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Kinshasa Urbain</span>
+</div>
+<div class="flex flex-col gap-3.5">
+<!-- ZONE A: Hyper-centre & Proximité immédiate -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-all" id="zone-card-a">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-tertiary-container/15 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Zone A • Proximité
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm">
+              64% des commandes
+            </span>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" onchange="toggleZoneState('zone-card-a', this.checked)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-tertiary after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-primary">2 500 FC</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">≈ $1.00 USD</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-tertiary text-[16px]">bolt</span>
+              Délai motard : 1h à 3h (Express même jour)
+            </p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Communes couvertes (4) :</span>
+<p class="font-body-md text-body-md text-on-surface font-normal">
+<strong class="font-semibold text-primary">Gombe</strong>, Barumbu, Kinshasa, Lingwala
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="px-3 py-1.5 rounded-lg bg-secondary-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-secondary-container/80 transition-colors flex items-center gap-1" onclick="showTariffModal('Zone A', '2500', '1.00')" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+            Modifier tarif
+          </button>
+<button class="font-label-sm text-label-sm text-primary flex items-center gap-1 hover:underline" onclick="showNotification('Repères Zone A : Grand Marché, Huileries, Flambeau')" type="button">
+<span class="material-symbols-outlined text-[16px]">map</span>
+            Détails des repères
+          </button>
+</div>
+</div>
+<!-- ZONE B: Première couronne & Quartiers animés -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-all" id="zone-card-b">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Zone B • Première couronne
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm">
+              28% des commandes
+            </span>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" onchange="toggleZoneState('zone-card-b', this.checked)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-tertiary after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-primary">3 500 FC</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">≈ $1.40 USD</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[16px]">moped</span>
+              Délai motard : 2h à 4h (Même jour)
+            </p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Communes couvertes (6) :</span>
+<p class="font-body-md text-body-md text-on-surface font-normal">
+            Bandalungwa, Kintambo, Ngaliema (jusqu'à Macampagne/Utexafrica), Kasa-Vubu, Kalamu (Victoire), Limete (Résidentiel &amp; Industriel)
+          </p>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-high/60">
+<span class="material-symbols-outlined text-primary text-[16px]">history</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">
+            Course récente : Jean Dupont à Bandalungwa (Arrêt Bakayau)
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="px-3 py-1.5 rounded-lg bg-secondary-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-secondary-container/80 transition-colors flex items-center gap-1" onclick="showTariffModal('Zone B', '3500', '1.40')" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+            Modifier
+          </button>
+<button class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1 hover:underline" onclick="showNotification('Options avancées de majoration heures de pointe actives')" type="button">
+<span class="material-symbols-outlined text-[16px]">more_horiz</span>
+            Options
+          </button>
+</div>
+</div>
+<!-- ZONE C: Deuxième couronne & Est/Sud -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-all" id="zone-card-c">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Zone C • Deuxième couronne
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm">
+              8% des commandes
+            </span>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" onchange="toggleZoneState('zone-card-c', this.checked)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-tertiary after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-primary">5 000 FC</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">≈ $2.00 USD</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">navigation</span>
+              Délai : 4h à 6h (Même jour ou J+1 selon trafic)
+            </p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Communes couvertes (7) :</span>
+<p class="font-body-md text-body-md text-on-surface font-normal">
+            Lemba, Matete, Ngaba, Mont-Ngafula (Rond-point Triangle/UPN), Selembao, Bumbu, Makala
+          </p>
+</div>
+<div class="flex items-start gap-2 p-2 rounded-lg bg-secondary-container/30">
+<span class="material-symbols-outlined text-secondary text-[17px] mt-0.5">info</span>
+<p class="font-label-sm text-label-sm text-on-secondary-container">
+            Note spéciale : Supplément pluie/embouteillages possible selon accord préalable avec le client.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="px-3 py-1.5 rounded-lg bg-secondary-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-secondary-container/80 transition-colors flex items-center gap-1" onclick="showTariffModal('Zone C', '5000', '2.00')" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+            Modifier
+          </button>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Majoration auto pluie : Active</span>
+</div>
+</div>
+<!-- ZONE D: Périphérie & Extension Kinshasa Est -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3 transition-all" id="zone-card-d">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+              Zone D • Périphérie Est
+            </span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed/50 text-on-primary-fixed-variant font-label-sm text-label-sm">
+              Sur demande
+            </span>
+</div>
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" onchange="toggleZoneState('zone-card-d', this.checked)" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-tertiary after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-surface after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div>
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-xl-mobile text-headline-xl-mobile font-bold text-primary">8 000 FC</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium">≈ $3.20 USD</span>
+</div>
+<p class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-outline text-[16px]">alarm</span>
+              Délai : 24h à 48h (Livraison groupée motard)
+            </p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Communes couvertes (5) :</span>
+<p class="font-body-md text-body-md text-on-surface font-normal">
+            Masina, Ndjili, Kimbanseke, Nsele, Maluku
+          </p>
+</div>
+<div class="flex items-center justify-between pt-1">
+<button class="px-3 py-1.5 rounded-lg bg-secondary-container text-on-surface font-label-sm text-label-sm font-semibold hover:bg-secondary-container/80 transition-colors flex items-center gap-1" onclick="showTariffModal('Zone D', '8000', '3.20')" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+            Modifier
+          </button>
+<button class="font-label-sm text-label-sm text-error flex items-center gap-1 hover:underline" id="btn-toggle-d" onclick="quickDeactivateD()" type="button">
+<span class="material-symbols-outlined text-[16px]">pause_circle</span>
+            Désactiver temporairement
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Amani Express Motards Specific Card -->
+<div class="px-gutter-mobile pt-space-md">
+<div class="p-space-md rounded-xl bg-surface-container shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">sports_motorsports</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Équipe Motards Amani Express</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Livreurs dédiés à votre boutique</p>
+</div>
+</div>
+<span class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+          Vérifiés
+        </span>
+</div>
+<!-- Motards Profiles Grid -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-center gap-2">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Portrait of professional congolese delivery rider Moussa wearing safety helmet and warm brown Amani delivery uniform smiling warmly against Kinshasa urban street backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjgCLzn8xeN7Z2WkAg7hAW8zN2MtJ45hfHPpYG1P7mhuCuECp7rLKecN8fSs65JnP0zBi09DLvEN0n3rGGfxJiZgpTvJU8UqSG8GYn1JEmZD76fBN_QnJIxk_xpXl1RmWjourDgnwPq_022tEGuG3RWRQVHDhlfRFYO8YDxtyFYm0YWJUWJ0-RtjOcx97GH68T_9jkNY86sUXZ88q9z1d8VxSeTPQR4irU1Wrn7QTdoJkcFUjQVEs2"/>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Moussa K.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">+243 81 234 5678</p>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest flex items-center gap-2">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Portrait of young congolese delivery courier Ibrahim with smart phone and motorcycle gear ready for parcel drop in Gombe Kinshasa in natural warm ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQWN_uzBMggP2VBBdGOTTmBDtXGcqthF8Aq_YO7gKnZxITfE4yczNBRamv61oj2VSOsim8oYFtj3JiaIzid5K2M_mf14VCaonMriLtwO-ZUZk6a7_eVXTgqnS-8SV_YTlJS4g9XjOO_Syj_F6VdIAv6SK16WnjgiP6e8QrNmPtPPchgm8bWW3r3r_JeFuGFH2icbyRN01y6Rw1fN_BI48LRiki0uXwDdfbIXFcWFBGyte-ek4CLNoT"/>
+<div class="min-w-0">
+<p class="font-label-md text-label-md text-on-surface font-bold truncate">Ibrahim B.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate">+243 82 345 6789</p>
+</div>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm leading-relaxed">
+<span class="text-on-surface font-semibold">Règle de reversement :</span> Vos motards appliquent automatiquement cette grille lors de la génération du bon de course. Les frais perçus sont intégralement reversés au coursier ou intégrés dans votre décompte boutique Chez Awa.
+      </div>
+</div>
+</div>
+<!-- Interactive Fare Simulator Card -->
+<div class="px-gutter-mobile pt-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">calculate</span>
+<h4 class="font-headline-md text-headline-md text-on-surface">Simuler les frais pour un client</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Indiquez la commune de destination du client pour afficher le devis instantané.
+      </p>
+<!-- Dropdown selector -->
+<div class="relative mt-1">
+<label class="sr-only" for="commune-sim-select">Choisir une commune</label>
+<select class="w-full h-12 px-3.5 pr-10 rounded-lg bg-surface-container-low text-on-surface font-body-lg text-body-lg appearance-none cursor-pointer focus:outline-none" id="commune-sim-select" onchange="updateSimulation(this.value)">
+<option selected="" value="bandalungwa">Bandalungwa (Arrêt Bakayau / Bisengo)</option>
+<option value="gombe">Gombe (Centre des affaires / Golf)</option>
+<option value="kintambo">Kintambo (Magasin / Jamaïque)</option>
+<option value="ngaliema">Ngaliema (Macampagne / Utex)</option>
+<option value="lemba">Lemba (Super Lemba / Campus)</option>
+<option value="matete">Matete (Marché Tomba / De Bonhomme)</option>
+<option value="mont-ngafula">Mont-Ngafula (Rond-point Triangle / UPN)</option>
+<option value="ndjili">Ndjili (Sainte-Thérèse / Quartier 1)</option>
+<option value="masina">Masina (Passerelle / Sans Fil)</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-3 pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- Simulation Result Banner -->
+<div class="p-3.5 rounded-lg bg-secondary-container/40 flex flex-col gap-1 transition-all" id="sim-result-box">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-secondary-container font-semibold uppercase tracking-wider">Estimation client</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-bold" id="sim-zone-tag">Zone B</span>
+</div>
+<div class="flex items-baseline justify-between pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-lg text-headline-lg font-bold text-primary" id="sim-price-cdf">3 500 FC</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium" id="sim-price-usd">(≈ $1.40 USD)</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1" id="sim-eta">
+<span class="material-symbols-outlined text-primary text-[15px]">schedule</span>
+            ~2h à 4h
+          </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Actions Frame -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface/95 backdrop-blur-md shadow-lg px-gutter-mobile py-space-sm pb-safe flex flex-col gap-2">
+<button class="w-full h-12 rounded-lg bg-primary-container text-on-primary font-headline-md text-headline-md flex items-center justify-center gap-2 shadow-md hover:opacity-95 active:scale-[0.99] transition-all" id="save-grid-btn" onclick="saveTariffGrid()" type="button">
+<span class="material-symbols-outlined text-[22px]">save</span>
+<span>Enregistrer la grille tarifaire</span>
+</button>
+<button class="w-full py-1 text-center font-label-md text-label-md text-secondary hover:text-primary transition-colors" onclick="resetToAmaniDefaults()" type="button">
+      Réinitialiser aux tarifs conseillés Amani
+    </button>
+</div>
+<!-- Custom Edit Tariff Floating Modal (Micro-interaction) -->
+<div class="hidden fixed inset-0 z-50 flex items-end sm:items-center justify-center p-3 bg-inverse-surface/40 backdrop-blur-sm" id="tariff-edit-modal">
+<div class="w-full max-w-sm rounded-xl bg-surface-container-lowest p-space-md shadow-xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-md text-headline-md text-on-surface" id="modal-zone-title">Modifier Tarif Zone</h4>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container" onclick="closeTariffModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Ajustez le tarif en Francs Congolais (CDF). L'équivalent en dollars USD sera converti automatiquement.
+      </p>
+<div class="flex flex-col gap-1.5 mt-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold" for="input-modal-cdf">Tarif de course (FC)</label>
+<div class="relative">
+<input class="w-full h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-headline-md text-headline-md focus:outline-none" id="input-modal-cdf" oninput="calculateModalUSD(this.value)" step="500" type="number"/>
+<span class="absolute inset-y-0 right-3 flex items-center font-label-md text-label-md text-on-surface-variant font-bold">FC</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Équivalent devisé :</span>
+<span class="font-label-lg text-label-lg font-bold text-primary" id="modal-calc-usd">≈ $1.00 USD</span>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<button class="flex-1 h-10 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md" onclick="closeTariffModal()" type="button">
+          Annuler
+        </button>
+<button class="flex-1 h-10 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold" onclick="applyModalTariff()" type="button">
+          Confirmer
+        </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="pointer-events-none fixed top-20 left-4 right-4 z-50 transform -translate-y-6 opacity-0 transition-all duration-300 flex items-center justify-center" id="toast-notification">
+<div class="px-4 py-2 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-md text-center" id="toast-message">
+      Action effectuée
+    </div>
+</div>
+</div>
+<script>
+  let activeEditingZone = null;
+
+  const simulationData = {
+    'bandalungwa': { zone: 'Zone B', cdf: '3 500 FC', usd: '≈ $1.40 USD', eta: '~2h à 4h' },
+    'gombe': { zone: 'Zone A', cdf: '2 500 FC', usd: '≈ $1.00 USD', eta: '~1h à 3h' },
+    'kintambo': { zone: 'Zone B', cdf: '3 500 FC', usd: '≈ $1.40 USD', eta: '~2h à 4h' },
+    'ngaliema': { zone: 'Zone B', cdf: '3 500 FC', usd: '≈ $1.40 USD', eta: '~2h à 4h' },
+    'lemba': { zone: 'Zone C', cdf: '5 000 FC', usd: '≈ $2.00 USD', eta: '~4h à 6h' },
+    'matete': { zone: 'Zone C', cdf: '5 000 FC', usd: '≈ $2.00 USD', eta: '~4h à 6h' },
+    'mont-ngafula': { zone: 'Zone C', cdf: '5 000 FC', usd: '≈ $2.00 USD', eta: '~4h à 6h' },
+    'ndjili': { zone: 'Zone D', cdf: '8 000 FC', usd: '≈ $3.20 USD', eta: '~24h à 48h' },
+    'masina': { zone: 'Zone D', cdf: '8 000 FC', usd: '≈ $3.20 USD', eta: '~24h à 48h' }
+  };
+
+  function updateSimulation(communeKey) {
+    const data = simulationData[communeKey] || simulationData['bandalungwa'];
+    const zoneTag = document.getElementById('sim-zone-tag');
+    const priceCdf = document.getElementById('sim-price-cdf');
+    const priceUsd = document.getElementById('sim-price-usd');
+    const eta = document.getElementById('sim-eta');
+
+    zoneTag.textContent = data.zone;
+    priceCdf.textContent = data.cdf;
+    priceUsd.textContent = `(${data.usd})`;
+    eta.innerHTML = `<span class="material-symbols-outlined text-primary text-[15px]">schedule</span> ${data.eta}`;
+
+    // Micro-highlight effect
+    const box = document.getElementById('sim-result-box');
+    box.classList.add('bg-secondary-container');
+    setTimeout(() => {
+      box.classList.remove('bg-secondary-container');
+    }, 300);
+  }
+
+  function showNotification(text) {
+    const toast = document.getElementById('toast-notification');
+    const msg = document.getElementById('toast-message');
+    msg.textContent = text;
+    toast.classList.remove('opacity-0', '-translate-y-6');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', '-translate-y-6');
+    }, 2800);
+  }
+
+  function toggleZoneState(cardId, isChecked) {
+    const card = document.getElementById(cardId);
+    if (!isChecked) {
+      card.classList.add('opacity-50');
+      showNotification('Zone mise en pause temporaire');
+    } else {
+      card.classList.remove('opacity-50');
+      showNotification('Zone réactivée');
+    }
+  }
+
+  function quickDeactivateD() {
+    const card = document.getElementById('zone-card-d');
+    const checkbox = card.querySelector('input[type="checkbox"]');
+    checkbox.checked = !checkbox.checked;
+    toggleZoneState('zone-card-d', checkbox.checked);
+  }
+
+  function showTariffModal(zoneName, currentCdf, currentUsd) {
+    activeEditingZone = zoneName;
+    document.getElementById('modal-zone-title').textContent = 'Modifier ' + zoneName;
+    const inputCdf = document.getElementById('input-modal-cdf');
+    inputCdf.value = currentCdf;
+    calculateModalUSD(currentCdf);
+    document.getElementById('tariff-edit-modal').classList.remove('hidden');
+  }
+
+  function closeTariffModal() {
+    document.getElementById('tariff-edit-modal').classList.add('hidden');
+  }
+
+  function calculateModalUSD(cdfValue) {
+    const num = parseFloat(cdfValue) || 0;
+    const usd = (num / 2500).toFixed(2);
+    document.getElementById('modal-calc-usd').textContent = `≈ $${usd} USD`;
+  }
+
+  function applyModalTariff() {
+    const inputCdf = document.getElementById('input-modal-cdf').value;
+    const usd = (parseFloat(inputCdf) / 2500).toFixed(2);
+    closeTariffModal();
+    showNotification(`Nouveau tarif pour ${activeEditingZone} enregistré : ${inputCdf} FC ($${usd})`);
+  }
+
+  function saveTariffGrid() {
+    const btn = document.getElementById('save-grid-btn');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">sync</span><span>Sauvegarde en cours...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px]">check_circle</span><span>Grille Chez Awa Enregistrée !</span>`;
+      showNotification('Grille des 24 communes synchronisée avec les motards Amani');
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 2500);
+    }, 700);
+  }
+
+  function resetToAmaniDefaults() {
+    showNotification('Tarifs officiels Amani Kinshasa restaurés');
+  }
+</script></main><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

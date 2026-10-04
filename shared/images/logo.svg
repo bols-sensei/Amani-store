@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 60" fill="none">
+  <rect width="48" height="48" x="6" y="6" rx="12" fill="#C8A97E"/>
+  <path d="M30 16L18 38H24L26.5 33H33.5L36 38H42L30 16ZM28 29L30 24L32 29H28Z" fill="#261E17"/>
+  <circle cx="36" cy="18" r="3.5" fill="#10B981"/>
+  <text x="66" y="33" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#261E17">Amani<tspan fill="#C8A97E">.</tspan></text>
+  <text x="66" y="47" font-family="Inter, system-ui, sans-serif" font-size="10.5" font-weight="600" letter-spacing="0.5" fill="#8C6D46">MARCHÉ RDC • KINSHASA</text>
+</svg>

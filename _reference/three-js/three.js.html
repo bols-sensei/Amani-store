@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_62 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_62" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_62');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  /**
+ * Service Worker — Amani PWA Kinshasa (sw.js)
+ * Conçu pour les réseaux instables et bas débit (2G / 3G / H+ Vodacom, Airtel, Orange RDC)
+ * 
+ * Stratégies :
+ * - Cache First (Assets statiques critiques : CSS, JS, Fonts, Icônes)
+ * - Stale-While-Revalidate (Catalogue produits, Catégories, Communes)
+ * - Network First avec fallback Offline HTML (Pages de commande / checkout / suivi)
+ * - Gestion intelligente des images (WebP/JPEG mise en cache avec limite de taille)
+ * - Background Sync (Enregistrement d'actions en file d'attente lors de coupures réseau)
+ */
+
+const CACHE_VERSION = 'amani-v2.4.0';
+const STATIC_CACHE = `amani-static-${CACHE_VERSION}`;
+const DYNAMIC_CACHE = `amani-dynamic-${CACHE_VERSION}`;
+const IMAGES_CACHE = `amani-images-${CACHE_VERSION}`;
+const API_CACHE = `amani-api-${CACHE_VERSION}`;
+
+// Limite de taille de cache pour préserver le stockage des smartphones locaux
+const MAX_IMAGE_ITEMS = 60;
+const MAX_DYNAMIC_ITEMS = 40;
+
+// Ressources critiques indispensables au démarrage hors-ligne
+const PRECACHE_ASSETS = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/offline.html',
+  '/css/app.css',
+  '/js/app.js',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png',
+  '/icons/offline-illustration.svg',
+  '/fonts/plus-jakarta-sans.woff2'
+];
+
+/**
+ * Utilitaire : Nettoyage et limitation de la taille du cache
+ */
+async function limitCacheSize(cacheName, maxItems) {
+  const cache = await caches.open(cacheName);
+  const keys = await cache.keys();
+  if (keys.length > maxItems) {
+    await cache.delete(keys[0]);
+    await limitCacheSize(cacheName, maxItems);
+  }
+}
+
+/**
+ * 1. INSTALLATION : Mise en cache des ressources vitales
+ */
+self.addEventListener('install', (event) => {
+  self.skipWaiting(); // Activation immédiate sans attendre la fermeture des onglets
+  event.waitUntil(
+    caches.open(STATIC_CACHE).then((cache) => {
+      console.log('[Amani SW] Pré-mise en cache des assets critiques pour Kinshasa...');
+      return cache.addAll(PRECACHE_ASSETS).catch((err) => {
+        console.warn('[Amani SW] Erreur partielle lors du pré-cache statique :', err);
+      });
+    })
+  );
+});
+
+/**
+ * 2. ACTIVATION : Nettoyage des anciens caches obsolètes
+ */
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys
+          .filter((key) => key.startsWith('amani-') && !key.includes(CACHE_VERSION))
+          .map((oldKey) => {
+            console.log('[Amani SW] Suppression de l\'ancien cache :', oldKey);
+            return caches.delete(oldKey);
+          })
+      );
+    }).then(() => self.clients.claim()) // Prendre le contrôle immédiat des clients
+  );
+});
+
+/**
+ * 3. INTERCEPTION DES REQUÊTES RÉSEAU (FETCH)
+ */
+self.addEventListener('fetch', (event) => {
+  const request = event.request;
+  const url = new URL(request.url);
+
+  // Ignorer les requêtes non-GET et les schémas non supportés (ex. chrome-extension, wa.me)
+  if (request.method !== 'GET' || !url.protocol.startsWith('http')) {
+    return;
+  }
+
+  // A. REQUÊTES NAVIGATION / PAGES HTML -> Network First avec Fallback Offline
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then((networkResponse) => {
+          // Si le réseau répond, on sauvegarde une copie de la page dans le cache dynamique
+          if (networkResponse && networkResponse.status === 200) {
+            const copy = networkResponse.clone();
+            caches.open(DYNAMIC_CACHE).then((cache) => {
+              cache.put(request, copy);
+              limitCacheSize(DYNAMIC_CACHE, MAX_DYNAMIC_ITEMS);
+            });
+          }
+          return networkResponse;
+        })
+        .catch(async () => {
+          // Coupure réseau (connexion 3G instable à Kinshasa)
+          const cachedResponse = await caches.match(request);
+          if (cachedResponse) {
+            return cachedResponse;
+          }
+          // Page de secours hors-ligne avec message kinois bienveillant
+          return caches.match('/offline.html');
+        })
+    );
+    return;
+  }
+
+  // B. ASSETS STATIQUES LOCAUX (CSS, JS, Polices, Icônes) -> Cache First
+  if (
+    url.pathname.endsWith('.css') ||
+    url.pathname.endsWith('.js') ||
+    url.pathname.endsWith('.woff2') ||
+    url.pathname.includes('/icons/')
+  ) {
+    event.respondWith(
+      caches.match(request).then((cachedResponse) => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+        return fetch(request).then((networkResponse) => {
+          if (networkResponse && networkResponse.status === 200) {
+            const copy = networkResponse.clone();
+            caches.open(STATIC_CACHE).then((cache) => cache.put(request, copy));
+          }
+          return networkResponse;
+        });
+      })
+    );
+    return;
+  }
+
+  // C. IMAGES PRODUITS ET VITRINES -> Stale-While-Revalidate avec cache dédié
+  if (
+    request.destination === 'image' ||
+    url.pathname.match(/\.(png|jpg|jpeg|webp|svg|gif)$/i)
+  ) {
+    event.respondWith(
+      caches.open(IMAGES_CACHE).then(async (cache) => {
+        const cachedResponse = await cache.match(request);
+        const fetchPromise = fetch(request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              cache.put(request, networkResponse.clone());
+              limitCacheSize(IMAGES_CACHE, MAX_IMAGE_ITEMS);
+            }
+            return networkResponse;
+          })
+          .catch(() => cachedResponse); // En cas d'échec réseau, on garde l'image en cache
+
+        // Retourne immédiatement la version en cache si disponible, sinon attend le réseau
+        return cachedResponse || fetchPromise;
+      })
+    );
+    return;
+  }
+
+  // D. API REST & CATALOGUE / TAUX DU JOUR -> Stale-While-Revalidate
+  if (url.pathname.startsWith('/api/')) {
+    event.respondWith(
+      caches.open(API_CACHE).then(async (cache) => {
+        const cachedResponse = await cache.match(request);
+        const networkFetch = fetch(request)
+          .then((networkResponse) => {
+            if (networkResponse && networkResponse.status === 200) {
+              cache.put(request, networkResponse.clone());
+            }
+            return networkResponse;
+          })
+          .catch(() => cachedResponse);
+
+        return cachedResponse || networkFetch;
+      })
+    );
+    return;
+  }
+
+  // E. STRATÉGIE PAR DÉFAUT -> Réseau avec secours Cache
+  event.respondWith(
+    fetch(request).catch(() => caches.match(request))
+  );
+});
+
+/**
+ * 4. GESTION DES NOTIFICATIONS PUSH (Arrivée du motard coursier, promo, etc.)
+ */
+self.addEventListener('push', (event) => {
+  let data = {
+    title: 'Amani Kinshasa',
+    body: 'Mise à jour de votre commande en cours.',
+    icon: '/icons/icon-192x192.png',
+    badge: '/icons/icon-72x72.png',
+    url: '/customer/orders'
+  };
+
+  if (event.data) {
+    try {
+      data = Object.assign(data, event.data.json());
+    } catch (e) {
+      data.body = event.data.text();
+    }
+  }
+
+  const options = {
+    body: data.body,
+    icon: data.icon,
+    badge: data.badge,
+    vibrate: [200, 100, 200],
+    data: {
+      url: data.url || '/customer/orders'
+    },
+    actions: [
+      { action: 'track', title: '📍 Suivre le motard' },
+      { action: 'close', title: 'Fermer' }
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification(data.title, options)
+  );
+});
+
+/**
+ * 5. CLIC SUR NOTIFICATION
+ */
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const targetUrl = event.notification.data.url || '/customer/orders';
+
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windowClients) => {
+      for (let client of windowClients) {
+        if (client.url.includes(targetUrl) && 'focus' in client) {
+          return client.focus();
+        }
+      }
+      if (clients.openWindow) {
+        return clients.openWindow(targetUrl);
+      }
+    })
+  );
+});
+
+/**
+ * 6. SYNCHRONISATION EN ARRIÈRE-PLAN (Background Sync pour paniers et commandes en zone blanche)
+ */
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'sync-cart-orders') {
+    console.log('[Amani SW] Rétablissement réseau détecté : synchronisation des actions en attente...');
+    event.waitUntil(
+      // Routine de synchronisation avec l'API Amani
+      Promise.resolve()
+    );
+  }
+});
+
+})();
+</script>
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_62 -->
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Retour" class="w-11 h-11 -ml-2 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XjIfsenHcmKn3krWQuLOUae2JeOsxLQN1TjhDCTVQdDaq4EbFi7MpQGvgP1_5DMjg8ibCDLrD12vbFxmnTgjwyDcN4TkLVi9Ngl-8PX2l23okCHBwCHNvw3O3ZOTdPmJeNB0-U6r2jjwKWfarvxhAqhmLw3gvvxi6uJPA0sFPiEhH_LM9-AI6o5EgRcH6Eglh94XeGACYfpeMHMkaRCpQ7epv6VbutIWbg5gVGPsDLRU3FEagxn7vOvu8"/></div><div class="flex flex-col items-center justify-center flex-1 px-space-xs text-center"><h1 class="font-headline-md text-headline-md text-on-surface truncate">Détail Client</h1><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Chez Awa</span></div><div class="flex items-center justify-center w-11 h-11"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Notification Feedback Toast (Triggered via JS) -->
+<div class="fixed top-20 left-4 right-4 z-50 transform -translate-y-28 opacity-0 transition-all duration-300 pointer-events-none flex items-center justify-between p-space-md rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl" id="toastNotification">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+<span class="font-body-md text-body-md" id="toastMsg">Action exécutée avec succès</span>
+</div>
+<span class="material-symbols-outlined text-surface-container-highest text-[18px]">close</span>
+</div>
+<!-- Content Container with mobile margins -->
+<div class="px-margin-mobile flex flex-col gap-space-md pb-space-xl">
+<!-- 1. Sous-Barre d'action & Navigation client -->
+<div class="flex items-center justify-between pt-space-sm">
+<button class="inline-flex items-center gap-space-xs text-on-surface-variant hover:text-on-surface transition-colors py-1.5 px-2 -ml-2 rounded-lg active:bg-surface-container" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+<span class="font-label-md text-label-md">Retour aux clients</span>
+</button>
+<div class="flex items-center gap-space-xs">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors shadow-sm text-label-md font-label-md" onclick="openNoteEditor()" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">edit_note</span>
+<span>Modifier note</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" onclick="showCustomerOptions()" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- 2. Carte d'identité client VIP -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<!-- Decorative Warm Accent Bar -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary via-primary-container to-secondary-container"></div>
+<div class="flex items-start gap-space-md pt-1">
+<!-- Photo de profil avec statut actif -->
+<div class="relative flex-shrink-0">
+<img alt="Jean Dupont" class="w-16 h-16 rounded-full object-cover shadow-sm bg-surface-container-high" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest" title="Actif en ce moment"></span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">Jean Dupont</h2>
+</div>
+<!-- Badge d'honneur VIP & RFM -->
+<div class="mt-1 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px] text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-semibold">Client Champion VIP</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm">RFM 5/5</span>
+</div>
+<!-- Coordonnées géographiques et contact -->
+<p class="mt-2 font-body-md text-body-md text-on-surface-variant flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-primary flex-shrink-0">location_on</span>
+<span class="truncate">Kinshasa, Bandalungwa (Arrêt Bakayau)</span>
+</p>
+<p class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-primary flex-shrink-0">call</span>
+<span>+243 89 543 2190</span>
+</p>
+<p class="font-label-sm text-label-sm text-outline mt-1.5 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>Client depuis Mars 2025 (11 mois de fidélité)</span>
+</p>
+</div>
+</div>
+<!-- 2 Gros boutons tactiles de contact immédiat -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-md pt-space-sm border-t-0">
+<a class="flex items-center justify-center gap-2 py-2.5 px-space-sm rounded-lg bg-[#E8F8F2] text-[#006746] hover:bg-[#d5f3e7] active:scale-[0.98] transition-all shadow-sm" href="https://wa.me/243895432190?text=Bonjour%20M.%20Jean,%20votre%20boutique%20Chez%20Awa%20vous%20salue!" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">chat</span>
+<span class="font-label-lg text-label-lg font-semibold">WhatsApp</span>
+</a>
+<a class="flex items-center justify-center gap-2 py-2.5 px-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high active:scale-[0.98] transition-all shadow-sm" href="tel:+243895432190">
+<span class="material-symbols-outlined text-[20px] text-primary">phone_in_talk</span>
+<span class="font-label-lg text-label-lg font-semibold">Appeler</span>
+</a>
+</div>
+</div>
+<!-- 3. Bloc de 4 cartes KPI client (Grille 2x2 aérée) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-lg text-label-lg text-on-surface">Indicateurs clés d'achat</span>
+<span class="font-label-sm text-label-sm text-outline">Ref. 1 USD = 2 500 FC</span>
+</div>
+<div class="grid grid-cols-2 gap-gutter-mobile">
+<!-- KPI 1 : Total Commandes -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total Commandes</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-on-surface">12</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">commandes</span>
+</div>
+<p class="font-label-sm text-label-sm text-tertiary-container mt-1 flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+<span>0 litige / retour</span>
+</p>
+</div>
+</div>
+<!-- KPI 2 : Total Dépensé -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container mb-2">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total Dépensé</span>
+<div class="font-headline-md text-headline-md text-on-surface mt-0.5 leading-tight">
+              458 000 <span class="text-label-md font-label-md text-primary">FC</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">~$183.20 USD</span>
+</div>
+</div>
+<!-- KPI 3 : Panier Moyen -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary-container mb-2">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Panier Moyen</span>
+<div class="font-headline-md text-headline-md text-on-surface mt-0.5 leading-tight">
+              38 166 <span class="text-label-md font-label-md text-primary">FC</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline block mt-0.5">~$15.25 USD</span>
+</div>
+</div>
+<!-- KPI 4 : Fréquence d'achat -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="w-8 h-8 rounded-full bg-[#E8F8F2] flex items-center justify-center text-[#006746] mb-2">
+<span class="material-symbols-outlined text-[18px]">repeat</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Fréquence d'achat</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-on-surface">22</span>
+<span class="font-label-sm text-label-sm text-on-surface">jours</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold block mt-0.5">Rythme très régulier</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Préférences & Notes Vendeur (Spécial Kinshasa) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">sticky_note_2</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Fiche &amp; Habitudes d'achat</h3>
+</div>
+<span class="px-2 py-0.5 bg-surface-container rounded-full text-outline font-label-sm text-label-sm">Privé Vendeur</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Adresse Kinshasa avec repère local -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">home_pin</span>
+<div class="flex-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Adresse favorite de livraison</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">Av. Kasa-Vubu, Arrêt Bakayau</p>
+<p class="font-label-md text-label-md text-on-surface-variant">Bandalungwa • Portail noir en face du kiosque</p>
+</div>
+</div>
+<!-- Consigne motard récurrente -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[#8C6D46] text-[18px] mt-0.5">two_wheeler</span>
+<div class="flex-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Consigne motard enregistrée</span>
+<p class="font-body-md text-body-md text-on-surface italic">
+              « Toujours appeler avant de confier au motard. Préfère livraison entre 12h et 15h. »
+            </p>
+</div>
+</div>
+<!-- Goûts & Mode de paiement -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">checkroom</span>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Articles favoris</span>
+<p class="font-body-md text-body-md text-on-surface">Mode homme (T-shirts taille M, Casquettes)</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px] mt-0.5">point_of_sale</span>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider block">Paiement habituel</span>
+<p class="font-body-md text-body-md text-on-surface">Cash-on-Delivery (Espèces réglo)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Historique complet des commandes passées chez Chez Awa -->
+<div class="w-full flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Historique Chez Awa</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">12 commandes</span>
+</div>
+<!-- Liste des commandes récentes -->
+<div class="flex flex-col gap-space-xs">
+<!-- Commande 1 : En préparation -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">#ORD-2026-00142</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+              En préparation
+            </span>
+</div>
+<div class="flex items-center justify-between text-body-md font-body-md text-on-surface-variant">
+<span>2 articles (T-shirt M + Casquette)</span>
+<span class="font-label-sm text-label-sm text-outline">Aujourd'hui, 11:20</span>
+</div>
+<div class="flex items-baseline justify-between pt-1 border-t-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Montant commande</span>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">28 500 FC</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">(~$11.40)</span>
+</div>
+</div>
+</div>
+<!-- Commande 2 : Livrée avec succès -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">#ORD-2026-00118</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#E8F8F2] text-[#006746] font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+              Livrée avec succès
+            </span>
+</div>
+<div class="flex items-center justify-between text-body-md font-body-md text-on-surface-variant">
+<span>1 article (Montre classique cuir)</span>
+<span class="font-label-sm text-label-sm text-outline">15 Janvier 2026</span>
+</div>
+<div class="flex items-baseline justify-between pt-1 border-t-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Montant commande</span>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">39 000 FC</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">(~$15.60)</span>
+</div>
+</div>
+</div>
+<!-- Commande 3 : Livrée avec succès -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">#ORD-2026-00085</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#E8F8F2] text-[#006746] font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+              Livrée avec succès
+            </span>
+</div>
+<div class="flex items-center justify-between text-body-md font-body-md text-on-surface-variant">
+<span>3 articles (T-shirts assortis)</span>
+<span class="font-label-sm text-label-sm text-outline">28 Décembre 2025</span>
+</div>
+<div class="flex items-baseline justify-between pt-1 border-t-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Montant commande</span>
+<div class="text-right">
+<span class="font-label-lg text-label-lg font-bold text-on-surface">60 000 FC</span>
+<span class="font-label-sm text-label-sm text-outline ml-1">(~$24.00)</span>
+</div>
+</div>
+</div>
+<!-- Lien voir les 9 commandes antérieures -->
+<button class="w-full py-2.5 px-space-md rounded-xl bg-surface-container text-primary font-label-lg text-label-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-1.5 shadow-sm" onclick="loadMoreOrders(this)" type="button">
+<span>Voir les 9 commandes antérieures</span>
+<span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+</div>
+</div>
+<!-- 6. Actions de fidélisation & Relance locale -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">loyalty</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Actions de fidélisation</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant -mt-1">
+        Renforcez l'engagement de Jean avec des avantages personnalisés Chez Awa.
+      </p>
+<div class="flex flex-col gap-space-xs pt-1">
+<!-- Bouton Coupon exclusif -->
+<button class="w-full py-3 px-space-md rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-between shadow-sm hover:opacity-95 active:scale-[0.99] transition-all" onclick="offerVipCoupon()" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px]">confirmation_number</span>
+<div class="text-left">
+<span class="block">Offrir un coupon de réduction exclusif (-15%)</span>
+<span class="text-label-sm font-label-sm text-primary-fixed-dim block">Valable 14 jours sur la collection Homme</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Bouton Motard attitré -->
+<button class="w-full py-3 px-space-md rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg flex items-center justify-between shadow-sm hover:bg-surface-container-high active:scale-[0.99] transition-all" onclick="assignUsualDriver()" type="button">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">motorcycle</span>
+<div class="text-left">
+<span class="block">Attribuer le motard habituel (Moussa)</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Connaît déjà le portail noir à Bandalungwa</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">check_circle_outline</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Modal / Bottom Sheet : Modifier Note Vendeur -->
+<div class="fixed inset-0 z-50 hidden" id="noteModal">
+<div class="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm" onclick="closeNoteEditor()"></div>
+<div class="absolute bottom-0 left-0 right-0 max-w-lg mx-auto bg-surface-container-lowest rounded-t-2xl p-space-lg flex flex-col gap-space-md shadow-2xl transition-transform">
+<div class="flex items-center justify-between">
+<h4 class="font-headline-md text-headline-md text-on-surface">Modifier la note client</h4>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" onclick="closeNoteEditor()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-outline" for="clientNoteInput">Consignes et remarques pour Jean Dupont</label>
+<textarea class="w-full p-space-sm rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:outline-none focus:ring-1 focus:ring-primary" id="clientNoteInput" placeholder="Ajouter une instruction spéciale..." rows="4">Toujours appeler avant de confier au motard. Préfère livraison entre 12h et 15h. Client courtois et paie au comptant sans retard.</textarea>
+</div>
+<div class="flex gap-space-sm">
+<button class="flex-1 py-2.5 rounded-lg bg-surface-container text-on-surface font-label-lg text-label-lg" onclick="closeNoteEditor()" type="button">
+          Annuler
+        </button>
+<button class="flex-1 py-2.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg" onclick="saveNote()" type="button">
+          Enregistrer
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function showToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const msg = document.getElementById('toastMsg');
+    if (toast && msg) {
+      msg.textContent = message;
+      toast.classList.remove('-translate-y-28', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('-translate-y-28', 'opacity-0', 'pointer-events-none');
+      }, 3200);
+    }
+  }
+
+  function openNoteEditor() {
+    const modal = document.getElementById('noteModal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeNoteEditor() {
+    const modal = document.getElementById('noteModal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function saveNote() {
+    closeNoteEditor();
+    showToast('Note vendeur mise à jour pour Jean Dupont');
+  }
+
+  function offerVipCoupon() {
+    showToast('Coupon VIP (-15%) généré et envoyé à Jean via WhatsApp');
+  }
+
+  function assignUsualDriver() {
+    showToast('Motard Moussa assigné par défaut aux futures courses');
+  }
+
+  function showCustomerOptions() {
+    showToast('Menu d\'options supplémentaires ouvert');
+  }
+
+  function loadMoreOrders(btn) {
+    btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span> Chargement...';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span> Toutes les 12 commandes sont affichées';
+      btn.disabled = true;
+      btn.classList.add('opacity-75', 'cursor-default');
+    }, 700);
+  }
+</script></main><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(38,30,23,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0 flex-1"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XjIfsenHcmKn3krWQuLOUae2JeOsxLQN1TjhDCTVQdDaq4EbFi7MpQGvgP1_5DMjg8ibCDLrD12vbFxmnTgjwyDcN4TkLVi9Ngl-8PX2l23okCHBwCHNvw3O3ZOTdPmJeNB0-U6r2jjwKWfarvxhAqhmLw3gvvxi6uJPA0sFPiEhH_LM9-AI6o5EgRcH6Eglh94XeGACYfpeMHMkaRCpQ7epv6VbutIWbg5gVGPsDLRU3FEagxn7vOvu8"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-on-surface truncate leading-tight">Chez Awa</span><span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Kinshasa • Produits</span></div></div><div class="flex items-center gap-space-xs shrink-0"><div class="flex items-center p-0.5 bg-secondary-container rounded-full"><button class="px-2 py-0.5 rounded-full bg-surface-container-lowest shadow-[0_1px_3px_rgba(38,30,23,0.08)] font-label-sm text-label-sm text-on-surface font-semibold" type="button">USD</button><button class="px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-secondary-container hover:text-on-surface" type="button">CDF</button></div><button aria-label="Notifications" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container relative"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-tertiary-container"></span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shrink-0 ml-space-xs" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Section En-tête : Contexte Magasin & Action Principale -->
+<section class="px-margin-mobile pt-space-md pb-space-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">Catalogue &amp; Produits</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">18 Réf.</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Boutique Chez Awa • Gombe, Kinshasa</p>
+</div>
+<button class="shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg shadow-sm hover:opacity-95 active:scale-95 transition-transform" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Nouveau</span>
+</button>
+</div>
+<!-- Barre de recherche ergonomique & déclencheur filtres -->
+<div class="flex items-center gap-space-xs mt-1">
+<div class="relative flex-1 flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-4 rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-container/20 transition-all" placeholder="Rechercher par nom, SKU, catégorie..." type="text"/>
+</div>
+<button aria-label="Filtrer les produits" class="w-11 h-11 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors shrink-0 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</button>
+</div>
+</section>
+<!-- Métriques rapides d'inventaire -->
+<section class="px-margin-mobile py-space-xs">
+<div class="grid grid-cols-3 gap-2.5">
+<!-- Total Articles -->
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">En vitrine</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary">storefront</span>
+</div>
+<div class="mt-1">
+<div class="font-headline-md text-headline-md text-on-surface font-bold">18</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">14 actifs</span>
+</div>
+</div>
+<!-- Valeur Marchande -->
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Valeur stock</span>
+<span class="material-symbols-outlined text-[16px] text-primary">payments</span>
+</div>
+<div class="mt-1">
+<div class="font-headline-md text-headline-md text-on-surface font-bold truncate">1.45M <span class="text-label-sm font-normal">FC</span></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">~$580 USD</span>
+</div>
+</div>
+<!-- Stock Faible -->
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">Alertes</span>
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+</div>
+<div class="mt-1">
+<div class="font-headline-md text-headline-md text-error font-bold">2</div>
+<span class="font-label-sm text-label-sm text-error font-semibold">Stock critique</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Filtres horizontaux segmentés (Pills) -->
+<section class="py-space-sm">
+<div class="flex items-center gap-2 overflow-x-auto px-margin-mobile no-scrollbar">
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold shadow-sm" type="button">
+        Tous (18)
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">
+        En Stock (14)
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">
+        Stock Faible (2)
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">
+        Rupture (2)
+      </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium transition-colors" type="button">
+        Brouillons (1)
+      </button>
+</div>
+</section>
+<!-- Carte d'Alerte Urgente de Réapprovisionnement -->
+<section class="px-margin-mobile py-space-xs">
+<div class="bg-error-container/40 p-3.5 rounded-xl flex flex-col gap-2.5">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-full bg-error-container flex items-center justify-center shrink-0 text-on-error-container">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-error-container font-semibold">Alerte Stock Critique</span>
+<span class="font-label-sm text-label-sm text-on-error-container bg-error-container px-2 py-0.5 rounded-full font-bold">3 restants</span>
+</div>
+<p class="font-body-md text-body-md text-on-error-container/90 mt-0.5 leading-snug">
+            Casquette Urbaine Amani (Noir) : forte demande observée à Bandal et Gombe aujourd'hui.
+          </p>
+</div>
+</div>
+<div class="flex justify-end">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-error-container font-label-sm text-label-sm font-semibold shadow-sm hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>Ajuster Stock / Réappro</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Liste des Produits Détaillés -->
+<section class="px-margin-mobile pt-space-sm pb-space-lg flex flex-col gap-3.5">
+<!-- Produit 1 : T-shirt Coton Premium Kinshasa -->
+<article class="bg-surface-container-lowest rounded-2xl p-3.5 shadow-sm flex flex-col gap-3">
+<div class="flex gap-3">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden bg-surface-container-low shrink-0">
+<img class="w-full h-full object-cover" data-alt="A meticulously folded navy blue classic premium crewneck t-shirt on a crisp off-white background, soft daylight casting realistic warm micro-shadows, luxury Pan-African boutique aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQHa7kvBs4-x5Ynqk86n9lIJzaqaItR7ApyQEBfdrFwpXZVTmNDPZtJxiGVdx-gI6l1t4IjLhsLO-fOPc_jBwGiS47Cw_6bBdZNqPCNEAV_fDSe5DYIXAOUPsa2pICotdFcw-7A-EmGsTB7p0PQ6ttQ1sRO43LfnTu8x0OJ2FLaBhvH5lz38iy_xRWcuYoI4C9sHdt28TrsVvTgg4x_5ByCVg74n8yG6ojB6g5uI649a_mPIUrrn5h"/>
+<span class="absolute bottom-1 left-1 px-1.5 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur font-label-sm text-[10px] text-on-surface font-semibold">#1 Top</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Mode • TSH-COT-01</span>
+<!-- Toggle En Ligne -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:left-[2px] after:bg-white after:rounded-full after:h-3.5 after:w-3.5 after:transition-all peer-checked:bg-tertiary-container"></div>
+</label>
+</div>
+<h3 class="font-headline-md text-body-xl text-on-surface font-bold leading-snug mt-0.5 truncate">
+              T-shirt Coton Premium Kinshasa
+            </h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">
+              3 Tailles (M, L, XL) • 2 Couleurs (Bleu, Noir)
+            </p>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">20 000 FC</span>
+<span class="font-body-md text-body-md text-outline">~$8.00 USD</span>
+</div>
+</div>
+</div>
+<!-- Rubrique Statut & Actions -->
+<div class="pt-2.5 flex items-center justify-between gap-2 bg-surface-container-low/50 -mx-3.5 -mb-3.5 px-3.5 py-2.5 rounded-b-2xl">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-on-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            24 en stock
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+            4.9 (48 v.)
+          </span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">edit</span>
+<span>Modifier</span>
+</button>
+<button aria-label="Menu options" class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Produit 2 : Montre Classique Cuir Cognac -->
+<article class="bg-surface-container-lowest rounded-2xl p-3.5 shadow-sm flex flex-col gap-3">
+<div class="flex gap-3">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden bg-surface-container-low shrink-0">
+<img class="w-full h-full object-cover" data-alt="Luxury timepiece wristwatch with rich cognac saddle brown leather stitched strap, elegant deep blue dial, polished stainless steel casing on warm beige marble pedestal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2X90BdUTn6-hsfCE5vTY6MmQh50pJRft0CK6AhIi21mRnK1yNfX1TJcVbIdmhJDxQ62ie2HIXEjAQEZNUeXCh9Wvf_UCfhv8awsUYIEqKxlQHAQl5rCYoCnf_U1jrJGRvjhrg591fAEL2x1lgttWQmOgnZe2zM3_ROWgcSgDmd47Pwmof2iU0oZXRL1ZLpYnWsDW1Bs6qItXgBekQOjQ-B-oCcdXH3yB0lf1ld74vj_M4kBtAwvMn"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-900 font-label-sm text-[10px] font-bold">Faible</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Luxe • WATCH-CUIR-02</span>
+<!-- Toggle En Ligne -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:left-[2px] after:bg-white after:rounded-full after:h-3.5 after:w-3.5 after:transition-all peer-checked:bg-tertiary-container"></div>
+</label>
+</div>
+<h3 class="font-headline-md text-body-xl text-on-surface font-bold leading-snug mt-0.5 truncate">
+              Montre Classique Cuir Cognac
+            </h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">
+              Boîtier Argent • Cuir Brun &amp; Noir
+            </p>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">39 000 FC</span>
+<span class="font-body-md text-body-md text-outline">~$15.60 USD</span>
+</div>
+</div>
+</div>
+<!-- Statut & Actions -->
+<div class="pt-2.5 flex items-center justify-between gap-2 bg-surface-container-low/50 -mx-3.5 -mb-3.5 px-3.5 py-2.5 rounded-b-2xl">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+            6 en stock
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+            5.0 (19 v.)
+          </span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">edit</span>
+<span>Modifier</span>
+</button>
+<button aria-label="Menu options" class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Produit 3 : Baskets Running Kin Sport -->
+<article class="bg-surface-container-lowest rounded-2xl p-3.5 shadow-sm flex flex-col gap-3">
+<div class="flex gap-3">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden bg-surface-container-low shrink-0">
+<img class="w-full h-full object-cover" data-alt="High-performance lightweight running sneakers in vibrant cobalt blue, neon lime and coral red accents on clean neutral surface with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUvNq3yevi2BUJ4ikgOvr2jgsd-TMiAtp7sEYEafxyXAJBtbAv0dEtl0bRvrZSYg8lEZTHZtz-nuQNvBCufPe_ZHK9ZxRGD-dPD_WGZmLZ0cPciSiKwmBMifMy5ZKnVMTnhb9oQDOFQDCiMnW_nIE99NLlrKYyAJQypQTi0s-DABN9qjNawgjSq0C5caJW7eccXV_Xk_6Jm7BP7NaMWzCE-YqAYKgTx1XcMQwEFTVEP5Ey4eyJe7lH"/>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Chaussures • SHOE-RUN-04</span>
+<!-- Toggle En Ligne -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:left-[2px] after:bg-white after:rounded-full after:h-3.5 after:w-3.5 after:transition-all peer-checked:bg-tertiary-container"></div>
+</label>
+</div>
+<h3 class="font-headline-md text-body-xl text-on-surface font-bold leading-snug mt-0.5 truncate">
+              Baskets Running Kin Sport
+            </h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">
+              Pointures 40 à 44 • Bicolore sport
+            </p>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">55 000 FC</span>
+<span class="font-body-md text-body-md text-outline">~$22.00 USD</span>
+</div>
+</div>
+</div>
+<!-- Statut & Actions -->
+<div class="pt-2.5 flex items-center justify-between gap-2 bg-surface-container-low/50 -mx-3.5 -mb-3.5 px-3.5 py-2.5 rounded-b-2xl">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-on-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+            12 paires
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary-container" style="font-variation-settings: 'FILL' 1;">star</span>
+            4.8 (14 v.)
+          </span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">edit</span>
+<span>Modifier</span>
+</button>
+<button aria-label="Menu options" class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Produit 4 : Écouteurs Sans Fil Pro Sound (En Rupture) -->
+<article class="bg-surface-container-lowest rounded-2xl p-3.5 shadow-sm flex flex-col gap-3 opacity-95">
+<div class="flex gap-3">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden bg-surface-container-low shrink-0">
+<img class="w-full h-full object-cover grayscale-[30%]" data-alt="Sleek matte black wireless over-ear noise-cancelling headphones accompanied by compact earbud charging case on modern boutique showroom counter with warm ambient bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWOLgViHCWDnBrj65Zx3hmslJRvbhIRWWStLoTB1AbvuhgxcKwFo4-e7O7z8cR-5FyGQWiyIS03TiwAS4rTo5egHAgLA0c66hV1JungLUmVXXZOpprt9ne5sjZRX8C3U0PhA3_tq-QVe-KQv-qtX_SdXeFhHhfg_zjNFPRqym0x037SZjcG8nn-U-_NrgC33CXY0Y90-N9r5Txd_XyhOuGZBOxEieIj-_sAPSO-P9rtwMCKYfCoIRi"/>
+<div class="absolute inset-0 bg-on-surface/10"></div>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">Rupture</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Audio • EAR-PRO-09</span>
+<!-- Toggle En Ligne (Désactivé) -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:left-[2px] after:bg-white after:rounded-full after:h-3.5 after:w-3.5 after:transition-all peer-checked:bg-tertiary-container"></div>
+</label>
+</div>
+<h3 class="font-headline-md text-body-xl text-on-surface font-bold leading-snug mt-0.5 truncate">
+              Écouteurs Sans Fil Pro Sound
+            </h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">
+              Noir Mat • Boîtier USB-C • Bestseller
+            </p>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">32 000 FC</span>
+<span class="font-body-md text-body-md text-outline">~$12.80 USD</span>
+</div>
+</div>
+</div>
+<!-- Action prioritaire réapprovisionnement -->
+<div class="pt-2.5 flex items-center justify-between gap-2 bg-error-container/20 -mx-3.5 -mb-3.5 px-3.5 py-2.5 rounded-b-2xl">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[16px]">warning</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">0 en stock • 35 vendus</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold shadow-sm hover:opacity-90 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[15px]">inventory</span>
+<span>Réapprovisionner</span>
+</button>
+</div>
+</article>
+<!-- Produit 5 : Casquette Urbaine Amani -->
+<article class="bg-surface-container-lowest rounded-2xl p-3.5 shadow-sm flex flex-col gap-3">
+<div class="flex gap-3">
+<div class="relative w-24 h-24 rounded-xl overflow-hidden bg-surface-container-low shrink-0">
+<img class="w-full h-full object-cover" data-alt="Minimalist street luxury black cotton cap embroidered with metallic gold Amani lettering, displayed on clean warm sand textured podium in natural diffused Kinshasa sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfB6bWBxuIPbuNov6elGubJ5gRFatYesb-SfLw8y6OO-qjENxkGGmesipBrmFbiQV-RQegBcJqBz2Hd1fQPPU7UcISzV03pQqCtpiUVDqdkhmgrqFc-M3WHbIyJ0mfxP3b6jln7s2QHyvN3emkZB_AgWppPNbnw_JkiiN4WJvU3-wEiaazE0bPluqd2z54W970qsIUDoligwaU8ivolmUpbW08dIHbntqUQxxCvtfppCodNKE9uYLA"/>
+<span class="absolute top-1 left-1 px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">Critique</span>
+</div>
+<div class="flex-1 min-w-0 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Accessoires • CAS-BLK-04</span>
+<!-- Toggle En Ligne -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[1px] after:left-[2px] after:bg-white after:rounded-full after:h-3.5 after:w-3.5 after:transition-all peer-checked:bg-tertiary-container"></div>
+</label>
+</div>
+<h3 class="font-headline-md text-body-xl text-on-surface font-bold leading-snug mt-0.5 truncate">
+              Casquette Urbaine Amani
+            </h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">
+              Taille Unique • Broderie Amani Gold
+            </p>
+</div>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">5 000 FC</span>
+<span class="font-body-md text-body-md text-outline">~$2.00 USD</span>
+</div>
+</div>
+</div>
+<!-- Statut & Actions -->
+<div class="pt-2.5 flex items-center justify-between gap-2 bg-surface-container-low/50 -mx-3.5 -mb-3.5 px-3.5 py-2.5 rounded-b-2xl">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container/60 text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+            3 exemplaires
+          </span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px] text-primary">add</span>
+<span>Ajuster</span>
+</button>
+<button aria-label="Menu options" class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant hover:text-on-surface shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</article>
+</section>
+<!-- Bandeau Outils Gestion de Masse -->
+<section class="px-margin-mobile pb-space-lg">
+<div class="bg-surface-container-low p-4 rounded-2xl flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container text-[20px]">dataset</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Actions groupées • Export</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Format Kinshasa</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">file_download</span>
+<span>Exporter CSV</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">price_change</span>
+<span>Prix en masse</span>
+</button>
+</div>
+</div>
+</section>
+</div></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,30,23,0.06)]" data-active-classes="text-primary-container font-semibold"><div class="flex items-center justify-around h-16 px-space-xs max-w-lg mx-auto"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm">Dashboard</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors text-primary-container font-semibold" data-path="produits" href="#"><span class="material-symbols-outlined text-[22px]">inventory_2</span><span class="font-label-sm text-label-sm">Produits</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors relative" data-path="commandes" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">receipt_long</span><span class="absolute -top-1 -right-2 min-w-[16px] h-4 px-1 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] leading-tight flex items-center justify-center font-bold">1</span></div><span class="font-label-sm text-label-sm">Commandes</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="livreurs" href="#"><span class="material-symbols-outlined text-[22px]">two_wheeler</span><span class="font-label-sm text-label-sm">Livreurs</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="finances" href="#"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-sm text-label-sm">Finances</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_blank" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fbf9f6;color:#1b1c1a;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-on-surface antialiased pt-safe pb-safe flex flex-col min-h-screen"><main class="flex flex-col relative w-full bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile pb-space-lg">
+<!-- Top Brand Header with Central SaaS Badge -->
+<div class="flex flex-col items-center text-center mt-space-md mb-space-lg">
+<div class="relative flex items-center justify-center mb-space-sm">
+<div class="w-16 h-16 rounded-xl bg-surface-container-lowest p-space-xs shadow-sm flex items-center justify-center">
+<img alt="Amani Marketplace Logo" class="w-full h-full object-contain rounded-lg" src="https://lh3.googleusercontent.com/aida/AEtjO1Xm3QBqwjVUmyYbF9hSATd2TnJjJS2CrBYUTFAqIcJ593e50jx7s61lLuuxyn8etHtXZI1x4m_mVH_unjjnVYhCxeAK8sXLClJymwtlOa-4ohHyolti0yoWB_1PPxyL9_dj453Nrd-szRMxwcW3esL2qpMCt5sdP0E-JIopZ7srPGfaY8yTqTGIqURkHrWVwQWkgmnzAMwkgoxUSd3DYrgxhWDLC_tnv2sLBLyZxwoaGnvjxL4PWVPxX84"/>
+</div>
+<span class="absolute -bottom-2 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm tracking-wide uppercase shadow-sm">
+        SaaS Core
+      </span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-label-md font-label-md mt-space-sm mb-space-xs">
+<span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span>CONSOLE CENTRALE SAAS</span>
+</div>
+<h1 class="text-headline-xl-mobile font-headline-xl-mobile text-on-surface tracking-tight mt-space-xs">
+      Administration Plateforme
+    </h1>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-[320px] mt-1">
+      Accès sécurisé pour l'équipe technique et financière Amani RDC
+    </p>
+</div>
+<!-- Primary Authentication Form Card -->
+<form class="flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm" id="adminLoginForm" onsubmit="event.preventDefault();">
+<!-- Email Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-label-md font-label-md text-on-surface flex items-center justify-between" for="adminEmail">
+<span>Adresse e-mail administrateur</span>
+<span class="text-label-sm font-label-sm text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+          SSO Actif
+        </span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">mail</span>
+<input autocomplete="username" class="w-full bg-surface-container-low text-on-surface placeholder:text-outline text-body-md font-body-md pl-10 pr-4 py-3 rounded-lg outline-none transition-all focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(140,109,70,0.35)]" id="adminEmail" placeholder="admin@amani-rdc.com" required="" type="email" value="admin@amani-rdc.com"/>
+</div>
+</div>
+<!-- Password Field with Visibility Toggle -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="text-label-md font-label-md text-on-surface" for="adminPassword">Mot de passe maître</label>
+<span class="text-label-sm font-label-sm text-primary cursor-pointer hover:underline">Clé révoquée ?</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px] pointer-events-none">lock</span>
+<input autocomplete="current-password" class="w-full bg-surface-container-low text-on-surface placeholder:text-outline text-body-md font-body-md pl-10 pr-11 py-3 rounded-lg outline-none transition-all focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_rgba(140,109,70,0.35)]" id="adminPassword" placeholder="Entrez votre clé d'accès" required="" type="password" value="••••••••••••••••"/>
+<button aria-label="Afficher ou masquer le mot de passe" class="absolute right-3 text-secondary hover:text-on-surface transition-colors p-1 flex items-center justify-center" id="togglePasswordBtn" type="button">
+<span class="material-symbols-outlined text-[20px]" id="passwordEyeIcon">visibility</span>
+</button>
+</div>
+</div>
+<!-- 2FA / OTP Section -->
+<div class="flex flex-col gap-1.5 bg-surface-container-low p-3.5 rounded-lg">
+<div class="flex items-center justify-between">
+<label class="text-label-md font-label-md text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">key</span>
+<span>Code d'authentification 2FA</span>
+</label>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm bg-surface-container-highest text-on-surface-variant">6 chiffres</span>
+</div>
+<div class="grid grid-cols-6 gap-2 my-1" id="otpContainer">
+<input class="otp-input text-center py-2.5 bg-surface-container-lowest text-headline-md font-headline-md text-on-surface rounded-lg outline-none transition-all focus:shadow-[0_0_0_2px_rgba(140,109,70,0.5)]" inputmode="numeric" maxlength="1" type="text" value="8"/>
+<input class="otp-input text-center py-2.5 bg-surface-container-lowest text-headline-md font-headline-md text-on-surface rounded-lg outline-none transition-all focus:shadow-[0_0_0_2px_rgba(140,109,70,0.5)]" inputmode="numeric" maxlength="1" type="text" value="4"/>
+<input class="otp-input text-center py-2.5 bg-surface-container-lowest text-headline-md font-headline-md text-on-surface rounded-lg outline-none transition-all focus:shadow-[0_0_0_2px_rgba(140,109,70,0.5)]" inputmode="numeric" maxlength="1" type="text" value="9"/>
+<input class="otp-input text-center py-2.5 bg-surface-container-lowest text-headline-md font-headline-md text-on-surface rounded-lg outline-none transition-all focus:shadow-[0_0_0_2px_rgba(140,109,70,0.5)]" inputmode="numeric" maxlength="1" placeholder="•" type="text" value=""/>
+<input class="otp-input text-center py-2.5 bg-surface-container-lowest text-headline-md font-headline-md text-on-surface rounded-lg outline-none transition-all focus:shadow-[0_0_0_2px_rgba(140,109,70,0.5)]" inputmode="numeric" maxlength="1" placeholder="•" type="text" value=""/>
+<input class="otp-input text-center py-2.5 bg-surface-container-lowest text-headline-md font-headline-md text-on-surface rounded-lg outline-none transition-all focus:shadow-[0_0_0_2px_rgba(140,109,70,0.5)]" inputmode="numeric" maxlength="1" placeholder="•" type="text" value=""/>
+</div>
+<div class="flex items-center gap-1.5 text-label-sm font-label-sm text-secondary">
+<span class="material-symbols-outlined text-[15px] text-tertiary" style="font-variation-settings: 'FILL' 1;">security</span>
+<span>YubiKey / Authenticator requis (TOTP RFC 6238)</span>
+</div>
+</div>
+<!-- Remember Session Checkbox -->
+<label class="flex items-start gap-2.5 cursor-pointer select-none">
+<div class="relative flex items-center justify-center mt-0.5">
+<input checked="" class="peer sr-only" id="rememberDevice" type="checkbox"/>
+<div class="w-5 h-5 rounded bg-surface-container-high peer-checked:bg-primary-container transition-colors flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px] hidden peer-checked:block font-bold">check</span>
+</div>
+</div>
+<span class="text-body-md font-body-md text-on-surface-variant leading-snug">
+        Garder ma session active sur cet appareil sécurisé
+      </span>
+</label>
+<!-- Big Action Button (Height 56px, Cafe Tone) -->
+<button class="w-full h-14 bg-primary-container hover:bg-primary active:scale-[0.99] text-on-primary rounded-xl font-label-lg text-label-lg tracking-wide shadow-md flex items-center justify-center gap-2 transition-all mt-1" id="submitLoginBtn" type="submit">
+<span>Se connecter au Dashboard</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</form>
+<!-- Technical Security Enclosure & Live Health -->
+<div class="flex flex-col gap-space-sm mt-space-md">
+<!-- Network & Node Protocol Card -->
+<div class="flex items-center gap-2.5 bg-surface-container-high p-3 rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">encrypted</span>
+<div class="flex flex-col min-w-0">
+<span class="text-label-sm font-label-sm text-on-surface font-semibold tracking-wide">
+          Session chiffrée SSL / TLS 1.3
+        </span>
+<span class="text-label-sm font-label-sm text-secondary truncate">
+          Restriction IP Kinshasa Hub active (Gombe / 105.235.*.*)
+        </span>
+</div>
+</div>
+<!-- Infrastructure Heartbeat Status -->
+<div class="flex items-center justify-between bg-surface-container-lowest px-3.5 py-2.5 rounded-lg shadow-sm">
+<div class="flex items-center gap-2 min-w-0">
+<span class="relative flex h-2.5 w-2.5 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-tertiary"></span>
+</span>
+<span class="text-label-md font-label-md text-on-surface truncate">
+          Tous les services opérationnels
+        </span>
+</div>
+<span class="text-label-sm font-label-sm text-secondary shrink-0 pl-2">
+        Kimia • SMS • BDD
+      </span>
+</div>
+<!-- SaaS Engine Version Footnote -->
+<div class="flex items-center justify-center gap-1.5 text-center text-label-sm font-label-sm text-outline mt-space-xs">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Amani SaaS Core v2.4.0 • Superadmin RDC</span>
+</div>
+</div>
+</div>
+<script>
+  // Password Visibility Toggle Interaction
+  const toggleBtn = document.getElementById('togglePasswordBtn');
+  const passwordInput = document.getElementById('adminPassword');
+  const eyeIcon = document.getElementById('passwordEyeIcon');
+
+  if (toggleBtn && passwordInput && eyeIcon) {
+    toggleBtn.addEventListener('click', () => {
+      const isPassword = passwordInput.getAttribute('type') === 'password';
+      passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+      eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+    });
+  }
+
+  // OTP Input Auto-focus advance
+  const otpInputs = document.querySelectorAll('.otp-input');
+  otpInputs.forEach((input, index) => {
+    input.addEventListener('input', (e) => {
+      if (e.target.value.length === 1 && index < otpInputs.length - 1) {
+        otpInputs[index + 1].focus();
+      }
+    });
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Backspace' && !e.target.value && index > 0) {
+        otpInputs[index - 1].focus();
+      }
+    });
+  });
+</script></main><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

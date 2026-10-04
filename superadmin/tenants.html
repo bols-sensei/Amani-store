@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config" src="../shared/js/tailwind.config.js"></script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fbf9f6;color:#1b1c1a;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:max(env(safe-area-inset-bottom,0px),12px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(38,30,23,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-2"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xm3QBqwjVUmyYbF9hSATd2TnJjJS2CrBYUTFAqIcJ593e50jx7s61lLuuxyn8etHtXZI1x4m_mVH_unjjnVYhCxeAK8sXLClJymwtlOa-4ohHyolti0yoWB_1PPxyL9_dj453Nrd-szRMxwcW3esL2qpMCt5sdP0E-JIopZ7srPGfaY8yTqTGIqURkHrWVwQWkgmnzAMwkgoxUSd3DYrgxhWDLC_tnv2sLBLyZxwoaGnvjxL4PWVPxX84"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-md text-headline-md tracking-tight text-on-surface leading-none">Amani</span><span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed text-[9px] font-semibold tracking-wider uppercase leading-none">Superadmin</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[110px]">Vendeurs</span></div></div><div class="flex items-center gap-2"><div class="inline-flex items-center p-0.5 rounded-full bg-surface-container"><button class="px-2 py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-[0_1px_3px_rgba(38,30,23,0.06)] min-h-[28px] min-w-[34px] flex items-center justify-center transition-all" type="button">USD</button><button class="px-2 py-1 rounded-full text-on-surface-variant font-label-sm text-label-sm min-h-[28px] min-w-[34px] flex items-center justify-center transition-all" type="button">CDF</button></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin-mobile pb-space-xl">
+<!-- Page Header -->
+<div class="flex items-center justify-between mb-space-sm pt-space-xs">
+<div class="flex items-baseline gap-2">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface">Vendeurs &amp; Tenants</h1>
+<span class="font-label-md text-label-md text-primary font-semibold">(99 boutiques)</span>
+</div>
+<button aria-label="Rapport export" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[19px]">download</span>
+</button>
+</div>
+<!-- Search & Filter Trigger -->
+<div class="flex items-center gap-space-xs mb-space-md">
+<div class="flex-1 flex items-center bg-surface-container-lowest px-3 py-2.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-outline text-[20px] mr-2">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="vendor-search" placeholder="Rechercher par nom, commune, tél..." type="text"/>
+</div>
+<button aria-label="Filtrer" class="w-11 h-11 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant shadow-sm hover:bg-surface-container transition-colors relative" type="button">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+<span class="absolute top-2.5 right-2.5 w-1.5 h-1.5 rounded-full bg-primary"></span>
+</button>
+</div>
+<!-- Horizontal Filter Pills -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 mb-space-lg no-scrollbar">
+<button class="filter-pill shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-primary-container text-on-primary-container font-semibold shadow-sm transition-all flex items-center gap-1.5" data-filter="all" type="button">
+<span>Tous</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary-container/20 text-on-primary-container text-[10px]">99</span>
+</button>
+<button class="filter-pill shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant font-medium hover:bg-surface-container transition-all flex items-center gap-1.5" data-filter="active" type="button">
+<span>Actifs</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-high text-on-surface-variant text-[10px]">87</span>
+</button>
+<button class="filter-pill shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant font-medium hover:bg-surface-container transition-all flex items-center gap-1.5" data-filter="pending" type="button">
+<span>En attente</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary-container text-on-secondary-fixed text-[10px]">12</span>
+</button>
+<button class="filter-pill shrink-0 px-3.5 py-1.5 rounded-full font-label-md text-label-md bg-surface-container-lowest text-on-surface-variant font-medium hover:bg-surface-container transition-all flex items-center gap-1.5" data-filter="suspended" type="button">
+<span>Suspendus</span>
+<span class="px-1.5 py-0.2 rounded-full bg-error-container text-on-error-container text-[10px]">3</span>
+</button>
+</div>
+<!-- Quick Macro Metrics Bar -->
+<div class="grid grid-cols-2 gap-space-xs mb-space-md">
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Volume Kinshasa (J-30)</p>
+<p class="font-headline-md text-headline-md text-on-surface font-semibold mt-0.5">$28,450</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-tertiary-container/15 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-between">
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Vérifications KYC</p>
+<p class="font-headline-md text-headline-md text-on-surface font-semibold mt-0.5">8 dossiers</p>
+</div>
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">fact_check</span>
+</div>
+</div>
+</div>
+<!-- Cards Stack -->
+<div class="flex flex-col gap-space-sm">
+<!-- Card 1 : ÉlectroMoussa Kinshasa -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-3" data-status="active">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Modern electronics boutique storefront display in downtown Kinshasa Gombe, warm lighting on shelves with smartphones and headphones, high end retail presentation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRUu28cobfdq4CRnOhK1itplZFFV4onqPMApMwkh1LvI58T3yJa_DR-IclbLKRFrDk3DxqiPu7TjEyiKFFG93RskbScDmNLuuaR97E0GLrAfYGAHNWJ86IDaD3KQiszipZtWXILM7GPxR3QxsK3m9izmGqPSG_6Ji1s8ZEnuSlTrRJ7rziR4QUL0G1Cncl_voMXqiSPoDTzKuzUDjVeURxsYdvuXDwIVFU7bCscH5vFHbnoKHMoPM2"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">ÉlectroMoussa Kinshasa</h2>
+<span class="material-symbols-outlined text-[16px] text-tertiary" title="Certifié">verified</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider">BUSINESS</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Actif
+              </span>
+</div>
+</div>
+</div>
+<button aria-label="Options" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Financial Metrics Pill -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CA Total</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">$12,300</span>
+<span class="font-label-sm text-label-sm text-outline">(≈ 30.75M FC)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Volume</span>
+<p class="font-label-lg text-label-lg font-semibold text-on-surface mt-0.5">248 commandes</p>
+</div>
+</div>
+<!-- Location & Contact Footer -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+            Gombe
+          </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">perm_phone_msg</span>
+            Moussa (+243 81 234 5678)
+          </span>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Appeler" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">call</span>
+</button>
+<button aria-label="Discuter WhatsApp" class="w-8 h-8 rounded-full bg-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary hover:bg-tertiary-fixed-dim/50 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 : Chez Awa (Mode & Accessoires) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-3" data-status="active">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Refined Kinshasa boutique featuring high fashion wax print dresses, handwoven artisanal luxury accessories, warm studio ambiance with warm terracotta and beige fabrics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMjcrq2L1_T6tqC45BGRWsztbJuHKRov0xz1ferUGM53qJsgIQqOWImoqPNmMVy4WzC4afyx5qTYjzGkgk6tfiQFdlIx25v2F0f4lRUM55fQSwpzCwehrO0SK7g7BHj6H7_tFK2jsHHNYLq1ONSiI4DTfpRj-PeVV7MArGW2Ln769oTTuVjnOGlOA_hL8VJw4sg-7aJGMazI4FP0avpRTPpQy0RPrWtI4AS46yJVAyE9M5c4OnWrfZ"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">Chez Awa (Mode &amp; Accessoires)</h2>
+<span class="material-symbols-outlined text-[16px] text-tertiary" title="Certifié">verified</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider">PRO</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Actif
+              </span>
+</div>
+</div>
+</div>
+<button aria-label="Options" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Financial Metrics Pill -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CA Total</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">$4,850</span>
+<span class="font-label-sm text-label-sm text-outline">(≈ 12.12M FC)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Volume</span>
+<p class="font-label-lg text-label-lg font-semibold text-on-surface mt-0.5">142 commandes</p>
+</div>
+</div>
+<!-- Location & Contact Footer -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+            Gombe
+          </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">perm_phone_msg</span>
+            Awa K. (+243 82 345 6789)
+          </span>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Appeler" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">call</span>
+</button>
+<button aria-label="Discuter WhatsApp" class="w-8 h-8 rounded-full bg-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary hover:bg-tertiary-fixed-dim/50 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 : PetitCoin Bazar (En attente KYC) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-3" data-status="pending">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative flex items-center justify-center text-on-surface-variant font-bold text-headline-md">
+            PB
+          </div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">PetitCoin Bazar</h2>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider">FREE</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span> Validation KYC
+              </span>
+</div>
+</div>
+</div>
+<button aria-label="Options" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Financial Metrics Pill -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CA Total</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface mt-0.5">$0 USD</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ancienneté</span>
+<p class="font-label-md text-label-md font-medium text-on-surface mt-0.5">Inscrit il y a 2 jours</p>
+</div>
+</div>
+<!-- Location & Direct Action -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2 font-body-md text-body-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Bandalungwa • Marc P.</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center gap-1 shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span>Examiner dossier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 4 : ModeFatou Boutique -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-3" data-status="active">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative">
+<img class="w-full h-full object-cover" data-alt="Chic African contemporary beauty accessories, beaded bags and handmade cosmetics displayed gently on warm natural linen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7BjBfarclekiO0K5Yrc3Sb8FazanaFiCZ9RkJO6aXh743S56d-pSQrjoqQ-K-YJjA-8Pu23Az8aq6aG38Wm9WP6EzSCwmM5D4xypB2h0A6h5C0X_S9oaAvQ1hji7WsMhCCA7PngDicnqKsud5eYHGbbh7TT36zB4f6J1yXDuOieu3da0tIjT07qkawBTifjE3AXwpFDFl0xoL2w06tA5e_07XGhdmvl862t09lPn6SzgiiU8hMbBN"/>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">ModeFatou Boutique</h2>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase tracking-wider">FREE</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Actif
+              </span>
+</div>
+</div>
+</div>
+<button aria-label="Options" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Financial Metrics Pill -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CA Total</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">$320</span>
+<span class="font-label-sm text-label-sm text-outline">(≈ 800,000 FC)</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Volume</span>
+<p class="font-label-lg text-label-lg font-semibold text-on-surface mt-0.5">18 commandes</p>
+</div>
+</div>
+<!-- Location & Contact Footer -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-3 font-body-md text-body-md text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+            Kintambo
+          </span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">perm_phone_msg</span>
+            Fatou N.
+          </span>
+</div>
+<div class="flex items-center gap-1">
+<button aria-label="Appeler" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">call</span>
+</button>
+<button aria-label="Discuter WhatsApp" class="w-8 h-8 rounded-full bg-tertiary-fixed-dim/30 flex items-center justify-center text-tertiary hover:bg-tertiary-fixed-dim/50 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5 : BoutiqueX Électronique (Suspendu) -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md flex flex-col gap-3" data-status="suspended">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high overflow-hidden shrink-0 relative flex items-center justify-center text-on-surface-variant font-bold text-headline-md">
+            BX
+          </div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-md text-headline-md text-on-surface truncate">BoutiqueX Électronique</h2>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold uppercase tracking-wider">PRO</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Suspendu (Litige)
+              </span>
+</div>
+</div>
+</div>
+<button aria-label="Options" class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</div>
+<!-- Financial Metrics Pill -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">CA Total</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface mt-0.5">$890 USD</span>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-error font-medium">Impayé constaté</span>
+<p class="font-label-md text-label-md text-outline mt-0.5">Suspendu depuis 3j</p>
+</div>
+</div>
+<!-- Quick Resolution Action Buttons -->
+<div class="flex items-center justify-end gap-2 pt-1">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md font-medium hover:bg-surface-container-high transition-colors" type="button">
+          Détails litige
+        </button>
+<button class="px-3 py-1.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-semibold hover:bg-secondary-fixed-dim transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">lock_open</span>
+<span>Réactiver</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Floating Add Button Bar -->
+<div class="sticky bottom-20 mt-space-md z-40 flex justify-center w-full pointer-events-none">
+<button class="pointer-events-auto px-5 py-3 rounded-full bg-primary-container text-on-primary-container font-label-lg text-label-lg font-semibold shadow-lg hover:shadow-xl hover:bg-primary transition-all flex items-center gap-2 transform active:scale-95" type="button">
+<span class="material-symbols-outlined text-[22px]">store</span>
+<span>+ Inviter / Ajouter un Vendeur</span>
+</button>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for horizontal filtering
+  document.querySelectorAll('.filter-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      // Toggle active visual states
+      document.querySelectorAll('.filter-pill').forEach(p => {
+        p.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-semibold', 'shadow-sm');
+        p.classList.add('bg-surface-container-lowest', 'text-on-surface-variant', 'font-medium');
+      });
+      pill.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant', 'font-medium');
+      pill.classList.add('bg-primary-container', 'text-on-primary-container', 'font-semibold', 'shadow-sm');
+
+      const filter = pill.getAttribute('data-filter');
+      const cards = document.querySelectorAll('[data-status]');
+      
+      cards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-status') === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Client-side instant filter input
+  const searchInput = document.getElementById('vendor-search');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      const cards = document.querySelectorAll('[data-status]');
+      cards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_16px_rgba(38,30,23,0.05)]" data-active-classes="text-primary font-semibold"><div class="flex items-center justify-around h-16 px-1"><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Dashboard</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center min-h-[44px] min-w-[44px] transition-colors text-primary font-semibold" data-path="vendeurs" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Vendeurs</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors relative" data-path="a-valider" href="#"><div class="relative"><span class="material-symbols-outlined text-[22px]">verified</span><span class="absolute -top-1 -right-2 px-1 py-0.2 rounded-full bg-tertiary text-on-tertiary font-label-sm text-[9px] leading-tight">8</span></div><span class="font-label-sm text-label-sm tracking-tight mt-0.5">À valider</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors" data-path="finances" href="#"><span class="material-symbols-outlined text-[22px]">payments</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Finances</span></a><a class="flex-1 flex flex-col items-center justify-center min-h-[44px] min-w-[44px] text-on-surface-variant transition-colors" data-path="plus" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-sm text-label-sm tracking-tight mt-0.5">Plus</span></a></div></nav><script src="../shared/js/routes.js"></script>
+<script src="../shared/js/app.js"></script>
+</body></html>

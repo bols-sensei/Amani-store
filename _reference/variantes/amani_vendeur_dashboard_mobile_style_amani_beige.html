@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface": "#fbf9f6",
+          "surface-tint": "#765934",
+          "on-primary-fixed": "#2a1800",
+          "secondary-fixed-dim": "#d3c4b9",
+          "on-secondary-fixed": "#221a13",
+          "on-primary-fixed-variant": "#5c421f",
+          "on-error": "#ffffff",
+          "outline": "#80756a",
+          "on-primary-container": "#fff8f4",
+          "on-secondary-container": "#6c6158",
+          "on-surface": "#1b1c1a",
+          "primary": "#8c6d46",
+          "primary-dark": "#725633",
+          "on-secondary-fixed-variant": "#4f453d",
+          "on-tertiary": "#ffffff",
+          "background": "#fbf9f6",
+          "on-secondary": "#ffffff",
+          "primary-container": "#8c6d46",
+          "tertiary": "#006746",
+          "surface-container-low": "#f5f3f0",
+          "inverse-on-surface": "#f2f0ed",
+          "error-container": "#ffdad6",
+          "surface-bright": "#fbf9f6",
+          "primary-fixed": "#ffddb6",
+          "secondary": "#675c53",
+          "inverse-surface": "#30312f",
+          "surface-container-highest": "#e4e2df",
+          "outline-variant": "#e7e3dd",
+          "surface-container-high": "#eae8e5",
+          "secondary-container": "#edddd1",
+          "secondary-fixed": "#efe0d4",
+          "surface-variant": "#e4e2df",
+          "on-primary": "#ffffff",
+          "surface-dim": "#dbdad7",
+          "tertiary-container": "#00835a",
+          "error": "#ba1a1a",
+          "tertiary-fixed-dim": "#4edea3",
+          "on-background": "#1b1c1a",
+          "on-tertiary-fixed": "#002113",
+          "on-error-container": "#93000a",
+          "on-surface-variant": "#4e453b",
+          "on-tertiary-container": "#e8ffef",
+          "tertiary-fixed": "#6ffbbe",
+          "primary-fixed-dim": "#e6c093",
+          "surface-container-lowest": "#ffffff",
+          "surface-container": "#efeeeb",
+          "inverse-primary": "#e6c093",
+          "on-tertiary-fixed-variant": "#005236"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "gutter-mobile": "0.75rem",
+          "gutter": "1rem",
+          "space-xs": "0.25rem",
+          "space-lg": "1.5rem",
+          "space-sm": "0.5rem",
+          "margin-mobile": "1rem",
+          "margin": "1rem",
+          "space-xl": "2.5rem",
+          "space-md": "1rem"
+        },
+        "fontFamily": {
+          "body-sm": ["Inter", "sans-serif"],
+          "body-md": ["Inter", "sans-serif"],
+          "body-lg": ["Inter", "sans-serif"],
+          "label-sm": ["Inter", "sans-serif"],
+          "label-md": ["Inter", "sans-serif"],
+          "label-lg": ["Inter", "sans-serif"],
+          "price-secondary": ["Inter", "sans-serif"],
+          "price-hero": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-xl": ["Plus Jakarta Sans", "sans-serif"]
+        },
+        "fontSize": {
+          "price-secondary": ["13px", { "lineHeight": "16px", "fontWeight": "500" }],
+          "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+          "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "600" }],
+          "label-md": ["14px", { "lineHeight": "18px", "fontWeight": "600" }],
+          "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+          "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+          "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }],
+          "price-hero": ["24px", { "lineHeight": "28px", "fontWeight": "800" }],
+          "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+          "headline-lg": ["28px", { "lineHeight": "36px", "fontWeight": "700" }]
+        }
+      }
+    }
+  };
+</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl border-b border-outline-variant/60 shadow-[0_1px_8px_rgba(70,50,30,0.03)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><img alt="Clean minimalist vector logo for Amani marketplace with warm beige and deep espresso tones, elegant stylized letter A or marketplace icon. Brand logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XjIfsenHcmKn3krWQuLOUae2JeOsxLQN1TjhDCTVQdDaq4EbFi7MpQGvgP1_5DMjg8ibCDLrD12vbFxmnTgjwyDcN4TkLVi9Ngl-8PX2l23okCHBwCHNvw3O3ZOTdPmJeNB0-U6r2jjwKWfarvxhAqhmLw3gvvxi6uJPA0sFPiEhH_LM9-AI6o5EgRcH6Eglh94XeGACYfpeMHMkaRCpQ7epv6VbutIWbg5gVGPsDLRU3FEagxn7vOvu8"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight font-bold">Chez Awa</span><span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary border border-primary/20 font-label-sm text-[10px] uppercase font-bold tracking-wider">PRO</span></div><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Vendor Dashboard</span></div></div><div class="flex items-center gap-space-xs"><div class="flex items-center bg-surface-container-low px-2 py-1 rounded-full text-on-surface border border-outline-variant/60"><span class="font-label-sm text-label-sm font-bold text-primary mr-1">USD</span><span class="font-label-sm text-label-sm text-outline">|</span><span class="font-label-sm text-label-sm text-on-surface-variant ml-1">CDF</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant ml-0.5">arrow_drop_down</span></div><button class="relative w-10 h-10 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="relative flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/30" src="https://lh3.googleusercontent.com/aida/AEtjO1W1JNUloLT0Uw40gPUEleDCW8a_nZeeLaaH2PJmpd2QM0RsgvbtDssBC4jmIOmJ1NImk7Y8V31EzzvY3HPGmqSL-mW94dvFLkYH8zdU_3u380fST91zdLDIF-GjOaUgTqWnab9Tn4bxH6AXe9zCISrEbLcNTZuW7LAUbMd0pTRHDGA4t64fqDhILxFcYuuSnEn9Vu-1AOSwr3_rC3aCOdaVGskDk2Un0cNjoJEF8N5ficWSW8b4ChX2CsM"/><span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-tertiary ring-2 ring-surface"></span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Greeting & Vendor Identity Context -->
+<div class="px-margin pt-space-md pb-space-sm flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h1 class="font-headline-md text-headline-md text-on-surface tracking-tight flex items-center gap-1.5 font-bold">
+          Bonjour Awa <span class="animate-bounce inline-block text-2xl">👋</span>
+</h1>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+<span>Boutique Chez Awa</span>
+<span>•</span>
+<span class="text-primary font-bold">Plan PRO Kinshasa</span>
+</div>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-primary text-on-primary hover:bg-primary-dark transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="font-label-sm text-label-sm font-semibold">Article</span>
+</button>
+</div>
+</div>
+<!-- Priority Alert: Commandes en attente -->
+<div class="px-margin my-space-xs">
+<div class="relative overflow-hidden rounded-xl bg-error-container/60 border border-error/20 text-on-error-container p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error text-on-error flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">priority_high</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-label-md text-label-md font-bold tracking-tight text-on-error-container truncate">1 commande urgente !</span>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold animate-pulse">Action requise</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+<span class="font-semibold text-on-surface">#ORD-2026-00142</span> • Jean Dupont
+          </p>
+<div class="flex items-baseline gap-1.5 mt-0.5">
+<span class="font-price-secondary text-price-secondary font-bold text-on-surface">25 000 FC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(≈ $10.00)</span>
+</div>
+<div class="mt-3 flex items-center gap-2">
+<button class="flex-1 h-10 px-3 rounded-lg bg-error text-on-error font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-98 transition-all hover:bg-error/90">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Traiter maintenant</span>
+</button>
+<a class="h-10 px-3 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center shrink-0 shadow-sm active:scale-95 transition-all hover:bg-tertiary-container" href="https://wa.me/243810000000?text=Bonjour%20Jean%2C%20je%20confirme%20votre%20commande%20ORD-2026-00142" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- KPI Cards (3 Stacked / Interactive Currency Readout) -->
+<div class="px-margin mt-space-sm flex flex-col gap-space-sm">
+<!-- KPI 1 : Aujourd'hui -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">today</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Aujourd'hui</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+14% vs hier</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<div>
+<div class="font-price-hero text-price-hero text-primary tracking-tight font-extrabold">250 000 FC</div>
+<div class="font-price-secondary text-price-secondary text-on-surface-variant">≈ $100.00 USD</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">12</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">ventes</span>
+</div>
+</div>
+</div>
+<!-- KPI 2 : Cette semaine -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">date_range</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Cette semaine</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">7 derniers jours</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<div>
+<div class="font-price-hero text-price-hero text-on-surface tracking-tight font-bold">1 200 000 FC</div>
+<div class="font-price-secondary text-price-secondary text-on-surface-variant">≈ $480.00 USD</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">58</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">ventes</span>
+</div>
+</div>
+</div>
+<!-- KPI 3 : Ce mois + Jauge d'objectif -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">Ce mois (Mai 2026)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold border border-primary/20">81% objectif</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div>
+<div class="font-price-hero text-price-hero text-on-surface tracking-tight font-bold">4 850 000 FC</div>
+<div class="font-price-secondary text-price-secondary text-on-surface-variant">≈ $1 940.00 USD</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">231</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">ventes</span>
+</div>
+</div>
+<!-- Objective Progress Bar -->
+<div class="w-full flex flex-col gap-1 mt-1">
+<div class="w-full h-2 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-dark transition-all duration-500" style="width: 81%"></div>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>Actuel : 4.85M FC</span>
+<span class="font-semibold text-on-surface">Cible : 6 000 000 FC ($2 400)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive 30-Day Evolution Chart (Harmonized Warm Caramel Gradient) -->
+<div class="px-margin mt-space-lg">
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Évolution 30 jours</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Volume des ventes (Francs Congolais)</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg border border-outline-variant/60">
+<button class="px-2.5 py-0.5 rounded font-label-sm text-label-sm font-bold bg-surface-container-lowest text-primary shadow-xs">FC</button>
+<button class="px-2.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">USD</button>
+</div>
+</div>
+<!-- Inline Dynamic Graph SVG -->
+<div class="w-full h-44 relative mt-1 flex flex-col justify-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 340 140">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#8C6D46" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#8C6D46" stop-opacity="0.00"></stop>
+</lineargradient>
+</defs>
+<!-- Subtle Horizontal Grid Lines -->
+<line stroke="#e7e3dd" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="340" y1="20" y2="20"></line>
+<line stroke="#e7e3dd" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="340" y1="65" y2="65"></line>
+<line stroke="#e7e3dd" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="340" y1="110" y2="110"></line>
+<!-- Filled Area Under Curve -->
+<polygon fill="url(#chartGradient)" points="
+            0,105 
+            28,95 
+            56,110 
+            84,80 
+            112,85 
+            140,55 
+            168,70 
+            196,40 
+            224,50 
+            252,30 
+            280,45 
+            308,22 
+            340,15 
+            340,140 
+            0,140"></polygon>
+<!-- Smooth Line Graph -->
+<polyline fill="none" points="
+            0,105 
+            28,95 
+            56,110 
+            84,80 
+            112,85 
+            140,55 
+            168,70 
+            196,40 
+            224,50 
+            252,30 
+            280,45 
+            308,22 
+            340,15" stroke="#8C6D46" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></polyline>
+<!-- Interactive Highlight Nodes -->
+<circle cx="140" cy="55" fill="#ffffff" r="3.5" stroke="#8C6D46" stroke-width="2.5"></circle>
+<circle cx="252" cy="30" fill="#ffffff" r="3.5" stroke="#8C6D46" stroke-width="2.5"></circle>
+<circle class="animate-pulse" cx="340" cy="15" fill="#8C6D46" r="4.5" stroke="#ffffff" stroke-width="2"></circle>
+</svg>
+<!-- Peak Milestone Floating Pin -->
+<div class="absolute right-0 top-0 transform translate-y-1 bg-primary text-on-primary px-2 py-0.5 rounded shadow-sm text-[10px] font-bold">
+          250k FC Hier
+        </div>
+</div>
+<!-- X-Axis Dates -->
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm pt-1">
+<span>01 Mai</span>
+<span>08 Mai</span>
+<span>15 Mai</span>
+<span>22 Mai</span>
+<span class="font-bold text-primary">Aujourd'hui</span>
+</div>
+</div>
+</div>
+<!-- Stock Alert Section (Ruptures & Niveaux Critiques) -->
+<div class="px-margin mt-space-lg flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Alertes Stock Bas</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">3 critiques</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Item 1: Casquette noire -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Classic black unisex streetwear baseball cap on minimalist grey concrete background, studio product photography, clean retail presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkIipq44c9zIQSCZnU2NKOYCK3WNSCGLWDiVfP4p5dhCP5on27z4rCDoAiJ4qFTEr9DEXgU8ZLqf1rmAo39Kzefx-xeJZPxq0_u45E-knbGdRnjzgfvgcNaLKdWUqEBxLD4gqv5c4jZ3omJfQY2-pLuy9tPktjL26CUTBC0D3Oaqa_A4ZrupoCDUf33uVWxBZBkgl--JsVfG9oix8jxY4smdZUn-HFl-Sx5Gdrhai3mikoEUJ9Rx3T"/>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[170px]">Casquette noire</h3>
+<span class="font-body-sm text-body-sm text-primary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">priority_high</span> Stock : 3 restants
+            </span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-secondary-container text-primary font-label-sm text-label-sm font-bold border border-outline-variant/60 active:scale-95 transition-colors">
+          + Réassort
+        </button>
+</div>
+<!-- Item 2: Écouteurs Bluetooth -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Modern wireless bluetooth earbuds in sleek matte black charging case, crisp commercial product lighting, elegant tech catalog shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-2OYsDRpJz9xF3Nz0waNvwysfq1L3QVZKHPj5oe3mI3bIGWJNJ1_GfBHuskVigBh8lZHxgYIH0gmKzyAQ6jVMTyiEMN-Qivtee89TMPhwHJoFqvPUNfXI33Hed8wQ3YB4l95KMYci934JizeuA1E3wnmUs_KscKzTOFb31grsvpEkyxirxMEiz3Rq_9COn_xWzuf3BXFgRXlMMyoJ_YWbFRUNFWIesSsNmrJPmRc0hcYW8NGjAlzx"/>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[170px]">Écouteurs Bluetooth</h3>
+<span class="font-body-sm text-body-sm text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">cancel</span> Rupture totale (0 restant)
+            </span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-error text-on-error font-label-sm text-label-sm font-bold active:scale-95 shadow-sm hover:bg-error/90 transition-colors">
+          Commander
+        </button>
+</div>
+<!-- Item 3: T-shirt coton Noir/M -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Folded luxury black cotton crewneck t-shirt with premium texture on warm neutral surface, high-end Kinshasa boutique apparel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe712dNiu4Os5u4-j6iG7-m9VTDCnzz6Lqx5XyJ6EP0-dteLpa2XCSHmClsDGAyA_uqL1pjYle_cTWMyEyV_WLGBcWTPdTU0X6jAXWrFlUjn7QXPglCc4PuxQwsgNsP2tAekOLtZuTnBtSWNei23AaAmm81NQraG9BxIBmvPIHLCuhmR0-TIJ0PAzkfYSREoU1w_G1d4hE2yX-7Tr9yDkjVtR0USP5tr8NGuM7EZgmmDuv2zdWbWQb"/>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[170px]">T-shirt coton Noir/M</h3>
+<span class="font-body-sm text-body-sm text-error font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">block</span> Variante épuisée (Taille M)
+            </span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-secondary-container text-primary font-label-sm text-label-sm font-bold border border-outline-variant/60 active:scale-95 transition-colors">
+          Ajuster
+        </button>
+</div>
+</div>
+</div>
+<!-- Top 5 Produits les plus vendus -->
+<div class="px-margin mt-space-lg flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Top 5 Produits</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Ce mois</span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- 1. T-shirt coton premium -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-5 font-headline-sm text-headline-sm font-extrabold text-primary">1</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Folded organic cotton premium graphic t-shirt displayed in high-end retail boutique, Kinshasa fashion, clean neutral styling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-I7-Xk7dDS4jrVF7GE2wvg8MnxW7nafZDazWckuovgtLOcULxofa363xi5uSqowZw_QkUHlEej78ky2Lbmb_dryAEfG76GC5Zx-l7GOlsYL89sEh2PQ5GUzKSAFXi1cPN5JDJ1c6uF6uMJIF9zC49_1RMbaQ8Z356619bAdOkzA5oTGcS1u_U8gNWA1TZCMraHbc-6zU-M7B_ty8Pxvf8NVmExqzkxqDu2IUR1hBukDUrrrf4B0_c"/>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[150px]">T-shirt coton premium</h3>
+<div class="flex items-baseline gap-1">
+<span class="font-price-secondary text-price-secondary font-bold text-primary">10 000 FC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(≈ $4.00)</span>
+</div>
+</div>
+</div>
+<div class="px-2 py-0.5 rounded-md bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">north_east</span> +24%
+        </div>
+</div>
+<!-- 2. Chaussures sport -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-5 font-headline-sm text-headline-sm font-extrabold text-on-surface">2</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Urban white and blue athletic running sneakers floating slightly on studio grey background, dynamic streetwear product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4WX--sEnusPMT9_ZgdkQHh8a-e8aCuFsF5wRJfAvqOb-KQQTgBUhdeArZOMZBKXatU32Ean4PdRd-cBkzHy0umwSfACGkvbeqjr0vbesYVVF_IH3JL-UNKgMUbNuotGcWU49dp0KaGImUEcPXhx3c8-RBJRDhLMuMPn1AH8YvonAVuslSoLu1niC4TeuV2fentgwDGffLcWVWAySMTSvAdn1PkpicTNRn8H3K9cUWEgMp9_VyFVkN"/>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[150px]">Chaussures sport</h3>
+<div class="flex items-baseline gap-1">
+<span class="font-price-secondary text-price-secondary font-bold text-primary">25 000 FC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(≈ $10.00)</span>
+</div>
+</div>
+</div>
+<div class="px-2 py-0.5 rounded-md bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">north_east</span> +18%
+        </div>
+</div>
+<!-- 3. Pantalon jean slim -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-5 font-headline-sm text-headline-sm font-extrabold text-on-surface-variant">3</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Dark blue slim denim jeans on boutique wooden hanger against warm textured interior wall, crisp fabric stitching detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzMKMqmFG0wvQxXA8AGllaLq94IjVYlbwEpatmIvGHvDQjMdOUAvqjpsfiE67a7NW9a_luMenoGpfvQ5sTRnJh8aT8OT7eu6rJN2XOsKgec-ulhG6YFBKU7Ns9e2kch-rT2vuWoFkOxD7Sgdn_DlIe98x9dRREg-QwAf2v_cgR1rEL4zcarlLIpqshSmrSXqMRfDlV68q4c9TVoD-0NXI31U8vlJO5urHD2LKMQZRzClpk3PD6eJLl"/>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[150px]">Pantalon jean slim</h3>
+<div class="flex items-baseline gap-1">
+<span class="font-price-secondary text-price-secondary font-bold text-primary">15 000 FC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(≈ $6.00)</span>
+</div>
+</div>
+</div>
+<div class="px-2 py-0.5 rounded-md bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">north_east</span> +9%
+        </div>
+</div>
+<!-- 4. Montre homme cuir -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-5 font-headline-sm text-headline-sm font-extrabold text-on-surface-variant">4</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Classic gentleman wristwatch with brown genuine leather strap and gold dial accent, placed on refined velvet pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMhO5PgsDWvvEzCrAbNgOQImufAu3vA4s6ctCUm2ZKFsh9xB5NwtviC7NYO4MI9Vs3IzhQawi6LoW7yvrqfATFOTWKiV1Y32zhNy5acXOJKe3Du5QAbQOi52T_Ezz3KIrUYa3inva49xEp94naz0qDwmYJ7d3HrqzeSXfTIthxcBIlWLtFPV65wwBY4OkCsOPOOJTPCNI9-QGH9NLTjfQv1taM5gnBHkf_i27zT5MpXKkSnL0xkrjM"/>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[150px]">Montre homme cuir</h3>
+<div class="flex items-baseline gap-1">
+<span class="font-price-secondary text-price-secondary font-bold text-primary">30 000 FC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(≈ $12.00)</span>
+</div>
+</div>
+</div>
+<div class="px-2 py-0.5 rounded-md bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">north_east</span> +6%
+        </div>
+</div>
+<!-- 5. Casquette noire -->
+<div class="p-space-sm rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<span class="w-5 font-headline-sm text-headline-sm font-extrabold text-on-surface-variant">5</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant/50 overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Black cotton sports cap seen from angle with curved visor, high contrast studio lighting on sleek surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQWV8-mVTFwUnQEhB7o7MKprnrzpiPNjNzGFdJgIKkzzQLPOBl_yFtT1b9R8T5e4C6HRSlrYiZ2B3_CyHt4urw1p1OwuJRYjMrhOgedlS-JINaeEX_9ZZPcaLei7JZ9Mz7iUw3akGsE1wgzxO3nuHkVdvaq_rZHNbL2GJlz9EdjVz_oNhoO2dySClVfm0vJi6vOdHzD4wawwMRxkK4qCACeWc5IKhEjWA_AG-49jTFJsvaFYpaKNqv"/>
+</div>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold truncate max-w-[150px]">Casquette noire</h3>
+<div class="flex items-baseline gap-1">
+<span class="font-price-secondary text-price-secondary font-bold text-primary">5 000 FC</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(≈ $2.00)</span>
+</div>
+</div>
+</div>
+<div class="px-2 py-0.5 rounded-md bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">south_east</span> -2%
+        </div>
+</div>
+</div>
+</div>
+<!-- Dernières Commandes (3 Detailed Cards) -->
+<div class="px-margin mt-space-lg mb-space-xl flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">receipt_long</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Dernières commandes</h2>
+</div>
+<button class="font-label-md text-label-md text-primary font-bold hover:underline">
+        Tout voir
+      </button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Order 1: #ORD-2026-00142 (En attente) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">#ORD-2026-00142</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              En attente
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Il y a 12 min</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span class="text-on-surface font-medium">Jean Dupont</span>
+<span>• Bandalungwa, Kinshasa</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div>
+<span class="font-price-hero text-price-hero text-primary font-extrabold">25 000 FC</span>
+<span class="font-price-secondary text-price-secondary text-on-surface-variant block font-medium">≈ $10.00 USD</span>
+</div>
+<div class="flex items-center gap-2">
+<a class="w-9 h-9 rounded-lg bg-tertiary text-on-tertiary flex items-center justify-center shadow-xs hover:bg-tertiary-container transition-colors" href="https://wa.me/243810000000">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-dark font-label-md text-label-md font-semibold active:scale-95 shadow-sm transition-all">
+              Valider
+            </button>
+</div>
+</div>
+</div>
+<!-- Order 2: #ORD-2026-00141 (En cours) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">#ORD-2026-00141</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-low text-primary border border-primary/20 font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">local_shipping</span>
+              En cours
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Il y a 1 h</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span class="text-on-surface font-medium">Marie K.</span>
+<span>• Gombe, Kinshasa</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div>
+<span class="font-price-hero text-price-hero text-on-surface font-bold">15 000 FC</span>
+<span class="font-price-secondary text-price-secondary text-on-surface-variant block font-medium">≈ $6.00 USD</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-low hover:bg-secondary-container text-on-surface border border-outline-variant/60 font-label-md text-label-md font-semibold active:scale-95 transition-colors">
+              Suivi coursier
+            </button>
+</div>
+</div>
+</div>
+<!-- Order 3: #ORD-2026-00140 (Livrée) -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">#ORD-2026-00140</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              Livrée
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hier, 16:40</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">person</span>
+<span class="text-on-surface font-medium">Ibrahim S.</span>
+<span>• Limete, Kinshasa</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div>
+<span class="font-price-hero text-price-hero text-on-surface font-bold">30 000 FC</span>
+<span class="font-price-secondary text-price-secondary text-on-surface-variant block font-medium">≈ $12.00 USD</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">paid</span> Cash encaissé
+          </span>
+</div>
+</div>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-xl border-t border-outline-variant/60 shadow-[0_-2px_12px_rgba(70,50,30,0.04)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 transition-colors text-primary font-bold" data-path="vendor-dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm font-bold">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="vendor-products" href="#"><span class="material-symbols-outlined text-[24px]">inventory_2</span><span class="font-label-sm text-label-sm">Produits</span></a><a class="relative flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="vendor-orders" href="#"><span class="relative"><span class="material-symbols-outlined text-[24px]">shopping_bag</span><span class="absolute -top-1 -right-2 bg-error text-on-error font-label-sm text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">1</span></span><span class="font-label-sm text-label-sm">Commandes</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="vendor-crm" href="#"><span class="material-symbols-outlined text-[24px]">group</span><span class="font-label-sm text-label-sm">Clients</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-colors" data-path="vendor-settings" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-sm text-label-sm">Plus</span></a></div></nav></body></html>
